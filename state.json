@@ -1,0 +1,13 @@
+{
+  "last_run": "2026-06-01",
+  "indicators": {
+    "capex_2027_guidance_usd_bn": 1000,
+    "capacity_language": "supply-constrained",
+    "nvidia_next_q_guidance_raised": true,
+    "nvidia_dc_yoy_growth_pct": 92,
+    "roi_no_return_pct": 56,
+    "treasury_10y_yield_pct": null
+  },
+  "score": 0,
+  "status": "STABLE"
+}
