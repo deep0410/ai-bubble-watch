@@ -1,4 +1,4 @@
-"""Gemini research with Google Search grounding and crash-risk scoring."""
+"""Gemini research (indicators 1-4) with Google Search; rates handled in rates.py."""
 
 from __future__ import annotations
 
@@ -15,44 +15,56 @@ import config
 
 logger = logging.getLogger(__name__)
 
-PROMPT = """You are a financial-signals research agent. Today is {today}.
-Use Google Search to find the MOST RECENT data for each of the 5 indicators below.
-Compare each against the PREVIOUS values provided, then output ONLY a JSON object
-(no markdown, no prose) matching the schema at the end.
+PROMPT = """You are a financial-signals research agent. Today's date is {today}.
+The most recent major-tech earnings cycle relevant to this run is: {earnings_cycle}.
+Previous monitor run date: {previous_run}.
 
-PREVIOUS VALUES (from last run):
+Use Google Search to find the MOST RECENT data for indicators 1-4 below. For EVERY figure
+you report, you MUST include the date it was published and the source name. RECENCY RULES:
+- Reject any figure published before {earnings_cycle}. If only older data exists, reuse the
+  PREVIOUS value, set bearish=false, and set "is_stale": true.
+- Prefer primary sources (earnings calls, SEC filings, company IR) and major outlets
+  (CNBC, Reuters, Bloomberg) or named analyst notes (Evercore, BofA, Goldman, Jefferies).
+
+PREVIOUS VALUES (from last run on {previous_run}):
 {previous_json}
 
 INDICATORS:
-1. capex_2027_guidance_usd_bn: Latest SUMMED 2027 capital-expenditure guidance across
-   Amazon, Alphabet, Meta, Microsoft, Oracle, in USD billions. bearish=true if the new
-   total is FLAT or LOWER than previous (guidance stopped rising).
-2. capacity_language: Latest hyperscaler/Nvidia earnings language on data-center capacity.
-   Return "supply-constrained" or "ample-capacity". bearish=true if it has flipped to
-   "ample-capacity".
-3. nvidia: From Nvidia's most recent earnings — did they RAISE next-quarter revenue
-   guidance vs the prior quarter (next_q_guidance_raised: true/false), and data-center
-   revenue YoY growth % (dc_yoy_growth_pct). bearish=true if guidance NOT raised OR
+1. capex_2027_guidance_usd_bn: The SUMMED calendar-year-2027 capex guidance/estimate across
+   Amazon, Alphabet, Meta, Microsoft, and Oracle, in USD billions. If companies have not
+   given formal 2027 guidance, use the latest post-earnings ANALYST CONSENSUS (Evercore/BofA/
+   Goldman). SANITY CHECK: the 2027 figure must be >= the current 2026 figure (~{capex_2026_floor}).
+   If a candidate number is lower than 2026, it is stale or mislabeled -> discard it and search
+   again. Treat the previous value as a fuzzy analyst aggregate, not a hard target. Do NOT mark
+   bearish for a drop smaller than 5%, and do NOT mark bearish if reporting describes capex as
+   rising, raised, soaring, or approaching/exceeding a level. Mark bearish only when sources
+   explicitly describe a cut, trim, pause, or cancellation. (Final bearish flag is recomputed in code.)
+2. capacity_language: From the MOST RECENT quarter's hyperscaler/Nvidia earnings calls, is the
+   tone "supply-constrained" or "ample-capacity"? bearish=true ONLY if TWO OR MORE major
+   players state capacity has caught up / they are no longer constrained.
+3. nvidia: From Nvidia's MOST RECENT earnings only — did they RAISE next-quarter revenue
+   guidance vs the quarter just reported (next_q_guidance_raised: bool), and data-center
+   revenue YoY growth % (dc_yoy_growth_pct)? bearish=true if guidance NOT raised OR
    dc_yoy_growth_pct < 40.
-4. roi_no_return_pct: Most recent credible survey % of enterprises reporting NO measurable
-   return / "nothing out of" their AI investment. bearish=true if higher than previous.
-5. treasury_10y_yield_pct: Current US 10-year Treasury yield %. bearish=true if up more
-   than 0.25 vs previous (or a clear sustained uptrend).
+4. roi: Track ONLY this survey: "{roi_survey_name}" measuring "{roi_metric}".
+   Last known edition date in state: {roi_last_edition}. Report its latest published value
+   (roi_value_pct). If no NEW edition of THIS survey has appeared since {previous_run}, reuse
+   the previous roi value and set bearish=false and is_stale=true. bearish=true ONLY if a NEW
+   edition shows the value moved in the worse direction vs the previous edition.
+   Do NOT substitute a different survey (e.g. MIT NANDA vs PwC) — different questions drift.
 
-For each indicator include a one-sentence "evidence" with the source name and date.
-If a fresh value can't be found, reuse the previous value and set bearish=false.
-
-OUTPUT JSON SCHEMA:
+Use plain ASCII in all evidence strings (no emoji, no unicode symbols).
+Output ONLY this JSON (no markdown, no prose). Every block needs data_date + source:
 {{
-  "capex": {{"value_usd_bn": number, "bearish": bool, "evidence": str}},
-  "capacity": {{"value": "supply-constrained"|"ample-capacity", "bearish": bool, "evidence": str}},
-  "nvidia": {{"next_q_guidance_raised": bool, "dc_yoy_growth_pct": number, "bearish": bool, "evidence": str}},
-  "roi": {{"no_return_pct": number, "bearish": bool, "evidence": str}},
-  "rates": {{"treasury_10y_yield_pct": number, "bearish": bool, "evidence": str}}
+  "capex":   {{"value_usd_bn": number, "bearish": bool, "is_stale": bool, "data_date": "YYYY-MM", "source": str, "evidence": str}},
+  "capacity":{{"value": "supply-constrained"|"ample-capacity", "bearish": bool, "is_stale": bool, "data_date": "YYYY-MM", "source": str, "evidence": str}},
+  "nvidia":  {{"next_q_guidance_raised": bool, "dc_yoy_growth_pct": number, "bearish": bool, "is_stale": bool, "data_date": "YYYY-MM", "source": str, "evidence": str}},
+  "roi":     {{"roi_value_pct": number, "bearish": bool, "is_stale": bool, "data_date": "YYYY-MM", "source": str, "evidence": str}}
 }}
 """
 
-_REQUIRED_KEYS = ("capex", "capacity", "nvidia", "roi", "rates")
+_LLM_KEYS = ("capex", "capacity", "nvidia", "roi")
+_BLOCK_FIELDS = ("bearish", "is_stale", "data_date", "source", "evidence")
 
 
 def _extract_text(response: object) -> str:
@@ -84,16 +96,23 @@ def _parse_json(text: str) -> dict[str, Any]:
     data = json.loads(cleaned)
     if not isinstance(data, dict):
         raise ValueError("Response is not a JSON object")
-    for key in _REQUIRED_KEYS:
+    for key in _LLM_KEYS:
         if key not in data:
             raise ValueError(f"Missing key: {key}")
         block = data[key]
-        if not isinstance(block, dict) or "bearish" not in block or "evidence" not in block:
+        if not isinstance(block, dict):
             raise ValueError(f"Invalid block for {key}")
+        for field in _BLOCK_FIELDS:
+            if field not in block:
+                raise ValueError(f"Missing {field} in {key}")
     return data
 
 
 def _call_gemini(client: genai.Client, model: str, prompt: str) -> str:
+    logger.info(
+        "Waiting on %s + Google Search (multiple searches possible; please wait)...",
+        model,
+    )
     resp = client.models.generate_content(
         model=model,
         contents=prompt,
@@ -105,22 +124,52 @@ def _call_gemini(client: genai.Client, model: str, prompt: str) -> str:
     text = _extract_text(resp)
     if not text:
         raise RuntimeError(f"Empty response from {model}")
+    logger.info("Received %d chars from %s", len(text), model)
     return text
 
 
-def run_research(today: str, previous: dict) -> dict[str, Any]:
+def run_research(
+    today: str,
+    previous_run: str,
+    previous: dict,
+    earnings_cycle: str,
+    roi_last_edition: str,
+) -> dict[str, Any]:
     if not config.GEMINI_API_KEY:
         raise ValueError("GEMINI_API_KEY is not set")
 
     client = genai.Client(api_key=config.GEMINI_API_KEY)
-    prompt = PROMPT.format(today=today, previous_json=json.dumps(previous, indent=2))
+    prompt = PROMPT.format(
+        today=today,
+        previous_run=previous_run,
+        earnings_cycle=earnings_cycle,
+        previous_json=json.dumps(previous, indent=2),
+        roi_survey_name=config.ROI_SURVEY_NAME,
+        roi_metric=config.ROI_METRIC,
+        roi_last_edition=roi_last_edition or "unknown",
+        capex_2026_floor=config.CAPEX_2026_FLOOR_USD_BN,
+    )
     models = [config.GEMINI_MODEL, config.GEMINI_FALLBACK]
+
+    logger.info("Prompt ready (%d chars); starting model loop", len(prompt))
 
     last_err: Exception | None = None
     for i, model in enumerate(models):
         try:
             text = _call_gemini(client, model, prompt)
-            return _parse_json(text)
+            logger.info("Parsing JSON response from %s", model)
+            data = _parse_json(text)
+            for key in _LLM_KEYS:
+                block = data[key]
+                logger.info(
+                    "  %s: bearish=%s stale=%s date=%s source=%s",
+                    key,
+                    block.get("bearish"),
+                    block.get("is_stale"),
+                    block.get("data_date"),
+                    block.get("source", "")[:40],
+                )
+            return data
         except json.JSONDecodeError as err:
             last_err = err
             logger.warning("JSON parse failed for %s: %s", model, err)
@@ -129,14 +178,21 @@ def run_research(today: str, previous: dict) -> dict[str, Any]:
             last_err = err
             logger.warning("Gemini %s failed: %s", model, err)
             if i == 0 and _is_rate_limit(err):
+                logger.info("Rate limited; trying fallback %s", models[1])
                 continue
             raise
 
     raise RuntimeError(f"Gemini failed: {last_err}") from last_err
 
 
-def score(research: dict[str, Any]) -> tuple[int, str]:
-    flags = [research[k]["bearish"] for k in _REQUIRED_KEYS]
-    n = sum(bool(x) for x in flags)
+def score(research: dict[str, Any], rates: dict[str, Any]) -> tuple[int, str]:
+    blocks = [
+        research["capex"],
+        research["capacity"],
+        research["nvidia"],
+        research["roi"],
+        rates,
+    ]
+    n = sum(1 for b in blocks if b.get("bearish") and not b.get("is_stale"))
     status = "STABLE" if n <= 1 else "WATCH" if n <= 3 else "ELEVATED"
     return n, status

@@ -1,13 +1,191 @@
 {
-  "last_run": "2026-06-01",
+  "last_run": "2026-06-03",
   "indicators": {
     "capex_2027_guidance_usd_bn": 1000,
+    "capex_2027_prev_reading": 992,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": null
+    "treasury_10y_yield_pct": 4.47
+  },
+  "roi_survey": {
+    "name": "PwC Global CEO Survey",
+    "metric": "% of CEOs reporting no value / 'nothing' from AI investment",
+    "last_edition_date": "2026-01"
   },
   "score": 0,
-  "status": "STABLE"
+  "status": "STABLE",
+  "history": [
+    {
+      "date": "2026-06-03",
+      "score": 1,
+      "status": "STABLE",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 992,
+        "capex_2027_prev_reading": 992,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.47
+      }
+    },
+    {
+      "date": "2026-06-03",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "STABLE",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1000,
+        "capex_2027_prev_reading": 992,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.47
+      },
+      "news": {
+        "items": [
+          {
+            "headline": "Goldman Sachs Raises Hyperscaler AI Capex Forecast to $5.3 Trillion by 2030, Citing Increased Private Financing Role",
+            "date": "2026-06-03",
+            "sources": [
+              "The Business Times",
+              "Advisor Perspectives",
+              "Vantage Markets",
+              "Benzinga"
+            ],
+            "summary": "Goldman Sachs has increased its combined capital expenditure forecast for the four largest hyperscalers (Meta, Microsoft, Amazon, and Alphabet) to $5.3 trillion between fiscal years 2025 and 2030, up from a previous estimate of $4.5 trillion. The firm anticipates private infrastructure and real estate capital will play a significantly larger role in financing this AI-driven data center boom.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Alphabet Launches $80 Billion Equity Raise to Fund Global AI Compute Expansion, Enters Muni Bond Market",
+            "date": "2026-06-03",
+            "sources": [
+              "Advisor Perspectives",
+              "Varindia",
+              "AI Business",
+              "MarketBeat"
+            ],
+            "summary": "Google parent Alphabet is undertaking an $80 billion equity financing program, including a $10 billion private placement to Berkshire Hathaway, to aggressively expand its global AI compute and data center capacity. As part of this initiative, Alphabet is also entering the municipal-bond market with a $1 billion transaction to finance electricity for its AI infrastructure.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "IREN Secures $3.65 Billion GPU Financing Facility for Microsoft AI Cloud Contract",
+            "date": "2026-06-03",
+            "sources": [
+              "Seeking Alpha",
+              "Intellectia AI",
+              "Canaccord (analyst note)",
+              "Cantor Fitzgerald (analyst note)"
+            ],
+            "summary": "IREN has successfully closed a $3.65 billion investment-grade GPU financing facility, comprising a $2.1 billion U.S. private placement and a $1.55 billion delayed-draw term loan. This funding will cover 96% of its $9.7 billion multi-year AI Cloud Services contract with Microsoft, enabling IREN to expand its AI cloud capacity to 480MW by the end of 2026. Goldman Sachs and J.P. Morgan served as joint lead managers.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AlphaSense Raises $350 Million, Doubles Valuation to $7.5 Billion Amid Strong Enterprise AI Adoption",
+            "date": "2026-06-03",
+            "sources": [
+              "GlobeNewswire",
+              "Let's Data Science"
+            ],
+            "summary": "AlphaSense, an AI platform for market intelligence, announced the close of a $350 million funding round, which nearly doubled its valuation to $7.5 billion. The company reported strong business momentum, exceeding $600 million in annual recurring revenue in Q1 2026.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AMD CFO Reports 'Tremendous' CPU Demand Driven by Agentic AI, Doubles Data Center CPU TAM Forecast to $120 Billion by 2030",
+            "date": "2026-06-03",
+            "sources": [
+              "Stocktwits"
+            ],
+            "summary": "AMD's CFO stated that 'agentic AI' is driving significant and incremental demand for their CPU platforms, with expectations for Q2 CPU revenue to grow over 70% year-over-year. The company has revised its data center CPU total addressable market (TAM) forecast to $120 billion by 2030, up from a previous estimate of $60 billion.",
+            "direction": "bullish",
+            "severity": "medium",
+            "unconfirmed": true
+          }
+        ],
+        "net_read": "bullish"
+      }
+    }
+  ],
+  "numeric_status": "STABLE",
+  "news_last_run": {
+    "items": [
+      {
+        "headline": "Goldman Sachs Raises Hyperscaler AI Capex Forecast to $5.3 Trillion by 2030, Citing Increased Private Financing Role",
+        "date": "2026-06-03",
+        "sources": [
+          "The Business Times",
+          "Advisor Perspectives",
+          "Vantage Markets",
+          "Benzinga"
+        ],
+        "summary": "Goldman Sachs has increased its combined capital expenditure forecast for the four largest hyperscalers (Meta, Microsoft, Amazon, and Alphabet) to $5.3 trillion between fiscal years 2025 and 2030, up from a previous estimate of $4.5 trillion. The firm anticipates private infrastructure and real estate capital will play a significantly larger role in financing this AI-driven data center boom.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "Alphabet Launches $80 Billion Equity Raise to Fund Global AI Compute Expansion, Enters Muni Bond Market",
+        "date": "2026-06-03",
+        "sources": [
+          "Advisor Perspectives",
+          "Varindia",
+          "AI Business",
+          "MarketBeat"
+        ],
+        "summary": "Google parent Alphabet is undertaking an $80 billion equity financing program, including a $10 billion private placement to Berkshire Hathaway, to aggressively expand its global AI compute and data center capacity. As part of this initiative, Alphabet is also entering the municipal-bond market with a $1 billion transaction to finance electricity for its AI infrastructure.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "IREN Secures $3.65 Billion GPU Financing Facility for Microsoft AI Cloud Contract",
+        "date": "2026-06-03",
+        "sources": [
+          "Seeking Alpha",
+          "Intellectia AI",
+          "Canaccord (analyst note)",
+          "Cantor Fitzgerald (analyst note)"
+        ],
+        "summary": "IREN has successfully closed a $3.65 billion investment-grade GPU financing facility, comprising a $2.1 billion U.S. private placement and a $1.55 billion delayed-draw term loan. This funding will cover 96% of its $9.7 billion multi-year AI Cloud Services contract with Microsoft, enabling IREN to expand its AI cloud capacity to 480MW by the end of 2026. Goldman Sachs and J.P. Morgan served as joint lead managers.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "AlphaSense Raises $350 Million, Doubles Valuation to $7.5 Billion Amid Strong Enterprise AI Adoption",
+        "date": "2026-06-03",
+        "sources": [
+          "GlobeNewswire",
+          "Let's Data Science"
+        ],
+        "summary": "AlphaSense, an AI platform for market intelligence, announced the close of a $350 million funding round, which nearly doubled its valuation to $7.5 billion. The company reported strong business momentum, exceeding $600 million in annual recurring revenue in Q1 2026.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "AMD CFO Reports 'Tremendous' CPU Demand Driven by Agentic AI, Doubles Data Center CPU TAM Forecast to $120 Billion by 2030",
+        "date": "2026-06-03",
+        "sources": [
+          "Stocktwits"
+        ],
+        "summary": "AMD's CFO stated that 'agentic AI' is driving significant and incremental demand for their CPU platforms, with expectations for Q2 CPU revenue to grow over 70% year-over-year. The company has revised its data center CPU total addressable market (TAM) forecast to $120 billion by 2030, up from a previous estimate of $60 billion.",
+        "direction": "bullish",
+        "severity": "medium",
+        "unconfirmed": true
+      }
+    ],
+    "net_read": "bullish"
+  }
 }

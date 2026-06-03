@@ -23,9 +23,17 @@ def _load_dotenv() -> None:
 _load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+FRED_API_KEY = os.getenv("FRED_API_KEY", "")
 NTFY_TOPIC = os.getenv("NTFY_TOPIC", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-pro")
 GEMINI_FALLBACK = os.getenv("GEMINI_FALLBACK", "gemini-2.5-flash")
+GEMINI_NEWS_MODEL = os.getenv("GEMINI_NEWS_MODEL", GEMINI_FALLBACK)
+ROI_SURVEY_NAME = os.getenv("ROI_SURVEY_NAME", "PwC Global CEO Survey")
+ROI_METRIC = os.getenv(
+    "ROI_METRIC",
+    "% of CEOs reporting no value / 'nothing' from AI investment",
+)
+CAPEX_2026_FLOOR_USD_BN = int(os.getenv("CAPEX_2026_FLOOR_USD_BN", "725"))
 STATE_PATH = _ROOT / "state.json"
 
 
