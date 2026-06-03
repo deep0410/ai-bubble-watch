@@ -1,9 +1,8 @@
 name: ai-bubble-monitor
 
+# No schedule here — GitHub's cron is unreliable. Use cron-job.org (see README)
+# with a schedule built on crontab.guru to POST workflow_dispatch on a timer.
 on:
-  schedule:
-    # Every Monday, 12:00 UTC (~8 AM Toronto EDT; ~7 AM EST)
-    - cron: "0 12 * * 1"
   workflow_dispatch: {}
 
 permissions:

@@ -2,7 +2,9 @@
 
 **Weekly AI-spend crash-risk signals — Gemini + live web search, push to your phone. $0 to run.**
 
-Automated job that checks five numeric market indicators plus a trusted-news scan (hyperscaler capex, capacity language, Nvidia trajectory, enterprise ROI sentiment, Treasury yields), scores bearish flags, compares to the last run, and sends a summary via [ntfy](https://ntfy.sh). Indicators 1-4 use Gemini + Google Search with earnings-cycle freshness rules; indicator 5 uses the **FRED DGS10** API directly. Runs on GitHub Actions; no server to maintain.
+Automated job that checks five numeric market indicators plus a trusted-news scan (hyperscaler capex, capacity language, Nvidia trajectory, enterprise ROI sentiment, Treasury yields), scores bearish flags, compares to the last run, and sends a summary via [ntfy](https://ntfy.sh). Indicators 1-4 use Gemini + Google Search with earnings-cycle freshness rules; indicator 5 uses the **FRED DGS10** API directly.
+
+**Where it runs:** [GitHub Actions](https://github.com/features/actions) executes the job (install deps, run `monitor.py`, commit `state.json`). **When it runs:** a free online cron service triggers the workflow — not GitHub's built-in schedule (that cron is often disabled or delayed).
 
 *Example notification — values change each run.*
 
@@ -14,7 +16,7 @@ Risk score: 1/5 (STABLE)
    ...
 ```
 
-**Cost:** Gemini API usage on a weekly schedule, GitHub Actions (free tier), ntfy (free).
+**Cost:** Gemini API usage on a weekly schedule, GitHub Actions minutes when triggered, ntfy (free), [cron-job.org](https://cron-job.org/en/) (free).
 
 ## Risk levels
 
@@ -75,27 +77,73 @@ python monitor.py
 
 Expect: printed summary in the terminal, ntfy notification on your phone, updated `state.json` with a new `history` entry.
 
-### 5. GitHub Actions secrets
+### 5. GitHub repo + Actions secrets
+
+Push this repo to GitHub (include seeded `state.json`).
 
 | Secret | Purpose |
 | ------ | ------- |
-| `GEMINI_API_KEY` | Gemini API (indicators 1-4) |
+| `GEMINI_API_KEY` | Gemini API (indicators 1-4 + news) |
 | `FRED_API_KEY` | 10-year Treasury (DGS10) |
 | `NTFY_TOPIC` | ntfy topic |
 
-Repo → **Settings → Secrets and variables → Actions** → add both.
+Repo → **Settings → Secrets and variables → Actions** → add all three.
 
-### 6. Deploy and verify CI
+### 6. Verify the workflow (manual)
 
-1. Push this repo to GitHub (include seeded `state.json`).
-2. Actions → **ai-bubble-monitor** → **Run workflow** (`workflow_dispatch`).
-3. Confirm: ntfy notification arrives; workflow commits `monitor run YYYY-MM-DD` if `state.json` changed.
+Actions → **ai-bubble-monitor** → **Run workflow** → **Run workflow** (`workflow_dispatch`).
 
-## Schedule
+Confirm: ntfy notification arrives; workflow commits `monitor run YYYY-MM-DD` if `state.json` changed.
 
-Default: **every Monday, 12:00 UTC** (see `.github/workflows/monitor.yml`).
+### 7. Schedule with crontab.guru + cron-job.org
 
-To change cadence, edit the cron in `monitor.yml` (e.g. `"0 12 1 * *"` for monthly on the 1st).
+GitHub Actions **`schedule` cron is not used** — it is unreliable (repos go idle, runs skipped or delayed). Use free online cron instead:
+
+| Tool | Role |
+| ---- | ---- |
+| [crontab.guru](https://crontab.guru/) | Build and verify the cron expression (editor only; does not run jobs) |
+| [cron-job.org](https://cron-job.org/en/) | Free scheduler that calls GitHub on your timetable |
+
+**Recommended:** every **Monday 12:00 UTC** — on crontab.guru that is:
+
+```text
+0 12 * * 1
+```
+
+**A. GitHub token for cron-job.org**
+
+Create a [fine-grained personal access token](https://github.com/settings/tokens?type=beta) (or classic PAT) for this repo with **Actions: Read and write** (or classic `repo` scope). Store it only in cron-job.org, not in the repo.
+
+**B. cron-job.org job**
+
+1. Sign up at [cron-job.org](https://cron-job.org/en/).
+2. **Create cronjob** → enable **Custom schedule** and paste the expression from crontab.guru (e.g. `0 12 * * 1`).
+3. **URL** (replace `OWNER` / `REPO`):
+
+   `https://api.github.com/repos/OWNER/REPO/actions/workflows/monitor.yml/dispatches`
+
+4. **Request method:** `POST`
+5. **Headers:**
+
+   | Header | Value |
+   | ------ | ----- |
+   | `Accept` | `application/vnd.github+json` |
+   | `Authorization` | `Bearer YOUR_GITHUB_TOKEN` |
+   | `X-GitHub-Api-Version` | `2022-11-28` |
+
+6. **Body** (raw JSON):
+
+   ```json
+   {"ref":"main"}
+   ```
+
+7. Save and use **Test run** once; check GitHub **Actions** for a new **ai-bubble-monitor** run.
+
+**C. Change cadence**
+
+Edit the expression on [crontab.guru](https://crontab.guru/) (e.g. `0 12 1 * *` = 12:00 UTC on the 1st of each month), then update the same expression in cron-job.org.
+
+**Manual run anytime:** GitHub Actions → **Run workflow**, or trigger the same POST from cron-job.org's test button.
 
 ## Gotchas
 
@@ -106,7 +154,7 @@ To change cadence, edit the cron in `monitor.yml` (e.g. `"0 12 1 * *"` for month
 - **ntfy text:** Notifications are ASCII-only (no emoji in title, body, or tags).
 - **News scan:** Second Gemini call per run; high bearish needs 2+ trusted sources or stays medium/unconfirmed.
 - **Google Search + JSON:** Fences stripped; one retry on parse failure.
-- **Workflow disable:** GitHub may disable scheduled workflows after ~60 days with no repo activity. Weekly commit-back of `state.json` keeps the repo active.
+- **Do not use GitHub `schedule`:** Use cron-job.org; keep the workflow as `workflow_dispatch` only.
 - **Public repo:** `state.json` and `history` are committed — anyone with repo access sees past readings.
 - **Model cost:** Set `GEMINI_MODEL=gemini-2.5-flash` in secrets/env if Pro is too expensive; Pro is better for multi-indicator research.
 
@@ -125,5 +173,5 @@ ai-bubble-watch/
 ├── state.json              # rolling state (updated each run)
 ├── requirements.txt
 ├── .env.example
-└── .github/workflows/monitor.yml
+└── .github/workflows/monitor.yml   # workflow_dispatch only (no schedule)
 ```
