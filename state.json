@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-06-03",
+  "last_run": "2026-06-11",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1000,
-    "capex_2027_prev_reading": 992,
+    "capex_2027_guidance_usd_bn": 920,
+    "capex_2027_prev_reading": 1000,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.47
+    "treasury_10y_yield_pct": 4.53
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -115,77 +115,164 @@
         ],
         "net_read": "bullish"
       }
+    },
+    {
+      "date": "2026-06-11",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "STABLE",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 920,
+        "capex_2027_prev_reading": 1000,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.53
+      },
+      "news": {
+        "items": [
+          {
+            "headline": "Global AI Debt Issuance to Top $500 Billion in 2026, Morgan Stanley Says",
+            "date": "2026-06-10",
+            "sources": [
+              "Morgan Stanley",
+              "The Business Times",
+              "Khaleej Times",
+              "TradingView"
+            ],
+            "summary": "Morgan Stanley forecasts that AI-related global debt issuance will more than double to nearly $570 billion in 2026, up from $236 billion by the end of May 2026. This surge is driven by hyperscalers increasingly turning to debt markets to fund massive AI-driven capital expenditures, with major cloud computing companies expected to spend around $700 billion this year and surpass $1 trillion by 2027.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Goldman Sachs Raises Hyperscaler AI Capex Forecast to $5.3 Trillion Through 2030",
+            "date": "2026-06-03",
+            "sources": [
+              "Goldman Sachs",
+              "Business Insider",
+              "The Vibes",
+              "Reuters"
+            ],
+            "summary": "Goldman Sachs has significantly raised its combined capital expenditure forecast for four major hyperscalers (Meta, Microsoft, Amazon, and Alphabet) to $5.3 trillion between fiscal years 2025 and 2030, an upward revision from its previous estimate of $4.5 trillion. This reflects accelerating demand for computing capacity driven by AI, cloud expansion, and digital infrastructure build-out. Goldman also noted that private capital is expected to play a larger role in financing this expansion.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Hyperscalers Project Over $620 Billion in 2026 AI Capex, Facing Demand Exceeding Capacity",
+            "date": "2026-06-08",
+            "sources": [
+              "MLQ Research",
+              "CreditSights",
+              "TrendForce",
+              "BloombergNEF"
+            ],
+            "summary": "The four dominant public cloud and AI infrastructure companies have collectively disclosed or guided towards over $620 billion in capital expenditure for 2026, with every hyperscaler reporting that demand for AI compute is exceeding available capacity. This includes significant spending plans from Microsoft, Google, Amazon, and Meta, with Google explicitly committing to a significant increase in 2027 capex.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Nvidia's Data Center Revenue Soars, Company Pivots to Broader AI Computing Platform Including Edge and Robotics",
+            "date": "2026-06-07",
+            "sources": [
+              "TheStreet",
+              "CNBC"
+            ],
+            "summary": "Nvidia reported record first-quarter fiscal 2027 sales of $81.6 billion, with its Data Center sector contributing $75.2 billion, a 92% year-over-year increase. CEO Jensen Huang emphasized a shift towards a broader 'computing platform for AI' strategy, expanding beyond cloud data centers to include edge computing, robotics, and automotive systems, identifying a nearly $500 billion market opportunity in 'Physical AI' by 2030.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Apollo and Blackstone Finalize $35 Billion Funding for Anthropic; AI Lab Confidentially Files for IPO",
+            "date": "2026-06-07",
+            "sources": [
+              "Yahoo Finance",
+              "Foreign Policy Journal"
+            ],
+            "summary": "Apollo Global Management and Blackstone Inc. have finalized a $35 billion deal to support AI infrastructure development by Anthropic PBC. Concurrently, Anthropic has confidentially submitted draft paperwork for a public listing, signaling a significant step towards public markets for a major AI lab.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "The period between June 3 and June 11, 2026, saw overwhelmingly bullish developments in the AI data center capex, compute demand, and AI financing thesis. Major financial institutions like Morgan Stanley and Goldman Sachs significantly raised their forecasts for AI-related debt issuance and hyperscaler capital expenditures, citing accelerating demand and the need for diverse funding. Hyperscalers themselves confirmed massive capex plans for 2026, with demand continuing to outstrip supply. Nvidia, a key enabler, reported strong data center revenue and outlined an expanded strategy into edge AI and robotics, further broadening the compute demand landscape. Finally, a significant private financing deal for Anthropic, coupled with its confidential IPO filing, underscores robust investor confidence in AI labs and their infrastructure needs."
+      }
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "Goldman Sachs Raises Hyperscaler AI Capex Forecast to $5.3 Trillion by 2030, Citing Increased Private Financing Role",
-        "date": "2026-06-03",
+        "headline": "Global AI Debt Issuance to Top $500 Billion in 2026, Morgan Stanley Says",
+        "date": "2026-06-10",
         "sources": [
+          "Morgan Stanley",
           "The Business Times",
-          "Advisor Perspectives",
-          "Vantage Markets",
-          "Benzinga"
+          "Khaleej Times",
+          "TradingView"
         ],
-        "summary": "Goldman Sachs has increased its combined capital expenditure forecast for the four largest hyperscalers (Meta, Microsoft, Amazon, and Alphabet) to $5.3 trillion between fiscal years 2025 and 2030, up from a previous estimate of $4.5 trillion. The firm anticipates private infrastructure and real estate capital will play a significantly larger role in financing this AI-driven data center boom.",
+        "summary": "Morgan Stanley forecasts that AI-related global debt issuance will more than double to nearly $570 billion in 2026, up from $236 billion by the end of May 2026. This surge is driven by hyperscalers increasingly turning to debt markets to fund massive AI-driven capital expenditures, with major cloud computing companies expected to spend around $700 billion this year and surpass $1 trillion by 2027.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Alphabet Launches $80 Billion Equity Raise to Fund Global AI Compute Expansion, Enters Muni Bond Market",
+        "headline": "Goldman Sachs Raises Hyperscaler AI Capex Forecast to $5.3 Trillion Through 2030",
         "date": "2026-06-03",
         "sources": [
-          "Advisor Perspectives",
-          "Varindia",
-          "AI Business",
-          "MarketBeat"
+          "Goldman Sachs",
+          "Business Insider",
+          "The Vibes",
+          "Reuters"
         ],
-        "summary": "Google parent Alphabet is undertaking an $80 billion equity financing program, including a $10 billion private placement to Berkshire Hathaway, to aggressively expand its global AI compute and data center capacity. As part of this initiative, Alphabet is also entering the municipal-bond market with a $1 billion transaction to finance electricity for its AI infrastructure.",
+        "summary": "Goldman Sachs has significantly raised its combined capital expenditure forecast for four major hyperscalers (Meta, Microsoft, Amazon, and Alphabet) to $5.3 trillion between fiscal years 2025 and 2030, an upward revision from its previous estimate of $4.5 trillion. This reflects accelerating demand for computing capacity driven by AI, cloud expansion, and digital infrastructure build-out. Goldman also noted that private capital is expected to play a larger role in financing this expansion.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "IREN Secures $3.65 Billion GPU Financing Facility for Microsoft AI Cloud Contract",
-        "date": "2026-06-03",
+        "headline": "Hyperscalers Project Over $620 Billion in 2026 AI Capex, Facing Demand Exceeding Capacity",
+        "date": "2026-06-08",
         "sources": [
-          "Seeking Alpha",
-          "Intellectia AI",
-          "Canaccord (analyst note)",
-          "Cantor Fitzgerald (analyst note)"
+          "MLQ Research",
+          "CreditSights",
+          "TrendForce",
+          "BloombergNEF"
         ],
-        "summary": "IREN has successfully closed a $3.65 billion investment-grade GPU financing facility, comprising a $2.1 billion U.S. private placement and a $1.55 billion delayed-draw term loan. This funding will cover 96% of its $9.7 billion multi-year AI Cloud Services contract with Microsoft, enabling IREN to expand its AI cloud capacity to 480MW by the end of 2026. Goldman Sachs and J.P. Morgan served as joint lead managers.",
+        "summary": "The four dominant public cloud and AI infrastructure companies have collectively disclosed or guided towards over $620 billion in capital expenditure for 2026, with every hyperscaler reporting that demand for AI compute is exceeding available capacity. This includes significant spending plans from Microsoft, Google, Amazon, and Meta, with Google explicitly committing to a significant increase in 2027 capex.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "AlphaSense Raises $350 Million, Doubles Valuation to $7.5 Billion Amid Strong Enterprise AI Adoption",
-        "date": "2026-06-03",
+        "headline": "Nvidia's Data Center Revenue Soars, Company Pivots to Broader AI Computing Platform Including Edge and Robotics",
+        "date": "2026-06-07",
         "sources": [
-          "GlobeNewswire",
-          "Let's Data Science"
+          "TheStreet",
+          "CNBC"
         ],
-        "summary": "AlphaSense, an AI platform for market intelligence, announced the close of a $350 million funding round, which nearly doubled its valuation to $7.5 billion. The company reported strong business momentum, exceeding $600 million in annual recurring revenue in Q1 2026.",
+        "summary": "Nvidia reported record first-quarter fiscal 2027 sales of $81.6 billion, with its Data Center sector contributing $75.2 billion, a 92% year-over-year increase. CEO Jensen Huang emphasized a shift towards a broader 'computing platform for AI' strategy, expanding beyond cloud data centers to include edge computing, robotics, and automotive systems, identifying a nearly $500 billion market opportunity in 'Physical AI' by 2030.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "AMD CFO Reports 'Tremendous' CPU Demand Driven by Agentic AI, Doubles Data Center CPU TAM Forecast to $120 Billion by 2030",
-        "date": "2026-06-03",
+        "headline": "Apollo and Blackstone Finalize $35 Billion Funding for Anthropic; AI Lab Confidentially Files for IPO",
+        "date": "2026-06-07",
         "sources": [
-          "Stocktwits"
+          "Yahoo Finance",
+          "Foreign Policy Journal"
         ],
-        "summary": "AMD's CFO stated that 'agentic AI' is driving significant and incremental demand for their CPU platforms, with expectations for Q2 CPU revenue to grow over 70% year-over-year. The company has revised its data center CPU total addressable market (TAM) forecast to $120 billion by 2030, up from a previous estimate of $60 billion.",
+        "summary": "Apollo Global Management and Blackstone Inc. have finalized a $35 billion deal to support AI infrastructure development by Anthropic PBC. Concurrently, Anthropic has confidentially submitted draft paperwork for a public listing, signaling a significant step towards public markets for a major AI lab.",
         "direction": "bullish",
-        "severity": "medium",
-        "unconfirmed": true
+        "severity": "high",
+        "unconfirmed": false
       }
     ],
-    "net_read": "bullish"
+    "net_read": "The period between June 3 and June 11, 2026, saw overwhelmingly bullish developments in the AI data center capex, compute demand, and AI financing thesis. Major financial institutions like Morgan Stanley and Goldman Sachs significantly raised their forecasts for AI-related debt issuance and hyperscaler capital expenditures, citing accelerating demand and the need for diverse funding. Hyperscalers themselves confirmed massive capex plans for 2026, with demand continuing to outstrip supply. Nvidia, a key enabler, reported strong data center revenue and outlined an expanded strategy into edge AI and robotics, further broadening the compute demand landscape. Finally, a significant private financing deal for Anthropic, coupled with its confidential IPO filing, underscores robust investor confidence in AI labs and their infrastructure needs."
   }
 }
