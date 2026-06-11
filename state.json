@@ -187,5 +187,14 @@
       }
     ],
     "net_read": "bullish"
-  }
+  },
+  "catalysts": {},
+  "falsification": {
+    "bet_date": "2026-06-05",
+    "deadline": "2028-06-05",
+    "criterion": "S&P 500 drawdown of 30%+ from ATH",
+    "max_drawdown_seen_pct": 0.0,
+    "status": "PENDING"
+  },
+  "attribution_note": "If a 30%+ drawdown occurs, record WHY: stated catalysts (lockups/Fed/SaaS/unemployment) vs off-list cause (war, credit event). Off-list = timeline hit, thesis missed."
 }

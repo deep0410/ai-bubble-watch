@@ -1,19 +1,46 @@
 # AI Bubble Monitor
 
-**Weekly AI-spend crash-risk signals — Gemini + live web search, push to your phone. $0 to run.**
+**Weekly slip-based crash-band model + AI-spend crash-risk signals — Gemini + live web search, push to your phone. $0 to run.**
 
-Automated job that checks five numeric market indicators plus a trusted-news scan (hyperscaler capex, capacity language, Nvidia trajectory, enterprise ROI sentiment, Treasury yields), scores bearish flags, compares to the last run, and sends a summary via [ntfy](https://ntfy.sh). Indicators 1-4 use Gemini + Google Search with earnings-cycle freshness rules; indicator 5 uses the **FRED DGS10** API directly.
+The crash is **not a fixed date — it's a computed band** that recalculates as catalysts fire early or slip late. Each run the job: updates five catalyst trackers and recomputes the crash band, measures S&P/Nasdaq drawdown from ATH against the falsification deadline, places today on the Benner Cycle and scores conformance, checks five numeric health indicators plus a trusted-news scan, hunts for institutional-trap events (mega-cap equity raises / insider exits), runs a **prosecution pass** (the strongest case AGAINST the thesis from this run's data), and sends it all via [ntfy](https://ntfy.sh).
+
+## The slip-band model
+
+| Catalyst | Baseline | Slip rule |
+| -------- | -------- | --------- |
+| C1 SpaceX lockup | first window 2026-08, full expiry 2026-12 | No IPO past baseline → sequence runs late by that gap. Listed → expiry = listing + 6mo |
+| C2 Fed direction | tracking | Early cut w/o stress → band +1mo later (cuts are fuel). Hold under stress → band −1mo (spring tightens) |
+| C3 Anthropic/OpenAI lockups | listing 2026-11, lockup = listing + 180d (≈2027-05) | Band can't resolve until the second wave clears; listing date anchors everything downstream |
+| C4 SaaS earnings cracks | Q1'27 reports (2027-04) | Confirmation only — never moves the band. A missed cycle = timeline **stretching** (+12mo warning), not sliding |
+| C5 Unemployment (FRED UNRATE) | 4.3% | Confirmed uptrend (3mo avg +0.2pp, or ≥5.0%) → band pulls forward 2mo, recession-flavored. Flat → valuation reset (shallower) |
+
+**Band formula:** start = C1 full expiry + 1mo + Fed net (−2mo if C5 uptrend); end = C3 lockup expiry + 3mo + Fed net. Baseline output: **2027-01 → 2027-08 (Q1–Q3 2027)**. Slip logic may push the band out indefinitely — by design: a model that can only pull the crash closer is just impatience with a spreadsheet.
+
+**Falsification (stated 2026-06-05):** no S&P drawdown ≥30% by **2028-06-05** → thesis is wrong by its own criterion. Tracked numerically every run (FRED SP500/NASDAQCOM). If it HITS, the monitor demands an attribution answer: did it crash for the *stated* catalysts, or something off-list (war, credit event)? Off-list = timeline hit, thesis missed.
+
+**Benner Cycle:** 2026 = SELL-peak year, 2032 = BUY-bottom, 2035 = panic-line year. Each run reports where we are on the chart and whether the market is conforming (10%+ off peak post-2026) or diverging bullish (new highs deep into 2027+). Context only — a 150-year-old chart is a rhyme, not a timing signal.
+
+**Prosecution pass:** every notification ends with the naysayer's case — which of this run's "confirmations" are just noise, plus the observation that would most weaken and most strengthen the thesis this month, stated in advance.
+
+Health indicators 1-4 use Gemini + Google Search with earnings-cycle freshness rules; Treasury, drawdowns, and unemployment use **FRED** directly (DGS10, SP500, NASDAQCOM, UNRATE).
 
 **Where it runs:** [GitHub Actions](https://github.com/features/actions) executes the job (install deps, run `monitor.py`, commit `state.json`). **When it runs:** a free online cron service triggers the workflow — not GitHub's built-in schedule (that cron is often disabled or delayed).
 
 *Example notification — values change each run.*
 
 ```
-AI Bubble Monitor - 2026-06-03
-Risk score: 1/5 (STABLE)
+AI Bubble Monitor - 2026-06-11 (prev 2026-06-03)
 
-1. 2027 capex guidance: $1050B + ok
-   ...
+CRASH BAND: 2027-01 -> 2027-08 (baseline 2027-01..2027-08, net slip +0mo)
+Flavor: valuation reset (historically shallower, faster recovery)
+C1 SpaceX lockup [pending] full expiry 2026-12 (on baseline)
+...
+FALSIFICATION: S&P 500 drawdown of 30%+ from ATH by 2028-06-05 - 24mo left | status: PENDING
+BENNER CYCLE: 2026 = SELL-peak year (good times, high prices)
+HEALTH INDICATORS: 1/5 bearish (STABLE)
+...
+PROSECUTION (the case against, this run): ...
+NET STATUS: STABLE
 ```
 
 **Cost:** Gemini API usage on a weekly schedule, GitHub Actions minutes when triggered, ntfy (free), [cron-job.org](https://cron-job.org/en/) (free).
