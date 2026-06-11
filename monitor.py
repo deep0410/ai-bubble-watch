@@ -18,16 +18,17 @@ from datetime import date
 from typing import Any, Callable
 
 import config
-from benner import benner_position, format_benner_section
+from benner import benner_position
 from capex import capex_bearish
-from catalyst_research import format_cape_line, format_trap_section, run_catalyst_research
-from catalysts import compute_band, format_catalyst_section, update_catalysts
+from catalyst_research import run_catalyst_research
+from catalysts import BASELINES, compute_band, update_catalysts
 from drawdown import (
     falsification_check,
     fetch_drawdowns,
+    fetch_inflation,
     fetch_unemployment,
-    format_falsification_section,
 )
+from health import health_score
 from earnings_calendar import earnings_cycle_label
 from indicators import run_research, score
 from news import apply_news_override, format_news_section, run_news_scan
@@ -36,20 +37,6 @@ from prosecution import run_prosecution
 from rates import fetch_10y_and_signal
 
 logger = logging.getLogger(__name__)
-
-
-def _arrow(new: Any, old: Any) -> str:
-    if old is None or new is None or new == old:
-        return "="
-    if isinstance(new, (int, float)) and isinstance(old, (int, float)):
-        return "+" if new > old else "-"
-    return "="
-
-
-def _flag_block(block: dict[str, Any]) -> str:
-    if block.get("is_stale"):
-        return "stale"
-    return "BEAR" if block.get("bearish") else "ok"
 
 
 def _load_state() -> dict:
@@ -131,6 +118,7 @@ def main() -> int:
     rates = fetch_10y_and_signal(prev.get("treasury_10y_yield_pct"))
     dd = _with_retry("Drawdowns", fetch_drawdowns)
     unemployment = _with_retry("Unemployment", fetch_unemployment)
+    inflation = _with_retry("Inflation", fetch_inflation)
     sp_dd = dd["sp500"]["drawdown_pct"]
 
     # 3. Catalyst research
@@ -141,7 +129,9 @@ def main() -> int:
 
     # 4. Slip update -> band; Benner; falsification
     logger.info("Step 4/7: slip update + crash band + Benner + falsification")
-    catalysts = update_catalysts(state.get("catalysts") or {}, cat_research, unemployment, today_d)
+    catalysts = update_catalysts(
+        state.get("catalysts") or {}, cat_research, unemployment, today_d, inflation
+    )
     band = compute_band(catalysts, today_d)
     benner = benner_position(today_d, sp_dd, dd["sp500"]["near_ath"])
     falsification = falsification_check(sp_dd, state, today_d)
@@ -156,7 +146,8 @@ def main() -> int:
     news = _with_retry("News scan", lambda: run_news_scan(today, previous_run))
     final_status = apply_news_override(numeric_status, news["items"])
     final_status = _drawdown_escalation(final_status, sp_dd)
-    news_lines, net_read = format_news_section(news)
+    _, net_read = format_news_section(news)
+    health = health_score(sp_dd, n, unemployment, final_status)
 
     # 6. Prosecution
     run_summary = json.dumps(
@@ -200,38 +191,73 @@ def main() -> int:
         "treasury_10y_yield_pct": rates["treasury_10y_yield_pct"],
     }
 
+    # Lean body: moving crash date on top, health /10, one line per concern.
+    c1, c2 = catalysts.get("c1", {}), catalysts.get("c2", {})
+    c3, c5 = catalysts.get("c3", {}), catalysts.get("c5", {})
+    c4 = catalysts.get("c4", {})
+    slip = band["net_slip_months"]
+    slip_txt = "on schedule" if slip == 0 else f"slipped {'+' if slip > 0 else ''}{slip}mo"
+    conformance_short = (
+        "too early to score"
+        if "too early" in benner["conformance"]
+        else benner["conformance"].split("(")[0].split(";")[0].strip().rstrip("-").strip()
+    )
+    trap_events = cat_research.get("trap", {}).get("events") or []
+    trap_txt = (
+        "; ".join(f"{e.get('company')} {e.get('type')}" for e in trap_events[:2])
+        if trap_events
+        else "none"
+    )
+    wc = c5.get("white_collar_rate")
+    wc_yoy = c5.get("white_collar_yoy_delta")
+    wc_txt = (
+        f", white-collar {wc}% ({'+' if (wc_yoy or 0) >= 0 else ''}{wc_yoy} YoY"
+        + ("; AI MECHANISM FIRING" if c5.get("mechanism_firing") else "")
+        + ")"
+        if wc is not None
+        else ""
+    )
+    flags = []
+    if c1.get("insider_selling"):
+        flags.append("SpaceX insider selling")
+    if c4.get("status") == "stretched":
+        flags.append("C4 timeline STRETCHING")
+    if band.get("overdue"):
+        flags.append("band OVERDUE - thesis slipping")
+    if falsification["status"] != "PENDING":
+        flags.append(f"BET {falsification['status']}")
+    flags_line = ("\n! " + " | ".join(flags)) if flags else ""
+
+    top_news = ""
+    items = news.get("items") or []
+    if items:
+        it = items[0]
+        top_news = f" - {it['headline'][:90]}"
+
     body = to_ntfy_safe(
-        f"""AI Bubble Monitor - {today} (prev {previous_run})
+        f"""CRASH: {band['start']} -> {band['end']} ({slip_txt})
+HEALTH: {health['score']}/10 ({health['label']})
+S&P {sp_dd}% off ATH | Nasdaq {dd['nasdaq']['drawdown_pct']}% | bet: 30% by 2028-06, {falsification['months_left']}mo left, deepest {falsification['max_drawdown_seen_pct']}%{flags_line}
 
-{format_catalyst_section(catalysts, band)}
+C1 SpaceX: {c1.get('status', 'pending')}, full {c1.get('full_expiry', BASELINES['c1']['full_expiry'])}
+C2 Fed: {c2.get('last_decision') or 'n/a'}, CPI {c2.get('cpi_yoy', '?')}% {c2.get('cpi_regime', '')}, net {'+' if c2.get('net_months', 0) > 0 else ''}{c2.get('net_months', 0)}mo
+C3 2nd wave: {c3.get('status', 'pending')}, lockup {c3.get('lockup_expiry', BASELINES['c3']['lockup_baseline'])}
+C4 SaaS cracks: {c4.get('status', 'pending')}
+C5 Jobs: {c5.get('rate', '?')}% {c5.get('status', 'flat')}{wc_txt}
 
-{format_falsification_section(falsification, dd)}
+Benner: {benner['phase'].split('(')[0].strip()} - {conformance_short}
+Signals: {n}/5 bear | trap: {trap_txt} | CAPE {cat_research.get('cape', {}).get('value', '?')}
+News: {net_read[:110]}{top_news}
 
-{format_benner_section(benner)}
+Against: {counter_case}
 
-HEALTH INDICATORS: {n}/5 bearish ({numeric_status})
-1. Capex 2027: ${cur['capex_2027_guidance_usd_bn']}B {_arrow(cur['capex_2027_guidance_usd_bn'], prev['capex_2027_guidance_usd_bn'])} {_flag_block(research['capex'])}
-2. Capacity: {cur['capacity_language']} {_flag_block(research['capacity'])}
-3. Nvidia: DC YoY {cur['nvidia_dc_yoy_growth_pct']}%, raised={cur['nvidia_next_q_guidance_raised']} {_flag_block(research['nvidia'])}
-4. ROI: {cur['roi_no_return_pct']}% {_arrow(cur['roi_no_return_pct'], prev['roi_no_return_pct'])} {_flag_block(roi_block)}
-5. 10y: {cur['treasury_10y_yield_pct']}% {_flag_block(rates)}
-
-{format_trap_section(cat_research)}
-{format_cape_line(cat_research)}
-
-NEWS: {net_read}
-{news_lines}
-
-PROSECUTION (the case against, this run):
-{counter_case}
-
-NET STATUS: {final_status}"""
+STATUS: {final_status}"""
     )
 
     print(body)
     logger.info("Step 7/7: sending ntfy notification")
     send_notification(
-        f"Bubble Monitor {final_status} | band {band['start']}..{band['end']} | S&P {sp_dd}%",
+        f"Crash {band['start']}..{band['end']} | health {health['score']}/10 | {final_status}",
         body,
         final_status,
     )
@@ -254,6 +280,9 @@ NET STATUS: {final_status}"""
                 "nasdaq_pct": dd["nasdaq"]["drawdown_pct"],
                 "date": dd["sp500"]["date"],
             },
+            "health": health,
+            "inflation": inflation,
+            "unemployment": unemployment,
             "cape": cat_research.get("cape"),
             "trap_last_run": cat_research.get("trap"),
         }
@@ -268,7 +297,10 @@ NET STATUS: {final_status}"""
             "crash_band": {"start": band["start"], "end": band["end"],
                            "net_slip_months": band["net_slip_months"]},
             "sp500_drawdown_pct": sp_dd,
+            "health_score": health["score"],
             "unemployment": unemployment["rate"],
+            "white_collar_rate": unemployment.get("white_collar_rate"),
+            "core_cpi_yoy_pct": inflation.get("core_cpi_yoy_pct"),
             "falsification_status": falsification["status"],
             "news": news,
             "prosecution": counter_case,

@@ -82,6 +82,7 @@ def update_catalysts(
     research: dict[str, Any],
     unemployment: dict[str, Any],
     today: date,
+    inflation: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Merge this run's research + UNRATE data into catalyst state with slip deltas."""
     cat = {k: dict(v) for k, v in (state_catalysts or {}).items()}
@@ -108,19 +109,31 @@ def update_catalysts(
     c1["insider_selling"] = bool(r1.get("insider_selling_news"))
     c1["evidence"] = r1.get("evidence", c1.get("evidence", ""))
 
-    # --- C2 Fed ---
+    # --- C2 Fed (inflation = classifier only, never a band-mover by itself) ---
     c2 = cat.setdefault("c2", {"net_months": 0, "status": "tracking"})
     r2 = research.get("c2_fed", {})
+    infl = inflation or {}
+    cpi_regime = infl.get("regime", "neutral")
     decision = (r2.get("last_decision") or "").lower()
     decision_date = r2.get("decision_date", "")
     if decision and decision_date and decision_date != c2.get("last_counted_date"):
         stress = bool(r2.get("market_stress"))
         if decision == "cut" and not stress:
             c2["net_months"] = c2.get("net_months", 0) + 1  # cuts are fuel -> later
-        elif decision == "hold" and stress:
-            c2["net_months"] = c2.get("net_months", 0) - 1  # spring tightening -> forward
+            c2["hold_class"] = "early cut (fuel)"
+        elif decision == "hold" and stress and cpi_regime == "sticky":
+            # Hold forced by inflation, under market stress: spring tightening.
+            c2["net_months"] = c2.get("net_months", 0) - 1
+            c2["hold_class"] = "stress-hold, Fed trapped"
+        elif decision == "hold":
+            c2["hold_class"] = (
+                "spring-tightening hold (CPI sticky)" if cpi_regime == "sticky"
+                else "comfort hold (no signal)"
+            )
         c2["last_counted_date"] = decision_date
     c2["last_decision"] = decision or c2.get("last_decision", "")
+    c2["cpi_regime"] = cpi_regime
+    c2["cpi_yoy"] = infl.get("core_cpi_yoy_pct")
     c2["evidence"] = r2.get("evidence", c2.get("evidence", ""))
 
     # --- C3 second wave ---
@@ -165,12 +178,19 @@ def update_catalysts(
             c4["status"] = "stretched"
     c4["evidence"] = r4.get("evidence", c4.get("evidence", ""))
 
-    # --- C5 unemployment (from FRED UNRATE, not LLM) ---
+    # --- C5 unemployment (from FRED, not LLM) ---
+    # Headline uptrend moves the band (pull forward, recession-flavored).
+    # White-collar (the AI-displacement mechanism test) is a FLAG, not a
+    # band-mover: it's a supporting witness for attribution, and its absence
+    # over time is evidence AGAINST the thesis.
     c5 = cat.setdefault("c5", {"status": "flat"})
     c5.update(
         rate=unemployment.get("rate"),
         trend=unemployment.get("trend"),
         status="uptrend" if unemployment.get("uptrend_confirmed") else "flat",
+        white_collar_rate=unemployment.get("white_collar_rate"),
+        white_collar_yoy_delta=unemployment.get("white_collar_yoy_delta"),
+        mechanism_firing=bool(unemployment.get("mechanism_firing")),
         evidence=unemployment.get("evidence", ""),
     )
 
@@ -200,14 +220,23 @@ def compute_band(cat: dict[str, Any], today: date) -> dict[str, Any]:
     overdue = months_between(end, now) > 0
     net_slip = months_between(BASELINE_BAND[0], start)
 
+    # Recovery flavor: what kind of crash, and can the Fed rescue it?
+    cpi_regime = cat.get("c2", {}).get("cpi_regime", "neutral")
+    if uptrend:
+        flavor = "recession-flavored (deeper, slower recovery)"
+    else:
+        flavor = "valuation reset (historically shallower, faster recovery)"
+    if cpi_regime == "sticky":
+        flavor += "; CPI sticky = Fed can't print its way out"
+    elif cpi_regime == "easing":
+        flavor += "; CPI easing = Fed has room, V-shape more likely"
+
     return {
         "start": start,
         "end": end,
         "baseline": f"{BASELINE_BAND[0]}..{BASELINE_BAND[1]}",
         "net_slip_months": net_slip,
-        "flavor": "recession-flavored (deeper, slower recovery)"
-        if uptrend
-        else "valuation reset (historically shallower, faster recovery)",
+        "flavor": flavor,
         "overdue": overdue,
         "anchors": {"c1_full_expiry": c1_full, "c3_lockup_expiry": c3_lockup,
                     "fed_net_months": fed_net},

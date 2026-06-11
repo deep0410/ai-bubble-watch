@@ -39,11 +39,11 @@ this run's data does NOT support it. Rules:
   stayed irrational 15 months past CAPE 40 in 1998-2000.
 - If unemployment is flat and indices are near highs, say plainly: nothing in this run
   confirms the crash is approaching.
-- End with one line: the single observation THIS MONTH that would most weaken the thesis
-  if it appears, and one that would most strengthen it (so the test is stated in advance).
+- End with one line: "Weakens: <observation>. Strengthens: <observation>." - the single
+  observation this month that would most weaken / most strengthen the thesis.
 
-Plain ASCII. Maximum 130 words. No headers, no bullets - one tight paragraph plus the
-final two-part line."""
+Plain ASCII. MAXIMUM 55 words total. Two to three punchy sentences plus the final
+Weakens/Strengthens line. This goes in a phone push notification - no filler."""
 
 
 def _extract_text(response: object) -> str:

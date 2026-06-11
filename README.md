@@ -29,19 +29,28 @@ Health indicators 1-4 use Gemini + Google Search with earnings-cycle freshness r
 *Example notification — values change each run.*
 
 ```
-AI Bubble Monitor - 2026-06-11 (prev 2026-06-03)
+CRASH: 2027-01 -> 2027-08 (on schedule)
+HEALTH: 9/10 (stable)
+S&P -4.5% off ATH | Nasdaq -7.1% | bet: 30% by 2028-06, 24mo left, deepest -4.5%
 
-CRASH BAND: 2027-01 -> 2027-08 (baseline 2027-01..2027-08, net slip +0mo)
-Flavor: valuation reset (historically shallower, faster recovery)
-C1 SpaceX lockup [pending] full expiry 2026-12 (on baseline)
-...
-FALSIFICATION: S&P 500 drawdown of 30%+ from ATH by 2028-06-05 - 24mo left | status: PENDING
-BENNER CYCLE: 2026 = SELL-peak year (good times, high prices)
-HEALTH INDICATORS: 1/5 bearish (STABLE)
-...
-PROSECUTION (the case against, this run): ...
-NET STATUS: STABLE
+C1 SpaceX: pending, full 2026-12
+C2 Fed: hold, CPI 2.96% neutral, net 0mo
+C3 2nd wave: pending, lockup 2027-05
+C4 SaaS cracks: pending
+C5 Jobs: 4.3% flat, white-collar 2.5% (+0.3 YoY)
+
+Benner: 2026 = SELL-peak year - too early to score
+Signals: 0/5 bear | trap: Meta secondary offering | CAPE 40.1
+News: Net bullish; capex narrative intact. - Goldman raises capex forecast
+
+Against: <prosecution: the case against the thesis, this run>
+
+STATUS: STABLE
 ```
+
+**Health score (0-10):** 10 = stable, 1 = crashing, 0 = crashed (the 30%+ event). Drawdown is ground truth and dominates (-30% forces 0; -25% caps at 1); bearish indicators subtract up to 3; confirmed unemployment uptrend, white-collar AI-mechanism firing, and ELEVATED news each subtract 1.
+
+**C5 white-collar:** FRED LNU04032215 (management/professional occupations, NSA, compared YoY only). The direct test of the AI-displacement mechanism: rising while headline is flat = the named mechanism firing early (flag, not band-mover); flat while AI capex booms = evidence against the thesis. **C2 inflation:** core CPI YoY (CPILFESL) is a *classifier only* — it labels Fed holds (sticky >=3% vs comfort hold <=2.5%) and sets recovery flavor (sticky = Fed can't print its way out); it never moves the band by itself, because its effect already routes through Fed decisions.
 
 **Cost:** Gemini API usage on a weekly schedule, GitHub Actions minutes when triggered, ntfy (free), [cron-job.org](https://cron-job.org/en/) (free).
 

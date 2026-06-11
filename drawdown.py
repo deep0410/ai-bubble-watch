@@ -77,7 +77,16 @@ def fetch_drawdowns() -> dict[str, Any]:
 
 
 def fetch_unemployment() -> dict[str, Any]:
-    """UNRATE with a confirmed-uptrend test (C5)."""
+    """UNRATE (headline) uptrend test + white-collar mechanism test (C5).
+
+    White-collar = FRED LNU04032215 (Management, Professional and Related
+    Occupations). NSA series, so compared YEAR-OVER-YEAR, never month-to-month.
+    This is the direct test of the AI-displacement mechanism: headline UNRATE
+    is diluted by sectors AI is not touching. White-collar rising while
+    headline is flat = the named mechanism firing early (supporting witness,
+    not proof - 2008 crushed white-collar with zero AI; attribution still
+    needs companies CITING AI, which the news layer catches).
+    """
     obs = _fred_series("UNRATE", limit=8)  # 8 months
     rates = [v for _, v in obs]  # newest first
     rate = rates[0]
@@ -85,13 +94,65 @@ def fetch_unemployment() -> dict[str, Any]:
     avg_prior = sum(rates[3:6]) / 3 if len(rates) >= 6 else avg_recent
     uptrend = (avg_recent - avg_prior) >= 0.2 or rate >= 5.0
     trend = f"3mo avg {round(avg_recent, 2)} vs prior {round(avg_prior, 2)}"
+
+    # White-collar YoY (NSA -> same-month comparison only)
+    wc_rate = wc_yoy = None
+    wc_rising = False
+    try:
+        wc = _fred_series("LNU04032215", limit=14)
+        wc_rate = wc[0][1]
+        if len(wc) > 12:
+            wc_yoy = round(wc_rate - wc[12][1], 2)
+            wc_rising = wc_yoy >= 0.4  # sustained YoY deterioration, not noise
+    except Exception as err:  # non-fatal: headline still works
+        logger.warning("White-collar series failed: %s", err)
+
+    mechanism_firing = wc_rising and not uptrend  # AI thesis leading indicator
     return {
         "rate": rate,
         "data_date": obs[0][0],
         "trend": trend,
         "uptrend_confirmed": uptrend,
+        "white_collar_rate": wc_rate,
+        "white_collar_yoy_delta": wc_yoy,
+        "white_collar_rising": wc_rising,
+        "mechanism_firing": mechanism_firing,
         "evidence": f"UNRATE {rate}% ({obs[0][0]}); {trend}; "
-        + ("UPTREND CONFIRMED" if uptrend else "flat"),
+        + ("UPTREND CONFIRMED" if uptrend else "flat")
+        + (
+            f" | white-collar {wc_rate}% ({'+' if (wc_yoy or 0) >= 0 else ''}{wc_yoy} YoY)"
+            if wc_rate is not None
+            else ""
+        )
+        + (" AI-MECHANISM FIRING (white-collar leading headline)" if mechanism_firing else ""),
+    }
+
+
+def fetch_inflation() -> dict[str, Any]:
+    """Core CPI YoY (CPILFESL) - C2 CLASSIFIER ONLY, never a band-mover.
+
+    Inflation's effect routes entirely through the Fed, and C2 already counts
+    Fed decisions - moving the band on CPI prints too would double-count one
+    cause. Roles: (1) classify Fed holds (sticky >=3.0% = spring tightening;
+    <=2.5% = comfort hold, no signal), (2) set recovery flavor (sticky = Fed
+    can't print its way out, deeper/slower; easing = Fed has room, V-shape).
+    """
+    obs = _fred_series("CPILFESL", limit=14)
+    latest_date, latest = obs[0]
+    yoy = None
+    if len(obs) > 12:
+        yoy = round((latest / obs[12][1] - 1.0) * 100, 2)
+    regime = "neutral"
+    if yoy is not None:
+        if yoy >= 3.0:
+            regime = "sticky"
+        elif yoy <= 2.5:
+            regime = "easing"
+    return {
+        "core_cpi_yoy_pct": yoy,
+        "data_date": latest_date,
+        "regime": regime,
+        "evidence": f"Core CPI {yoy}% YoY ({latest_date}); regime: {regime}",
     }
 
 
