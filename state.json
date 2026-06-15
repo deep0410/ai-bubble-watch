@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-06-11",
+  "last_run": "2026-06-15",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1100,
-    "capex_2027_prev_reading": 920,
+    "capex_2027_guidance_usd_bn": 1116,
+    "capex_2027_prev_reading": 1100,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.53
+    "treasury_10y_yield_pct": 4.45
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -15,7 +15,7 @@
     "last_edition_date": "2026-01"
   },
   "score": 0,
-  "status": "WATCH",
+  "status": "ELEVATED",
   "history": [
     {
       "date": "2026-06-03",
@@ -291,71 +291,175 @@
         "net_read": "The market for AI data centers and compute demand shows strong bullish signals from key players like Nvidia and SpaceX's AI unit, supported by continued high hyperscaler capital expenditure. However, concerns are emerging regarding the return on investment for AI initiatives and the increasing debt burden for some infrastructure providers, leading to a mixed but generally positive outlook."
       },
       "prosecution": "Minor drawdowns are normal volatility, not a crash. Unemployment remains flat and low at 4.3%, directly contradicting a key catalyst. IPO lockups are known and show no insider selling. AI demand remains strong. Nothing in this run confirms the crash is approaching.\n\nWeakens: Flat, low unemployment. Strengthens: Emerging AI ROI concerns."
+    },
+    {
+      "date": "2026-06-15",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1116,
+        "capex_2027_prev_reading": 1100,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.45
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -2.34,
+      "health_score": 9,
+      "unemployment": 4.3,
+      "white_collar_rate": 2.5,
+      "core_cpi_yoy_pct": 2.96,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "Oracle Boosts AI Datacenter Capex to $70 Billion for FY27, Exceeding Prior Guidance",
+            "date": "2026-06-11",
+            "sources": [
+              "Govly",
+              "TNW"
+            ],
+            "summary": "Oracle announced a substantial increase in AI datacenter capital expenditures, with fiscal 2026 spending reaching $55.7 billion (exceeding its $50 billion guidance) and projections rising to $70 billion for fiscal 2027. The company plans to raise an additional $40 billion, partially offset by $75 billion in customer prepayments for large-scale AI contracts.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Hyperscaler AI Capex Forecasts Surge to Over $700 Billion in 2026, Signaling Sustained Growth",
+            "date": "2026-06-11",
+            "sources": [
+              "CoBank Site",
+              "Telecoms.com (Dell'Oro)",
+              "Dell'Oro",
+              "CreditSights"
+            ],
+            "summary": "Hyperscaler AI-related capital expenditures are projected to exceed $700 billion in 2026, up from $235 billion in 2024, with some analysts raising outlooks to over $1 trillion for 2026. This acceleration, driven by strong returns on invested capital and explosive AI application growth, suggests the AI infrastructure cycle is still in its early stages.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Goldman Sachs Warns Aggressive AI Capex Could Pressure Tech Giants' Returns on Equity",
+            "date": "2026-06-14",
+            "sources": [
+              "GuruFocus (Goldman Sachs)",
+              "TheStreet (Goldman Sachs)",
+              "Investing.com (Goldman Sachs)"
+            ],
+            "summary": "Goldman Sachs cautioned that the aggressive AI capital expenditure by major cloud operators, estimated at $770 billion in 2026 (equivalent to 100% of operating cash flow), could lead to a decline in return on equity (ROE) for leading tech firms by an average of seven percentage points next year as they become more asset-intensive.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Data Center Expansion Faces Significant Headwinds from Power Constraints and Community Opposition",
+            "date": "2026-06-15",
+            "sources": [
+              "Bloom Energy Report",
+              "AI Magazine (Gartner)",
+              "AI News (Gartner)",
+              "Telecoms.com (Gartner, Dell'Oro)"
+            ],
+            "summary": "Reports indicate that while AI continues to drive data center expansion, power availability is becoming the dominant constraint, with 61% of developers planning to generate their own power. Global data center electricity consumption is forecast to increase by 26% to 565 TWh in 2026 due to AI-optimized servers, while growing community scrutiny over energy and water usage also poses a barrier to new developments.",
+            "direction": "neutral",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "S&P Global Ratings Flags Increased Risk in AI Financing with 'Credit Negative' for Broadcom Deal",
+            "date": "2026-06-11",
+            "sources": [
+              "S&P Global Ratings",
+              "Crypto Briefing (S&P Global Ratings)"
+            ],
+            "summary": "S&P Global Ratings assigned a 'B' rating to CoreWeave's proposed $3.5 billion senior unsecured notes for AI infrastructure expansion. Separately, S&P characterized the first tranche of Broadcom's $35 billion AI XPV Platform financing, intended for Anthropic's expansion, as 'credit negative,' indicating incremental risk to Broadcom's credit profile.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "Mixed, with continued strong investment in AI infrastructure facing increasing financial scrutiny and significant power and community-related development challenges."
+      },
+      "prosecution": "The thesis scores 0/5. Minor drawdowns are noise. Unemployment is flat, directly contradicting a key catalyst. The Fed is on hold, and lockup selling hasn't begun. Nothing confirms the crash is approaching.\n\nWeakens: Flat unemployment. Strengthens: None."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "SpaceX Will Have Its IPO Tomorrow: 12 Things Retail Investors Should Know",
+        "headline": "Oracle Boosts AI Datacenter Capex to $70 Billion for FY27, Exceeding Prior Guidance",
         "date": "2026-06-11",
         "sources": [
-          "Forbes",
-          "Intellectia AI",
-          "HTX"
+          "Govly",
+          "TNW"
         ],
-        "summary": "Goldman Sachs reportedly projects SpaceX's AI unit revenue to grow 100-fold by 2030, from $3.2 billion in 2025 to $322 billion, driven by deals to rent computing capacity to Anthropic and Google. Goldman Sachs and Morgan Stanley are leading underwriters for the IPO, which is set to be the largest in history.",
+        "summary": "Oracle announced a substantial increase in AI datacenter capital expenditures, with fiscal 2026 spending reaching $55.7 billion (exceeding its $50 billion guidance) and projections rising to $70 billion for fiscal 2027. The company plans to raise an additional $40 billion, partially offset by $75 billion in customer prepayments for large-scale AI contracts.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Nvidia Just Announced a Potential Windfall for Shareholders",
+        "headline": "Hyperscaler AI Capex Forecasts Surge to Over $700 Billion in 2026, Signaling Sustained Growth",
         "date": "2026-06-11",
         "sources": [
-          "The Motley Fool",
-          "Fast Company"
+          "CoBank Site",
+          "Telecoms.com (Dell'Oro)",
+          "Dell'Oro",
+          "CreditSights"
         ],
-        "summary": "Nvidia reported record Q1 FY2027 revenue of $81.6 billion, an 85% increase year-over-year, with data center revenue surging 92%, driven by strong demand for its Blackwell and Vera Rubin AI chips. The company plans to return 50% or more of its free cash flow to shareholders.",
+        "summary": "Hyperscaler AI-related capital expenditures are projected to exceed $700 billion in 2026, up from $235 billion in 2024, with some analysts raising outlooks to over $1 trillion for 2026. This acceleration, driven by strong returns on invested capital and explosive AI application growth, suggests the AI infrastructure cycle is still in its early stages.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Can Oracle Hit $400? This Is How It Could",
-        "date": "2026-06-11",
+        "headline": "Goldman Sachs Warns Aggressive AI Capex Could Pressure Tech Giants' Returns on Equity",
+        "date": "2026-06-14",
         "sources": [
-          "24/7 Wall St."
+          "GuruFocus (Goldman Sachs)",
+          "TheStreet (Goldman Sachs)",
+          "Investing.com (Goldman Sachs)"
         ],
-        "summary": "Oracle's Q4 FY2026 Cloud Infrastructure revenue increased 93% year-over-year to $5.79 billion, with a remaining performance obligation backlog of $638 billion, validating the AI infrastructure thesis. However, the company incurred $55.66 billion in capex during FY2026 and reported negative $23.69 billion in free cash flow, with plans to raise approximately $40 billion through debt and equity in FY2027.",
-        "direction": "neutral",
-        "severity": "medium",
-        "unconfirmed": true
-      },
-      {
-        "headline": "The AI Bubble Is Stable As A Price War Forces A New Reality",
-        "date": "2026-06-11",
-        "sources": [
-          "Forbes"
-        ],
-        "summary": "Goldman Sachs Research forecasts a 24-fold increase in token consumption by 2030, but chipmakers are reducing annual token costs by 60-70%, causing volume growth to outpace spend growth. This trend could lead to a cash-flow squeeze for 'neoclouds' like CoreWeave and Oracle. Additionally, many organizations are not seeing significant ROI from generative AI, with some, like Uber, implementing usage caps due to high costs.",
+        "summary": "Goldman Sachs cautioned that the aggressive AI capital expenditure by major cloud operators, estimated at $770 billion in 2026 (equivalent to 100% of operating cash flow), could lead to a decline in return on equity (ROE) for leading tech firms by an average of seven percentage points next year as they become more asset-intensive.",
         "direction": "bearish",
-        "severity": "medium",
-        "unconfirmed": true
+        "severity": "high",
+        "unconfirmed": false
       },
       {
-        "headline": "<Research>G Sachs: TENCENT Valuation Has Bottomed; Buy Rating Kept with TP HKD700",
+        "headline": "Data Center Expansion Faces Significant Headwinds from Power Constraints and Community Opposition",
+        "date": "2026-06-15",
+        "sources": [
+          "Bloom Energy Report",
+          "AI Magazine (Gartner)",
+          "AI News (Gartner)",
+          "Telecoms.com (Gartner, Dell'Oro)"
+        ],
+        "summary": "Reports indicate that while AI continues to drive data center expansion, power availability is becoming the dominant constraint, with 61% of developers planning to generate their own power. Global data center electricity consumption is forecast to increase by 26% to 565 TWh in 2026 due to AI-optimized servers, while growing community scrutiny over energy and water usage also poses a barrier to new developments.",
+        "direction": "neutral",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "S&P Global Ratings Flags Increased Risk in AI Financing with 'Credit Negative' for Broadcom Deal",
         "date": "2026-06-11",
         "sources": [
-          "AASTOCKS.com"
+          "S&P Global Ratings",
+          "Crypto Briefing (S&P Global Ratings)"
         ],
-        "summary": "Goldman Sachs noted Tencent's initial progress in its AI strategy, including a significant year-over-year increase in AI capital expenditure and robust development of enterprise AI businesses. The firm expects Tencent Cloud's growth to accelerate.",
-        "direction": "bullish",
-        "severity": "medium",
-        "unconfirmed": true
+        "summary": "S&P Global Ratings assigned a 'B' rating to CoreWeave's proposed $3.5 billion senior unsecured notes for AI infrastructure expansion. Separately, S&P characterized the first tranche of Broadcom's $35 billion AI XPV Platform financing, intended for Anthropic's expansion, as 'credit negative,' indicating incremental risk to Broadcom's credit profile.",
+        "direction": "bearish",
+        "severity": "high",
+        "unconfirmed": false
       }
     ],
-    "net_read": "The market for AI data centers and compute demand shows strong bullish signals from key players like Nvidia and SpaceX's AI unit, supported by continued high hyperscaler capital expenditure. However, concerns are emerging regarding the return on investment for AI initiatives and the increasing debt burden for some infrastructure providers, leading to a mixed but generally positive outlook."
+    "net_read": "Mixed, with continued strong investment in AI infrastructure facing increasing financial scrutiny and significant power and community-related development challenges."
   },
   "catalysts": {
     "c1": {
@@ -365,7 +469,7 @@
       "first_window": "2026-09",
       "full_expiry": "2026-12",
       "insider_selling": false,
-      "evidence": "SpaceX is expected to price its IPO on June 11, 2026, and begin trading on the Nasdaq under the ticker symbol 'SPCX' on June 12, 2026. The offering is for approximately 555.6 million shares at $135 per share, aiming to raise $75 billion. An expected lockup expiration is between 90 to 180 days, placing it around December 2026. There are no reports of meaningful insider selling having occurred yet, as the company is just now going public."
+      "evidence": "SpaceX completed its IPO on June 12, 2026, listing with the ticker SPCX. (Hiive, retrieved 2026-06-15) The company went public on 12 June 2026. (Stake, 2026-06-15) The initial public offering (IPO) of SpaceX on June 12, 2026 was the largest in history. (Wikipedia, retrieved 2026-06-15) A lockup schedule is in place; insiders are expected to be able to sell 20% of their stake after the company's Q2 earnings report. (Payload, 2026-06-15) Another report indicates holders of restricted shares can sell the equivalent of 7% of outstanding shares two days after the first earnings report. (Morningstar, 2026-06-12) There has been no reported meaningful insider selling as of 2026-06-15."
     },
     "c2": {
       "net_months": 0,
@@ -375,17 +479,17 @@
       "last_decision": "hold",
       "cpi_regime": "neutral",
       "cpi_yoy": 2.96,
-      "evidence": "The most recent FOMC meeting was on April 28-29, 2026, with the next one scheduled for June 16-17. The decision at the April meeting, as with the preceding meetings in 2026, was to hold the federal funds rate at a target range of 3.50% to 3.75%. In the period following the meeting, while the S&P 500 reached new highs in May, there were signs of market stress. Treasury yields hit their 2026 highs in late May, with the 10-year yield rising to 4.67%. Additionally, reports in May indicated rising stress in the private credit market, with the U.S. private credit default rate hitting a record high of 6.0% in April."
+      "evidence": "The most recent FOMC meeting was on April 28-29, 2026, where the committee held the federal funds rate steady at a target range of 3.50% to 3.75%. (Nuveen, 2026-04-29) The next FOMC meeting is scheduled for June 16-17, 2026. (Federal Reserve, 2026-05-20) There was no visible market stress around the April meeting. The S&P 500 rose 0.6% for the week ending June 12, 2026. (Seeking Alpha, 2026-06-15) The 10-year Treasury yield was 4.44% as of June 15, 2026, with no reports of a significant spike around the April meeting. (GuruFocus, 2026-06-15) Credit spreads were reported as resilient and tightened through May. (Muzinich & Co., June 2026)"
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft registration statement (Form S-1) to the SEC. The company is not yet listed, and the timing depends on market conditions, with analysts expecting a debut in the second half of 2026. OpenAI announced on June 8, 2026, that it had also confidentially filed for an IPO. OpenAI has not listed, and the company stated that the timing is undecided and 'may be a while,' though media reports suggest a possible late 2026 or early 2027 debut."
+      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft registration statement to the SEC. (Anthropic IPO 2026 Guide, 2026-06-10) A public listing is expected as early as October 2026. (IG UK, 2026-06-12) OpenAI confirmed on June 8, 2026, that it had confidentially filed for an IPO. (The Guardian, 2026-06-08) The company has not decided on timing, but reports suggest a potential listing between September and November 2026. (Enterprise DNA, 2026-06-09)"
     },
     "c4": {
       "status": "pending",
       "stretch_warnings": 0,
-      "evidence": "In the most recent earnings cycle (Q1 2026), major SaaS companies did not report guidance cuts attributed to AI disruption. Salesforce's full-year guidance was slightly below analyst expectations, but the company cited softness in specific segments like marketing and commerce, not AI substitution. Other major SaaS firms, including ServiceNow, Workday, and HubSpot, either raised or reiterated their full-year guidance, often highlighting their own AI product adoption as a positive factor. A June 2, 2026 report from CLSA noted that most SaaS companies have maintained or increased their guidance and that no negative impact from AI is visible in their financial performance yet."
+      "evidence": "In the most recent earnings cycle, major SaaS companies have not broadly cut or disappointed on guidance in ways attributed to AI disruption. Salesforce raised its fiscal 2027 guidance. (Morningstar, 2026-05-28) Workday boosted its full-year profit outlook, citing efficiency gains from AI. (MLQ News, 2026-05-22) ServiceNow raised its full-year subscription revenue guidance, with analysts noting its strong AI monetization. (TIKR, 2026-06-08; Seeking Alpha, 2026-06-03) HubSpot also raised its 2026 guidance. (StocksToTrade, 2026-05-15)"
     },
     "c5": {
       "status": "flat",
@@ -428,9 +532,9 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -4.5,
-    "nasdaq_pct": -7.1,
-    "date": "2026-06-10"
+    "sp500_pct": -2.34,
+    "nasdaq_pct": -4.45,
+    "date": "2026-06-12"
   },
   "health": {
     "score": 9,
@@ -454,12 +558,12 @@
     "evidence": "UNRATE 4.3% (2026-05-01); 3mo avg 4.3 vs prior 4.37; flat | white-collar 2.5% (+0.3 YoY)"
   },
   "cape": {
-    "value": 39.17,
+    "value": 41.02,
     "data_date": "2026-06",
-    "source": "GuruFocus"
+    "source": "YCharts/Robert Shiller"
   },
   "trap_last_run": {
     "events": [],
-    "evidence": "A search for new mega-cap secondary offerings, large equity raises, or unusual insider selling since June 11, 2026, did not yield any such events. Alphabet completed a large equity raise of approximately $85 billion in early June, prior to this date. The most significant market event is the SpaceX IPO, a primary offering aiming to raise $75 billion, which is pricing on June 11, 2026, and expected to trade on June 12, 2026. There were no reports of new, large secondary offerings or significant insider selling from Magnificent 7 or other hyperscaler companies on or after June 11, 2026."
+    "evidence": "A search for new mega-cap secondary share offerings, large new equity raises, or unusually large insider/founder selling since 2026-06-11 did not yield any specific reports of such events."
   }
 }
