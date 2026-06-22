@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-06-15",
+  "last_run": "2026-06-22",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1116,
-    "capex_2027_prev_reading": 1100,
+    "capex_2027_guidance_usd_bn": 1100,
+    "capex_2027_prev_reading": 1116,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.45
+    "treasury_10y_yield_pct": 4.49
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -388,78 +388,173 @@
         "net_read": "Mixed, with continued strong investment in AI infrastructure facing increasing financial scrutiny and significant power and community-related development challenges."
       },
       "prosecution": "The thesis scores 0/5. Minor drawdowns are noise. Unemployment is flat, directly contradicting a key catalyst. The Fed is on hold, and lockup selling hasn't begun. Nothing confirms the crash is approaching.\n\nWeakens: Flat unemployment. Strengthens: None."
+    },
+    {
+      "date": "2026-06-22",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1100,
+        "capex_2027_prev_reading": 1116,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.49
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -1.43,
+      "health_score": 9,
+      "unemployment": 4.3,
+      "white_collar_rate": 2.5,
+      "core_cpi_yoy_pct": 2.96,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "Hyperscalers Face Free Cash Flow Compression as AI Capex Outpaces Operating Cash Flow, Leading to Increased Debt and Equity Raises",
+            "date": "2026-06-17",
+            "sources": [
+              "Epoch AI (cited by multiple outlets)",
+              "Oracle IR/earnings call (reported by Morningstar, Seeking Alpha)",
+              "Amazon financials (reported by The Lead-Lag Report)",
+              "Alphabet financials (reported by INDmoney, CNBC)"
+            ],
+            "summary": "Research indicates that the aggregate free cash flow of major AI builders (Oracle, Amazon, Alphabet, Meta, Microsoft) is projected to turn negative around Q3 2026, as AI capital expenditures grow significantly faster (70% annually) than operating cash flow (23% annually). Oracle has already experienced negative free cash flow and plans to raise $40 billion in debt and equity in fiscal 2027. Amazon's trailing-twelve-month free cash flow collapsed by 95%. Alphabet's Q1 FCF fell 47% year-over-year, with full-year 2026 FCF projected to be down 72%. This trend is forcing hyperscalers to increasingly rely on debt and equity markets to fund their massive AI infrastructure buildouts.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "J.P. Morgan Ups AI Infrastructure Investment Forecast to $5.5 Trillion by 2030, Citing Massive Debt Financing Wave",
+            "date": "2026-06-17",
+            "sources": [
+              "J.P. Morgan research note (reported by multiple outlets including J.P. Morgan itself, and also mentions Goldman Sachs, Morgan Stanley)"
+            ],
+            "summary": "J.P. Morgan sharply revised its AI infrastructure investment forecast upwards by $400 billion to $5.5 trillion by 2030, with over 70% of this massive funding expected to come from debt financing. This 'AI financing wave' is pushing corporate bond issuance to near historical highs, exemplified by Nvidia's $25 billion bond offering that was 3.4x oversubscribed. J.P. Morgan predicts $2.1 trillion in high-grade bond financing and $350 billion from leveraged finance for data centers over the next five years.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Microsoft Secures 20-Year Natural Gas Deal with Chevron for Massive 2.67 Gigawatt AI Data Center in West Texas",
+            "date": "2026-06-22",
+            "sources": [
+              "Quartz",
+              "The Wall Street Journal",
+              "Bloomberg",
+              "Reuters",
+              "Neowin"
+            ],
+            "summary": "Microsoft has signed a 20-year power purchase agreement with Chevron to supply electricity from a natural gas plant for its planned 2.67 gigawatt 'Project Kilby' AI data center in West Texas. This $7 billion project, expected to begin power flow in late 2028 and develop through the 2030s, highlights the immense energy demands of AI infrastructure and Microsoft's strategy to secure dedicated, large-scale power sources, even if it means incorporating fossil fuels.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Nvidia Overtakes Cisco in Data Center Ethernet Switching Revenue, Highlighting Strength in End-to-End AI Infrastructure",
+            "date": "2026-06-19",
+            "sources": [
+              "TheStreet (citing IDC tracker, Seeking Alpha, Yahoo Finance)"
+            ],
+            "summary": "Nvidia surpassed Cisco in data center Ethernet switching revenue for the first quarter of 2026, marking a significant shift in the networking market crucial for AI infrastructure. Nvidia's switching revenue grew 192.7% year-over-year to $2.1 billion, capturing a 21.5% share of the data center segment. Its broader networking division, including NVLink and InfiniBand, generated $11 billion in revenue last fiscal quarter, up 263% year-over-year, with CEO Jensen Huang claiming Nvidia is now the 'largest networking company in the world.' This indicates strong demand for Nvidia's integrated AI solutions beyond just GPUs.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Meta Platforms Considers Multi-Billion Dollar Share Offering to Fund AI Capex, Sparking Dilution Concerns and Analyst Downgrades",
+            "date": "2026-06-20",
+            "sources": [
+              "Financial Times (reported by Perplexity)",
+              "JPMorgan",
+              "UBS"
+            ],
+            "summary": "A Financial Times report indicated that Meta Platforms is weighing a multi-billion dollar share offering to fund its aggressive AI capital expenditure, which could reach $145 billion in 2026. This news sparked dilution fears among investors and led to downgrades from JPMorgan and UBS to 'Neutral' with reduced price targets, compounding a broader tech selloff.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "Neutral to slightly bearish, as robust AI infrastructure buildout and demand are increasingly met with concerns over financing sustainability and free cash flow compression among hyperscalers."
+      },
+      "prosecution": "Current market drawdowns are negligible noise. Unemployment remains flat, contradicting recessionary fears. The Fed is on hold, and known IPO lockups are months away and likely priced in. Nothing in this run confirms the crash is approaching.\nWeakens: Flat unemployment. Strengthens: News concerns over financing sustainability."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "Oracle Boosts AI Datacenter Capex to $70 Billion for FY27, Exceeding Prior Guidance",
-        "date": "2026-06-11",
+        "headline": "Hyperscalers Face Free Cash Flow Compression as AI Capex Outpaces Operating Cash Flow, Leading to Increased Debt and Equity Raises",
+        "date": "2026-06-17",
         "sources": [
-          "Govly",
-          "TNW"
+          "Epoch AI (cited by multiple outlets)",
+          "Oracle IR/earnings call (reported by Morningstar, Seeking Alpha)",
+          "Amazon financials (reported by The Lead-Lag Report)",
+          "Alphabet financials (reported by INDmoney, CNBC)"
         ],
-        "summary": "Oracle announced a substantial increase in AI datacenter capital expenditures, with fiscal 2026 spending reaching $55.7 billion (exceeding its $50 billion guidance) and projections rising to $70 billion for fiscal 2027. The company plans to raise an additional $40 billion, partially offset by $75 billion in customer prepayments for large-scale AI contracts.",
-        "direction": "bullish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "Hyperscaler AI Capex Forecasts Surge to Over $700 Billion in 2026, Signaling Sustained Growth",
-        "date": "2026-06-11",
-        "sources": [
-          "CoBank Site",
-          "Telecoms.com (Dell'Oro)",
-          "Dell'Oro",
-          "CreditSights"
-        ],
-        "summary": "Hyperscaler AI-related capital expenditures are projected to exceed $700 billion in 2026, up from $235 billion in 2024, with some analysts raising outlooks to over $1 trillion for 2026. This acceleration, driven by strong returns on invested capital and explosive AI application growth, suggests the AI infrastructure cycle is still in its early stages.",
-        "direction": "bullish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "Goldman Sachs Warns Aggressive AI Capex Could Pressure Tech Giants' Returns on Equity",
-        "date": "2026-06-14",
-        "sources": [
-          "GuruFocus (Goldman Sachs)",
-          "TheStreet (Goldman Sachs)",
-          "Investing.com (Goldman Sachs)"
-        ],
-        "summary": "Goldman Sachs cautioned that the aggressive AI capital expenditure by major cloud operators, estimated at $770 billion in 2026 (equivalent to 100% of operating cash flow), could lead to a decline in return on equity (ROE) for leading tech firms by an average of seven percentage points next year as they become more asset-intensive.",
+        "summary": "Research indicates that the aggregate free cash flow of major AI builders (Oracle, Amazon, Alphabet, Meta, Microsoft) is projected to turn negative around Q3 2026, as AI capital expenditures grow significantly faster (70% annually) than operating cash flow (23% annually). Oracle has already experienced negative free cash flow and plans to raise $40 billion in debt and equity in fiscal 2027. Amazon's trailing-twelve-month free cash flow collapsed by 95%. Alphabet's Q1 FCF fell 47% year-over-year, with full-year 2026 FCF projected to be down 72%. This trend is forcing hyperscalers to increasingly rely on debt and equity markets to fund their massive AI infrastructure buildouts.",
         "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Data Center Expansion Faces Significant Headwinds from Power Constraints and Community Opposition",
-        "date": "2026-06-15",
+        "headline": "J.P. Morgan Ups AI Infrastructure Investment Forecast to $5.5 Trillion by 2030, Citing Massive Debt Financing Wave",
+        "date": "2026-06-17",
         "sources": [
-          "Bloom Energy Report",
-          "AI Magazine (Gartner)",
-          "AI News (Gartner)",
-          "Telecoms.com (Gartner, Dell'Oro)"
+          "J.P. Morgan research note (reported by multiple outlets including J.P. Morgan itself, and also mentions Goldman Sachs, Morgan Stanley)"
         ],
-        "summary": "Reports indicate that while AI continues to drive data center expansion, power availability is becoming the dominant constraint, with 61% of developers planning to generate their own power. Global data center electricity consumption is forecast to increase by 26% to 565 TWh in 2026 due to AI-optimized servers, while growing community scrutiny over energy and water usage also poses a barrier to new developments.",
-        "direction": "neutral",
+        "summary": "J.P. Morgan sharply revised its AI infrastructure investment forecast upwards by $400 billion to $5.5 trillion by 2030, with over 70% of this massive funding expected to come from debt financing. This 'AI financing wave' is pushing corporate bond issuance to near historical highs, exemplified by Nvidia's $25 billion bond offering that was 3.4x oversubscribed. J.P. Morgan predicts $2.1 trillion in high-grade bond financing and $350 billion from leveraged finance for data centers over the next five years.",
+        "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "S&P Global Ratings Flags Increased Risk in AI Financing with 'Credit Negative' for Broadcom Deal",
-        "date": "2026-06-11",
+        "headline": "Microsoft Secures 20-Year Natural Gas Deal with Chevron for Massive 2.67 Gigawatt AI Data Center in West Texas",
+        "date": "2026-06-22",
         "sources": [
-          "S&P Global Ratings",
-          "Crypto Briefing (S&P Global Ratings)"
+          "Quartz",
+          "The Wall Street Journal",
+          "Bloomberg",
+          "Reuters",
+          "Neowin"
         ],
-        "summary": "S&P Global Ratings assigned a 'B' rating to CoreWeave's proposed $3.5 billion senior unsecured notes for AI infrastructure expansion. Separately, S&P characterized the first tranche of Broadcom's $35 billion AI XPV Platform financing, intended for Anthropic's expansion, as 'credit negative,' indicating incremental risk to Broadcom's credit profile.",
+        "summary": "Microsoft has signed a 20-year power purchase agreement with Chevron to supply electricity from a natural gas plant for its planned 2.67 gigawatt 'Project Kilby' AI data center in West Texas. This $7 billion project, expected to begin power flow in late 2028 and develop through the 2030s, highlights the immense energy demands of AI infrastructure and Microsoft's strategy to secure dedicated, large-scale power sources, even if it means incorporating fossil fuels.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "Nvidia Overtakes Cisco in Data Center Ethernet Switching Revenue, Highlighting Strength in End-to-End AI Infrastructure",
+        "date": "2026-06-19",
+        "sources": [
+          "TheStreet (citing IDC tracker, Seeking Alpha, Yahoo Finance)"
+        ],
+        "summary": "Nvidia surpassed Cisco in data center Ethernet switching revenue for the first quarter of 2026, marking a significant shift in the networking market crucial for AI infrastructure. Nvidia's switching revenue grew 192.7% year-over-year to $2.1 billion, capturing a 21.5% share of the data center segment. Its broader networking division, including NVLink and InfiniBand, generated $11 billion in revenue last fiscal quarter, up 263% year-over-year, with CEO Jensen Huang claiming Nvidia is now the 'largest networking company in the world.' This indicates strong demand for Nvidia's integrated AI solutions beyond just GPUs.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "Meta Platforms Considers Multi-Billion Dollar Share Offering to Fund AI Capex, Sparking Dilution Concerns and Analyst Downgrades",
+        "date": "2026-06-20",
+        "sources": [
+          "Financial Times (reported by Perplexity)",
+          "JPMorgan",
+          "UBS"
+        ],
+        "summary": "A Financial Times report indicated that Meta Platforms is weighing a multi-billion dollar share offering to fund its aggressive AI capital expenditure, which could reach $145 billion in 2026. This news sparked dilution fears among investors and led to downgrades from JPMorgan and UBS to 'Neutral' with reduced price targets, compounding a broader tech selloff.",
         "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
       }
     ],
-    "net_read": "Mixed, with continued strong investment in AI infrastructure facing increasing financial scrutiny and significant power and community-related development challenges."
+    "net_read": "Neutral to slightly bearish, as robust AI infrastructure buildout and demand are increasingly met with concerns over financing sustainability and free cash flow compression among hyperscalers."
   },
   "catalysts": {
     "c1": {
@@ -469,27 +564,27 @@
       "first_window": "2026-09",
       "full_expiry": "2026-12",
       "insider_selling": false,
-      "evidence": "SpaceX completed its IPO on June 12, 2026, listing with the ticker SPCX. (Hiive, retrieved 2026-06-15) The company went public on 12 June 2026. (Stake, 2026-06-15) The initial public offering (IPO) of SpaceX on June 12, 2026 was the largest in history. (Wikipedia, retrieved 2026-06-15) A lockup schedule is in place; insiders are expected to be able to sell 20% of their stake after the company's Q2 earnings report. (Payload, 2026-06-15) Another report indicates holders of restricted shares can sell the equivalent of 7% of outstanding shares two days after the first earnings report. (Morningstar, 2026-06-12) There has been no reported meaningful insider selling as of 2026-06-15."
+      "evidence": "SpaceX completed its initial public offering and began trading on the Nasdaq on June 12, 2026. The offering raised a reported $75 billion, making it the largest IPO in history. The shares were priced at $135 and closed the first day of trading at $160.95. No meaningful insider selling has been reported in the period following the IPO."
     },
     "c2": {
       "net_months": 0,
       "status": "tracking",
       "hold_class": "comfort hold (no signal)",
-      "last_counted_date": "2026-04-29",
+      "last_counted_date": "2026-06-17",
       "last_decision": "hold",
       "cpi_regime": "neutral",
       "cpi_yoy": 2.96,
-      "evidence": "The most recent FOMC meeting was on April 28-29, 2026, where the committee held the federal funds rate steady at a target range of 3.50% to 3.75%. (Nuveen, 2026-04-29) The next FOMC meeting is scheduled for June 16-17, 2026. (Federal Reserve, 2026-05-20) There was no visible market stress around the April meeting. The S&P 500 rose 0.6% for the week ending June 12, 2026. (Seeking Alpha, 2026-06-15) The 10-year Treasury yield was 4.44% as of June 15, 2026, with no reports of a significant spike around the April meeting. (GuruFocus, 2026-06-15) Credit spreads were reported as resilient and tightened through May. (Muzinich & Co., June 2026)"
+      "evidence": "The most recent FOMC decision was on June 17, 2026, where the committee held the federal funds rate steady at a target range of 3.50% to 3.75%. The market reaction was described as hawkish, with the two-year U.S. Treasury yield moving sharply higher and equities coming under pressure immediately after the announcement, indicating market stress."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft registration statement to the SEC. (Anthropic IPO 2026 Guide, 2026-06-10) A public listing is expected as early as October 2026. (IG UK, 2026-06-12) OpenAI confirmed on June 8, 2026, that it had confidentially filed for an IPO. (The Guardian, 2026-06-08) The company has not decided on timing, but reports suggest a potential listing between September and November 2026. (Enterprise DNA, 2026-06-09)"
+      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft S-1 registration statement with the SEC, with a potential listing expected as early as October 2026. OpenAI followed on June 8, 2026, announcing its own confidential S-1 submission, with reports targeting a listing as soon as September 2026. As of June 22, 2026, neither company has listed on a public exchange."
     },
     "c4": {
       "status": "pending",
       "stretch_warnings": 0,
-      "evidence": "In the most recent earnings cycle, major SaaS companies have not broadly cut or disappointed on guidance in ways attributed to AI disruption. Salesforce raised its fiscal 2027 guidance. (Morningstar, 2026-05-28) Workday boosted its full-year profit outlook, citing efficiency gains from AI. (MLQ News, 2026-05-22) ServiceNow raised its full-year subscription revenue guidance, with analysts noting its strong AI monetization. (TIKR, 2026-06-08; Seeking Alpha, 2026-06-03) HubSpot also raised its 2026 guidance. (StocksToTrade, 2026-05-15)"
+      "evidence": "In the most recent earnings cycle, major SaaS companies have not broadly cut guidance due to AI disruption. Adobe, for its second quarter of fiscal 2026, reported record revenue and raised its full-year guidance, citing strong AI-driven demand. While HubSpot's Q2 guidance was viewed as slightly light by some, the company attributed this to longer sales cycles and internal restructuring, not AI substitution, and it raised its full-year currency-adjusted forecast."
     },
     "c5": {
       "status": "flat",
@@ -532,9 +627,9 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -2.34,
-    "nasdaq_pct": -4.45,
-    "date": "2026-06-12"
+    "sp500_pct": -1.43,
+    "nasdaq_pct": -2.13,
+    "date": "2026-06-18"
   },
   "health": {
     "score": 9,
@@ -558,12 +653,12 @@
     "evidence": "UNRATE 4.3% (2026-05-01); 3mo avg 4.3 vs prior 4.37; flat | white-collar 2.5% (+0.3 YoY)"
   },
   "cape": {
-    "value": 41.02,
+    "value": 40.43,
     "data_date": "2026-06",
-    "source": "YCharts/Robert Shiller"
+    "source": "GuruFocus"
   },
   "trap_last_run": {
     "events": [],
-    "evidence": "A search for new mega-cap secondary share offerings, large new equity raises, or unusually large insider/founder selling since 2026-06-11 did not yield any specific reports of such events."
+    "evidence": "No new mega-cap (Magnificent 7 / hyperscaler) secondary share offerings, large new equity raises, or unusually large insider/founder selling events were prominently reported in the period from June 15, 2026, to June 22, 2026. A major equity offering by Alphabet for $84.75 billion occurred prior to this window, on June 1, 2026."
   }
 }
