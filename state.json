@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-06-22",
+  "last_run": "2026-06-29",
   "indicators": {
     "capex_2027_guidance_usd_bn": 1100,
-    "capex_2027_prev_reading": 1116,
+    "capex_2027_prev_reading": 1100,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.49
+    "treasury_10y_yield_pct": 4.4
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -484,77 +484,163 @@
         "net_read": "Neutral to slightly bearish, as robust AI infrastructure buildout and demand are increasingly met with concerns over financing sustainability and free cash flow compression among hyperscalers."
       },
       "prosecution": "Current market drawdowns are negligible noise. Unemployment remains flat, contradicting recessionary fears. The Fed is on hold, and known IPO lockups are months away and likely priced in. Nothing in this run confirms the crash is approaching.\nWeakens: Flat unemployment. Strengthens: News concerns over financing sustainability."
+    },
+    {
+      "date": "2026-06-29",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1100,
+        "capex_2027_prev_reading": 1100,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.4
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -3.36,
+      "health_score": 8,
+      "unemployment": 4.3,
+      "white_collar_rate": 2.5,
+      "core_cpi_yoy_pct": 2.96,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "Hyperscaler AI Capex Projections Remain Robust for 2026, with Some Estimates Nearing $1 Trillion for 2027",
+            "date": "2026-06-29",
+            "sources": [
+              "Goldman Sachs",
+              "CNBC",
+              "Morgan Stanley"
+            ],
+            "summary": "Multiple analyst reports confirm that major hyperscalers (Amazon, Microsoft, Google, Meta, Oracle) are projected to spend between $670 billion and $770 billion on capital expenditures in 2026, with a significant portion dedicated to AI infrastructure. Morgan Stanley further forecasts that hyperscaler capital expenditure could surpass $1 trillion in 2027, indicating sustained high demand for AI compute and data center buildouts.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Growing Concerns Over AI Financing Debt and IPO Market Sensitivity Emerge",
+            "date": "2026-06-29",
+            "sources": [
+              "Bloomberg",
+              "eFinancialCareers",
+              "Goldman Sachs"
+            ],
+            "summary": "Reports indicate early signs of widening bond spreads for major tech companies like SpaceX and Alphabet, signaling increased macrofinancial risk in credit markets due to substantial AI infrastructure debt. Debt investors are expressing concerns about the sheer volume of capital expenditure being financed through borrowing. Additionally, news of OpenAI potentially postponing its IPO led to a drop in share prices for investment banks, highlighting market sensitivity to AI financing events. Rising interest rates are also increasing borrowing costs for AI infrastructure projects.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Goldman Sachs Raises S&P 500 Target, Citing AI Infrastructure Spending as Key Earnings Driver",
+            "date": "2026-06-29",
+            "sources": [
+              "Goldman Sachs"
+            ],
+            "summary": "Goldman Sachs strategists raised their S&P 500 year-end 2026 target to 8,000, projecting 24% year-over-year earnings growth for S&P 500 companies. Approximately half of this earnings expansion is directly attributed to AI infrastructure spending, with the bank anticipating major cloud providers could collectively pour $670 billion into capital expenditures in 2026.",
+            "direction": "bullish",
+            "severity": "medium",
+            "unconfirmed": true
+          },
+          {
+            "headline": "Bloomberg Reports Widening Bond Spreads for SpaceX and Alphabet, Signaling AI Debt Concerns",
+            "date": "2026-06-29",
+            "sources": [
+              "Bloomberg"
+            ],
+            "summary": "Bloomberg reported early signs of widening bond spreads for SpaceX and Alphabet paper, indicating that the substantial debt being issued to finance AI infrastructure buildouts is transferring macrofinancial risk into credit markets. This development suggests increasing investor caution regarding the sustainability of current AI financing models.",
+            "direction": "bearish",
+            "severity": "medium",
+            "unconfirmed": true
+          },
+          {
+            "headline": "Senator Elizabeth Warren Calls for Stricter Antitrust Enforcement on AI 'Acquihire' Deals",
+            "date": "2026-06-25",
+            "sources": [
+              "Bloomberg"
+            ],
+            "summary": "Senator Elizabeth Warren urged Congress to reform merger laws and intensify antitrust scrutiny on AI companies, specifically targeting 'acquihire' loopholes and licensing agreements used by large technology firms to acquire AI talent and technology without formal mergers. This move signals potential increased regulatory pressure on how Big Tech expands its AI capabilities.",
+            "direction": "bearish",
+            "severity": "medium",
+            "unconfirmed": true
+          }
+        ],
+        "net_read": "The market is experiencing a dual narrative: while hyperscaler AI capital expenditures continue to show robust growth and drive positive earnings forecasts, increasing concerns around AI-related debt financing, widening bond spreads, and potential IPO postponements suggest growing financial caution. Additionally, calls for stricter antitrust enforcement indicate rising regulatory scrutiny on AI market consolidation."
+      },
+      "prosecution": "Minor drawdowns are market noise, far from a 30% crash. Flat, low unemployment directly contradicts recessionary catalysts. Widely known IPO lockups are priced in; CAPE has no short-term timing. Nothing confirms the crash is approaching.\n\nWeakens: Flat unemployment and minor drawdowns. Strengthens: Rising AI debt concerns."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "Hyperscalers Face Free Cash Flow Compression as AI Capex Outpaces Operating Cash Flow, Leading to Increased Debt and Equity Raises",
-        "date": "2026-06-17",
+        "headline": "Hyperscaler AI Capex Projections Remain Robust for 2026, with Some Estimates Nearing $1 Trillion for 2027",
+        "date": "2026-06-29",
         "sources": [
-          "Epoch AI (cited by multiple outlets)",
-          "Oracle IR/earnings call (reported by Morningstar, Seeking Alpha)",
-          "Amazon financials (reported by The Lead-Lag Report)",
-          "Alphabet financials (reported by INDmoney, CNBC)"
+          "Goldman Sachs",
+          "CNBC",
+          "Morgan Stanley"
         ],
-        "summary": "Research indicates that the aggregate free cash flow of major AI builders (Oracle, Amazon, Alphabet, Meta, Microsoft) is projected to turn negative around Q3 2026, as AI capital expenditures grow significantly faster (70% annually) than operating cash flow (23% annually). Oracle has already experienced negative free cash flow and plans to raise $40 billion in debt and equity in fiscal 2027. Amazon's trailing-twelve-month free cash flow collapsed by 95%. Alphabet's Q1 FCF fell 47% year-over-year, with full-year 2026 FCF projected to be down 72%. This trend is forcing hyperscalers to increasingly rely on debt and equity markets to fund their massive AI infrastructure buildouts.",
-        "direction": "bearish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "J.P. Morgan Ups AI Infrastructure Investment Forecast to $5.5 Trillion by 2030, Citing Massive Debt Financing Wave",
-        "date": "2026-06-17",
-        "sources": [
-          "J.P. Morgan research note (reported by multiple outlets including J.P. Morgan itself, and also mentions Goldman Sachs, Morgan Stanley)"
-        ],
-        "summary": "J.P. Morgan sharply revised its AI infrastructure investment forecast upwards by $400 billion to $5.5 trillion by 2030, with over 70% of this massive funding expected to come from debt financing. This 'AI financing wave' is pushing corporate bond issuance to near historical highs, exemplified by Nvidia's $25 billion bond offering that was 3.4x oversubscribed. J.P. Morgan predicts $2.1 trillion in high-grade bond financing and $350 billion from leveraged finance for data centers over the next five years.",
+        "summary": "Multiple analyst reports confirm that major hyperscalers (Amazon, Microsoft, Google, Meta, Oracle) are projected to spend between $670 billion and $770 billion on capital expenditures in 2026, with a significant portion dedicated to AI infrastructure. Morgan Stanley further forecasts that hyperscaler capital expenditure could surpass $1 trillion in 2027, indicating sustained high demand for AI compute and data center buildouts.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Microsoft Secures 20-Year Natural Gas Deal with Chevron for Massive 2.67 Gigawatt AI Data Center in West Texas",
-        "date": "2026-06-22",
+        "headline": "Growing Concerns Over AI Financing Debt and IPO Market Sensitivity Emerge",
+        "date": "2026-06-29",
         "sources": [
-          "Quartz",
-          "The Wall Street Journal",
           "Bloomberg",
-          "Reuters",
-          "Neowin"
+          "eFinancialCareers",
+          "Goldman Sachs"
         ],
-        "summary": "Microsoft has signed a 20-year power purchase agreement with Chevron to supply electricity from a natural gas plant for its planned 2.67 gigawatt 'Project Kilby' AI data center in West Texas. This $7 billion project, expected to begin power flow in late 2028 and develop through the 2030s, highlights the immense energy demands of AI infrastructure and Microsoft's strategy to secure dedicated, large-scale power sources, even if it means incorporating fossil fuels.",
-        "direction": "bullish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "Nvidia Overtakes Cisco in Data Center Ethernet Switching Revenue, Highlighting Strength in End-to-End AI Infrastructure",
-        "date": "2026-06-19",
-        "sources": [
-          "TheStreet (citing IDC tracker, Seeking Alpha, Yahoo Finance)"
-        ],
-        "summary": "Nvidia surpassed Cisco in data center Ethernet switching revenue for the first quarter of 2026, marking a significant shift in the networking market crucial for AI infrastructure. Nvidia's switching revenue grew 192.7% year-over-year to $2.1 billion, capturing a 21.5% share of the data center segment. Its broader networking division, including NVLink and InfiniBand, generated $11 billion in revenue last fiscal quarter, up 263% year-over-year, with CEO Jensen Huang claiming Nvidia is now the 'largest networking company in the world.' This indicates strong demand for Nvidia's integrated AI solutions beyond just GPUs.",
-        "direction": "bullish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "Meta Platforms Considers Multi-Billion Dollar Share Offering to Fund AI Capex, Sparking Dilution Concerns and Analyst Downgrades",
-        "date": "2026-06-20",
-        "sources": [
-          "Financial Times (reported by Perplexity)",
-          "JPMorgan",
-          "UBS"
-        ],
-        "summary": "A Financial Times report indicated that Meta Platforms is weighing a multi-billion dollar share offering to fund its aggressive AI capital expenditure, which could reach $145 billion in 2026. This news sparked dilution fears among investors and led to downgrades from JPMorgan and UBS to 'Neutral' with reduced price targets, compounding a broader tech selloff.",
+        "summary": "Reports indicate early signs of widening bond spreads for major tech companies like SpaceX and Alphabet, signaling increased macrofinancial risk in credit markets due to substantial AI infrastructure debt. Debt investors are expressing concerns about the sheer volume of capital expenditure being financed through borrowing. Additionally, news of OpenAI potentially postponing its IPO led to a drop in share prices for investment banks, highlighting market sensitivity to AI financing events. Rising interest rates are also increasing borrowing costs for AI infrastructure projects.",
         "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
+      },
+      {
+        "headline": "Goldman Sachs Raises S&P 500 Target, Citing AI Infrastructure Spending as Key Earnings Driver",
+        "date": "2026-06-29",
+        "sources": [
+          "Goldman Sachs"
+        ],
+        "summary": "Goldman Sachs strategists raised their S&P 500 year-end 2026 target to 8,000, projecting 24% year-over-year earnings growth for S&P 500 companies. Approximately half of this earnings expansion is directly attributed to AI infrastructure spending, with the bank anticipating major cloud providers could collectively pour $670 billion into capital expenditures in 2026.",
+        "direction": "bullish",
+        "severity": "medium",
+        "unconfirmed": true
+      },
+      {
+        "headline": "Bloomberg Reports Widening Bond Spreads for SpaceX and Alphabet, Signaling AI Debt Concerns",
+        "date": "2026-06-29",
+        "sources": [
+          "Bloomberg"
+        ],
+        "summary": "Bloomberg reported early signs of widening bond spreads for SpaceX and Alphabet paper, indicating that the substantial debt being issued to finance AI infrastructure buildouts is transferring macrofinancial risk into credit markets. This development suggests increasing investor caution regarding the sustainability of current AI financing models.",
+        "direction": "bearish",
+        "severity": "medium",
+        "unconfirmed": true
+      },
+      {
+        "headline": "Senator Elizabeth Warren Calls for Stricter Antitrust Enforcement on AI 'Acquihire' Deals",
+        "date": "2026-06-25",
+        "sources": [
+          "Bloomberg"
+        ],
+        "summary": "Senator Elizabeth Warren urged Congress to reform merger laws and intensify antitrust scrutiny on AI companies, specifically targeting 'acquihire' loopholes and licensing agreements used by large technology firms to acquire AI talent and technology without formal mergers. This move signals potential increased regulatory pressure on how Big Tech expands its AI capabilities.",
+        "direction": "bearish",
+        "severity": "medium",
+        "unconfirmed": true
       }
     ],
-    "net_read": "Neutral to slightly bearish, as robust AI infrastructure buildout and demand are increasingly met with concerns over financing sustainability and free cash flow compression among hyperscalers."
+    "net_read": "The market is experiencing a dual narrative: while hyperscaler AI capital expenditures continue to show robust growth and drive positive earnings forecasts, increasing concerns around AI-related debt financing, widening bond spreads, and potential IPO postponements suggest growing financial caution. Additionally, calls for stricter antitrust enforcement indicate rising regulatory scrutiny on AI market consolidation."
   },
   "catalysts": {
     "c1": {
@@ -563,8 +649,8 @@
       "listing_date": "2026-06",
       "first_window": "2026-09",
       "full_expiry": "2026-12",
-      "insider_selling": false,
-      "evidence": "SpaceX completed its initial public offering and began trading on the Nasdaq on June 12, 2026. The offering raised a reported $75 billion, making it the largest IPO in history. The shares were priced at $135 and closed the first day of trading at $160.95. No meaningful insider selling has been reported in the period following the IPO."
+      "insider_selling": true,
+      "evidence": "SpaceX completed its IPO on June 12, 2026. The company has a staggered lockup expiration schedule to prevent a single large sell-off. The only reported insider selling in the past year was a sale of approximately $1.2 million worth of stock by CEO Elon Musk on April 2, 2026, which was described as not indicating broader insider liquidation."
     },
     "c2": {
       "net_months": 0,
@@ -574,17 +660,18 @@
       "last_decision": "hold",
       "cpi_regime": "neutral",
       "cpi_yoy": 2.96,
-      "evidence": "The most recent FOMC decision was on June 17, 2026, where the committee held the federal funds rate steady at a target range of 3.50% to 3.75%. The market reaction was described as hawkish, with the two-year U.S. Treasury yield moving sharply higher and equities coming under pressure immediately after the announcement, indicating market stress."
+      "evidence": "The most recent FOMC meeting was on June 16-17, 2026, at which the committee decided to hold the federal funds rate steady at a target range of 3.5% to 3.75%. Following the announcement, major stock indexes closed down around 1-1.3%, which is not a 5%+ pullback. Short-term Treasury yields rose."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft S-1 registration statement with the SEC, with a potential listing expected as early as October 2026. OpenAI followed on June 8, 2026, announcing its own confidential S-1 submission, with reports targeting a listing as soon as September 2026. As of June 22, 2026, neither company has listed on a public exchange."
+      "evidence": "Anthropic confidentially submitted a draft S-1 registration statement with the SEC on June 1, 2026, with a potential listing as early as October 2026. Reuters reported on June 8, 2026, that OpenAI had confidentially filed for a US IPO, with a potential listing in late 2026 or early 2027, though some reports suggest a possible delay to 2027."
     },
     "c4": {
-      "status": "pending",
+      "status": "confirmed",
       "stretch_warnings": 0,
-      "evidence": "In the most recent earnings cycle, major SaaS companies have not broadly cut guidance due to AI disruption. Adobe, for its second quarter of fiscal 2026, reported record revenue and raised its full-year guidance, citing strong AI-driven demand. While HubSpot's Q2 guidance was viewed as slightly light by some, the company attributed this to longer sales cycles and internal restructuring, not AI substitution, and it raised its full-year currency-adjusted forecast."
+      "evidence": "In its most recent earnings report in late May 2026, Salesforce provided a revenue forecast that fell short of Wall Street estimates. The company acknowledged that the evolving landscape of generative AI was a factor in client decision-making, leading to concerns about disruption to traditional software demand. Reports noted that the decline in Salesforce's stock mirrored that of other SaaS companies like ServiceNow and Adobe due to similar investor concerns about AI.",
+      "confirmed_date": "2026-06"
     },
     "c5": {
       "status": "flat",
@@ -627,12 +714,12 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -1.43,
-    "nasdaq_pct": -2.13,
-    "date": "2026-06-18"
+    "sp500_pct": -3.36,
+    "nasdaq_pct": -6.63,
+    "date": "2026-06-26"
   },
   "health": {
-    "score": 9,
+    "score": 8,
     "label": "stable"
   },
   "inflation": {
@@ -653,12 +740,12 @@
     "evidence": "UNRATE 4.3% (2026-05-01); 3mo avg 4.3 vs prior 4.37; flat | white-collar 2.5% (+0.3 YoY)"
   },
   "cape": {
-    "value": 40.43,
+    "value": 41.02,
     "data_date": "2026-06",
-    "source": "GuruFocus"
+    "source": "YCharts"
   },
   "trap_last_run": {
     "events": [],
-    "evidence": "No new mega-cap (Magnificent 7 / hyperscaler) secondary share offerings, large new equity raises, or unusually large insider/founder selling events were prominently reported in the period from June 15, 2026, to June 22, 2026. A major equity offering by Alphabet for $84.75 billion occurred prior to this window, on June 1, 2026."
+    "evidence": "No new mega-cap (Magnificent 7 / hyperscaler) secondary share offerings, large new equity raises, or unusually large insider/founder selling events were reported between 2026-06-22 and 2026-06-29."
   }
 }
