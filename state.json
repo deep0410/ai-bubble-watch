@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-06-29",
+  "last_run": "2026-07-13",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1100,
+    "capex_2027_guidance_usd_bn": 1500,
     "capex_2027_prev_reading": 1100,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.4
+    "treasury_10y_yield_pct": 4.54
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -575,72 +575,175 @@
         "net_read": "The market is experiencing a dual narrative: while hyperscaler AI capital expenditures continue to show robust growth and drive positive earnings forecasts, increasing concerns around AI-related debt financing, widening bond spreads, and potential IPO postponements suggest growing financial caution. Additionally, calls for stricter antitrust enforcement indicate rising regulatory scrutiny on AI market consolidation."
       },
       "prosecution": "Minor drawdowns are market noise, far from a 30% crash. Flat, low unemployment directly contradicts recessionary catalysts. Widely known IPO lockups are priced in; CAPE has no short-term timing. Nothing confirms the crash is approaching.\n\nWeakens: Flat unemployment and minor drawdowns. Strengthens: Rising AI debt concerns."
+    },
+    {
+      "date": "2026-07-13",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1500,
+        "capex_2027_prev_reading": 1100,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.54
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -0.45,
+      "health_score": 8,
+      "unemployment": 4.2,
+      "white_collar_rate": 2.8,
+      "core_cpi_yoy_pct": 2.96,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "Big Tech's 2026 AI Capex Will Hit $725B, up 77% Year-Over-Year",
+            "date": "2026-06-30",
+            "sources": [
+              "vertexaisearch.cloud.google.com (citing Alphabet, Amazon, Meta, Microsoft guidance)",
+              "Bloomberg (as cited by AI Weekly)",
+              "The Futurum Group",
+              "Goldman Sachs (as cited by Wall Street Debates AI's Second Half)"
+            ],
+            "summary": "Alphabet, Amazon, Meta, and Microsoft have collectively guided to approximately $725 billion in capital expenditure for 2026, representing a 77% increase from 2025. This substantial investment is primarily allocated to Nvidia GPUs, custom silicon development, and the physical buildout of data centers. Amazon is projected to spend around $200 billion, Microsoft approximately $190 billion, Alphabet between $175-185 billion, and Meta $115-135 billion.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Big Tech Doubles Debt to $350B to Fund AI Data Center Buildout",
+            "date": "2026-07-10",
+            "sources": [
+              "Bloomberg (as cited by AI Weekly)",
+              "Baton Rouge Business Report (citing Bloomberg)",
+              "Los Angeles Times (citing Bloomberg)",
+              "Datacenters (citing Bloomberg)"
+            ],
+            "summary": "Over the past five years, Alphabet, Amazon, Meta, Microsoft, and Oracle have collectively accumulated approximately $350 billion in debt to finance their AI capital expenditures. This surge in borrowing has more than doubled their combined annual interest expenses since 2019, now exceeding $10 billion, indicating a growing reliance on debt markets for the extensive AI infrastructure buildout.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "S&P cut Oracle to the lowest investment-grade rating on Thursday, and Amazon's $25 billion bond drew an unusually chilly reception.",
+            "date": "2026-07-10",
+            "sources": [
+              "S&P Global Ratings (as cited by AI Weekly)",
+              "Bloomberg (as cited by AI Weekly)",
+              "Baton Rouge Business Report (citing Bloomberg and S&P)",
+              "Los Angeles Times (citing Bloomberg and S&P)",
+              "Datacenters (citing Bloomberg and S&P)"
+            ],
+            "summary": "S&P Global Ratings downgraded Oracle's credit rating to the lowest investment-grade level, citing concerns over the company's escalating AI-related spending. Concurrently, Amazon's recent $25 billion bond offering reportedly met with an \"unusually chilly reception\" from investors, suggesting a potential saturation point in the market's willingness to finance large-scale AI infrastructure investments.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AI Investment Is Shifting as Inference, Enterprise Adoption Accelerate | Goldman Sachs",
+            "date": "2026-07-09",
+            "sources": [
+              "Goldman Sachs Asset Management"
+            ],
+            "summary": "According to analysts from Goldman Sachs Asset Management, enterprise adoption of AI is rapidly accelerating, leading to increased pressure and tightening constraints on available computing power as AI models are deployed for more complex business workflows. This trend suggests a significant and growing demand for AI compute infrastructure from corporate clients.",
+            "direction": "bullish",
+            "severity": "medium",
+            "unconfirmed": true
+          },
+          {
+            "headline": "Nscale banks $900M from J.P. Morgan and Goldman Sachs: Is AI infrastructure debt the next bubble?",
+            "date": "2026-07-06",
+            "sources": [
+              "AI Funding Rounds 2026 - Live Deal Tracker (citing J.P. Morgan and Goldman Sachs)"
+            ],
+            "summary": "AI infrastructure company Nscale successfully raised $900 million in funding from J.P. Morgan and Goldman Sachs. This significant debt financing round underscores the continued strong investment appetite for companies building out the foundational infrastructure for artificial intelligence.",
+            "direction": "bullish",
+            "severity": "medium",
+            "unconfirmed": true
+          }
+        ],
+        "net_read": "mixed"
+      },
+      "prosecution": "S&P and Nasdaq drawdowns are mere noise. Headline unemployment remains low and flat, contradicting an imminent recession. Known IPO lockups aren't active selling, and the Fed is on hold. Nothing in this run confirms a crash is approaching.\n\nWeakens: Flat headline unemployment. Strengthens: Rising white-collar unemployment."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "Hyperscaler AI Capex Projections Remain Robust for 2026, with Some Estimates Nearing $1 Trillion for 2027",
-        "date": "2026-06-29",
+        "headline": "Big Tech's 2026 AI Capex Will Hit $725B, up 77% Year-Over-Year",
+        "date": "2026-06-30",
         "sources": [
-          "Goldman Sachs",
-          "CNBC",
-          "Morgan Stanley"
+          "vertexaisearch.cloud.google.com (citing Alphabet, Amazon, Meta, Microsoft guidance)",
+          "Bloomberg (as cited by AI Weekly)",
+          "The Futurum Group",
+          "Goldman Sachs (as cited by Wall Street Debates AI's Second Half)"
         ],
-        "summary": "Multiple analyst reports confirm that major hyperscalers (Amazon, Microsoft, Google, Meta, Oracle) are projected to spend between $670 billion and $770 billion on capital expenditures in 2026, with a significant portion dedicated to AI infrastructure. Morgan Stanley further forecasts that hyperscaler capital expenditure could surpass $1 trillion in 2027, indicating sustained high demand for AI compute and data center buildouts.",
+        "summary": "Alphabet, Amazon, Meta, and Microsoft have collectively guided to approximately $725 billion in capital expenditure for 2026, representing a 77% increase from 2025. This substantial investment is primarily allocated to Nvidia GPUs, custom silicon development, and the physical buildout of data centers. Amazon is projected to spend around $200 billion, Microsoft approximately $190 billion, Alphabet between $175-185 billion, and Meta $115-135 billion.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Growing Concerns Over AI Financing Debt and IPO Market Sensitivity Emerge",
-        "date": "2026-06-29",
+        "headline": "Big Tech Doubles Debt to $350B to Fund AI Data Center Buildout",
+        "date": "2026-07-10",
         "sources": [
-          "Bloomberg",
-          "eFinancialCareers",
-          "Goldman Sachs"
+          "Bloomberg (as cited by AI Weekly)",
+          "Baton Rouge Business Report (citing Bloomberg)",
+          "Los Angeles Times (citing Bloomberg)",
+          "Datacenters (citing Bloomberg)"
         ],
-        "summary": "Reports indicate early signs of widening bond spreads for major tech companies like SpaceX and Alphabet, signaling increased macrofinancial risk in credit markets due to substantial AI infrastructure debt. Debt investors are expressing concerns about the sheer volume of capital expenditure being financed through borrowing. Additionally, news of OpenAI potentially postponing its IPO led to a drop in share prices for investment banks, highlighting market sensitivity to AI financing events. Rising interest rates are also increasing borrowing costs for AI infrastructure projects.",
+        "summary": "Over the past five years, Alphabet, Amazon, Meta, Microsoft, and Oracle have collectively accumulated approximately $350 billion in debt to finance their AI capital expenditures. This surge in borrowing has more than doubled their combined annual interest expenses since 2019, now exceeding $10 billion, indicating a growing reliance on debt markets for the extensive AI infrastructure buildout.",
         "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Goldman Sachs Raises S&P 500 Target, Citing AI Infrastructure Spending as Key Earnings Driver",
-        "date": "2026-06-29",
+        "headline": "S&P cut Oracle to the lowest investment-grade rating on Thursday, and Amazon's $25 billion bond drew an unusually chilly reception.",
+        "date": "2026-07-10",
         "sources": [
-          "Goldman Sachs"
+          "S&P Global Ratings (as cited by AI Weekly)",
+          "Bloomberg (as cited by AI Weekly)",
+          "Baton Rouge Business Report (citing Bloomberg and S&P)",
+          "Los Angeles Times (citing Bloomberg and S&P)",
+          "Datacenters (citing Bloomberg and S&P)"
         ],
-        "summary": "Goldman Sachs strategists raised their S&P 500 year-end 2026 target to 8,000, projecting 24% year-over-year earnings growth for S&P 500 companies. Approximately half of this earnings expansion is directly attributed to AI infrastructure spending, with the bank anticipating major cloud providers could collectively pour $670 billion into capital expenditures in 2026.",
+        "summary": "S&P Global Ratings downgraded Oracle's credit rating to the lowest investment-grade level, citing concerns over the company's escalating AI-related spending. Concurrently, Amazon's recent $25 billion bond offering reportedly met with an \"unusually chilly reception\" from investors, suggesting a potential saturation point in the market's willingness to finance large-scale AI infrastructure investments.",
+        "direction": "bearish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "AI Investment Is Shifting as Inference, Enterprise Adoption Accelerate | Goldman Sachs",
+        "date": "2026-07-09",
+        "sources": [
+          "Goldman Sachs Asset Management"
+        ],
+        "summary": "According to analysts from Goldman Sachs Asset Management, enterprise adoption of AI is rapidly accelerating, leading to increased pressure and tightening constraints on available computing power as AI models are deployed for more complex business workflows. This trend suggests a significant and growing demand for AI compute infrastructure from corporate clients.",
         "direction": "bullish",
         "severity": "medium",
         "unconfirmed": true
       },
       {
-        "headline": "Bloomberg Reports Widening Bond Spreads for SpaceX and Alphabet, Signaling AI Debt Concerns",
-        "date": "2026-06-29",
+        "headline": "Nscale banks $900M from J.P. Morgan and Goldman Sachs: Is AI infrastructure debt the next bubble?",
+        "date": "2026-07-06",
         "sources": [
-          "Bloomberg"
+          "AI Funding Rounds 2026 - Live Deal Tracker (citing J.P. Morgan and Goldman Sachs)"
         ],
-        "summary": "Bloomberg reported early signs of widening bond spreads for SpaceX and Alphabet paper, indicating that the substantial debt being issued to finance AI infrastructure buildouts is transferring macrofinancial risk into credit markets. This development suggests increasing investor caution regarding the sustainability of current AI financing models.",
-        "direction": "bearish",
-        "severity": "medium",
-        "unconfirmed": true
-      },
-      {
-        "headline": "Senator Elizabeth Warren Calls for Stricter Antitrust Enforcement on AI 'Acquihire' Deals",
-        "date": "2026-06-25",
-        "sources": [
-          "Bloomberg"
-        ],
-        "summary": "Senator Elizabeth Warren urged Congress to reform merger laws and intensify antitrust scrutiny on AI companies, specifically targeting 'acquihire' loopholes and licensing agreements used by large technology firms to acquire AI talent and technology without formal mergers. This move signals potential increased regulatory pressure on how Big Tech expands its AI capabilities.",
-        "direction": "bearish",
+        "summary": "AI infrastructure company Nscale successfully raised $900 million in funding from J.P. Morgan and Goldman Sachs. This significant debt financing round underscores the continued strong investment appetite for companies building out the foundational infrastructure for artificial intelligence.",
+        "direction": "bullish",
         "severity": "medium",
         "unconfirmed": true
       }
     ],
-    "net_read": "The market is experiencing a dual narrative: while hyperscaler AI capital expenditures continue to show robust growth and drive positive earnings forecasts, increasing concerns around AI-related debt financing, widening bond spreads, and potential IPO postponements suggest growing financial caution. Additionally, calls for stricter antitrust enforcement indicate rising regulatory scrutiny on AI market consolidation."
+    "net_read": "mixed"
   },
   "catalysts": {
     "c1": {
@@ -649,8 +752,8 @@
       "listing_date": "2026-06",
       "first_window": "2026-09",
       "full_expiry": "2026-12",
-      "insider_selling": true,
-      "evidence": "SpaceX completed its IPO on June 12, 2026. The company has a staggered lockup expiration schedule to prevent a single large sell-off. The only reported insider selling in the past year was a sale of approximately $1.2 million worth of stock by CEO Elon Musk on April 2, 2026, which was described as not indicating broader insider liquidation."
+      "insider_selling": false,
+      "evidence": "SpaceX completed its IPO on June 12, 2026, listing on the Nasdaq under the ticker symbol SPCX. The offering raised approximately $75 billion, valuing the company at around $1.77 trillion. A lock-up period of 366 days for Elon Musk and other insiders, and a staggered 180-day lock-up for other pre-IPO investors was announced. No meaningful insider selling has been reported since the IPO."
     },
     "c2": {
       "net_months": 0,
@@ -660,27 +763,27 @@
       "last_decision": "hold",
       "cpi_regime": "neutral",
       "cpi_yoy": 2.96,
-      "evidence": "The most recent FOMC meeting was on June 16-17, 2026, at which the committee decided to hold the federal funds rate steady at a target range of 3.5% to 3.75%. Following the announcement, major stock indexes closed down around 1-1.3%, which is not a 5%+ pullback. Short-term Treasury yields rose."
+      "evidence": "The most recent FOMC decision was on June 17, 2026, when the committee decided to hold the federal funds rate steady in the 3.50% to 3.75% range. The S&P 500 experienced a minor decline of 0.7% for the month of June but did not have a pullback of 5% or more around the meeting date. The 10-year Treasury yield ended June at 4.45%, showing no signs of a significant spike around the meeting. Credit spreads widened modestly in June but remained historically tight, indicating no significant credit market stress."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic confidentially submitted a draft S-1 registration statement with the SEC on June 1, 2026, with a potential listing as early as October 2026. Reuters reported on June 8, 2026, that OpenAI had confidentially filed for a US IPO, with a potential listing in late 2026 or early 2027, though some reports suggest a possible delay to 2027."
+      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft registration statement for an IPO. While no official date is set, analysts expect a public debut in the second half of 2026, possibly as early as October 2026. OpenAI also confidentially filed for an IPO on June 8, 2026. Initial reports suggested a potential listing in late 2026, but more recent reporting from late June 2026 indicates the IPO could be delayed until 2027."
     },
     "c4": {
       "status": "confirmed",
       "stretch_warnings": 0,
-      "evidence": "In its most recent earnings report in late May 2026, Salesforce provided a revenue forecast that fell short of Wall Street estimates. The company acknowledged that the evolving landscape of generative AI was a factor in client decision-making, leading to concerns about disruption to traditional software demand. Reports noted that the decline in Salesforce's stock mirrored that of other SaaS companies like ServiceNow and Adobe due to similar investor concerns about AI.",
+      "evidence": "In the most recent earnings cycle (for the quarter ending April/May 2026), there is no evidence of multiple major SaaS companies cutting guidance due to AI disruption. Adobe reported record Q2 revenue on June 11, 2026, and raised its full-year targets, citing 'strong AI-driven demand.' ServiceNow's stock fell after its April 2026 earnings due to a margin outlook impacted by acquisitions, not AI; the company subsequently raised its 2026 target for its 'Now Assist' AI product. HubSpot's softer Q2 guidance, issued in May 2026, was attributed to pricing and packaging changes, not AI substitution. While there was a broader market selloff in the SaaS sector in early 2026 due to fears of AI substitution, the actual company guidance from the most recent quarter does not reflect this.",
       "confirmed_date": "2026-06"
     },
     "c5": {
       "status": "flat",
-      "rate": 4.3,
-      "trend": "3mo avg 4.3 vs prior 4.37",
-      "white_collar_rate": 2.5,
-      "white_collar_yoy_delta": 0.3,
-      "mechanism_firing": false,
-      "evidence": "UNRATE 4.3% (2026-05-01); 3mo avg 4.3 vs prior 4.37; flat | white-collar 2.5% (+0.3 YoY)"
+      "rate": 4.2,
+      "trend": "3mo avg 4.27 vs prior 4.33",
+      "white_collar_rate": 2.8,
+      "white_collar_yoy_delta": 0.4,
+      "mechanism_firing": true,
+      "evidence": "UNRATE 4.2% (2026-06-01); 3mo avg 4.27 vs prior 4.33; flat | white-collar 2.8% (+0.4 YoY) AI-MECHANISM FIRING (white-collar leading headline)"
     }
   },
   "falsification": {
@@ -690,7 +793,7 @@
     "max_drawdown_seen_pct": -4.5,
     "status": "PENDING",
     "max_drawdown_date": "2026-06-11",
-    "months_left": 24
+    "months_left": 23
   },
   "attribution_note": "If a 30%+ drawdown occurs, record WHY: stated catalysts (lockups/Fed/SaaS/unemployment) vs off-list cause (war, credit event). Off-list = timeline hit, thesis missed.",
   "crash_band": {
@@ -714,9 +817,9 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -3.36,
-    "nasdaq_pct": -6.63,
-    "date": "2026-06-26"
+    "sp500_pct": -0.45,
+    "nasdaq_pct": -3.0,
+    "date": "2026-07-10"
   },
   "health": {
     "score": 8,
@@ -729,23 +832,30 @@
     "evidence": "Core CPI 2.96% YoY (2026-05-01); regime: neutral"
   },
   "unemployment": {
-    "rate": 4.3,
-    "data_date": "2026-05-01",
-    "trend": "3mo avg 4.3 vs prior 4.37",
+    "rate": 4.2,
+    "data_date": "2026-06-01",
+    "trend": "3mo avg 4.27 vs prior 4.33",
     "uptrend_confirmed": false,
-    "white_collar_rate": 2.5,
-    "white_collar_yoy_delta": 0.3,
-    "white_collar_rising": false,
-    "mechanism_firing": false,
-    "evidence": "UNRATE 4.3% (2026-05-01); 3mo avg 4.3 vs prior 4.37; flat | white-collar 2.5% (+0.3 YoY)"
+    "white_collar_rate": 2.8,
+    "white_collar_yoy_delta": 0.4,
+    "white_collar_rising": true,
+    "mechanism_firing": true,
+    "evidence": "UNRATE 4.2% (2026-06-01); 3mo avg 4.27 vs prior 4.33; flat | white-collar 2.8% (+0.4 YoY) AI-MECHANISM FIRING (white-collar leading headline)"
   },
   "cape": {
-    "value": 41.02,
-    "data_date": "2026-06",
+    "value": 41.37,
+    "data_date": "2026-07",
     "source": "YCharts"
   },
   "trap_last_run": {
-    "events": [],
-    "evidence": "No new mega-cap (Magnificent 7 / hyperscaler) secondary share offerings, large new equity raises, or unusually large insider/founder selling events were reported between 2026-06-22 and 2026-06-29."
+    "events": [
+      {
+        "company": "Alphabet",
+        "type": "insider_selling",
+        "size": "$3.14M",
+        "date": "2026-06-29"
+      }
+    ],
+    "evidence": "Since 2026-06-29, no new mega-cap secondary share offerings or large equity raises have been announced. On June 29, 2026, Alphabet insider John Kent Walker sold 8,998 shares for a total of approximately $3.14 million. There have been other insider sales across the Magnificent 7 in the past three months, including approximately $410.6 million at NVIDIA and $12.4 million at Tesla, but specific large transactions within the specified timeframe since June 29, 2026, were not detailed in the search results."
   }
 }
