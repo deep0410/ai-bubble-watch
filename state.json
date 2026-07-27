@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-07-20",
+  "last_run": "2026-07-27",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1100,
-    "capex_2027_prev_reading": 1500,
+    "capex_2027_guidance_usd_bn": 1051,
+    "capex_2027_prev_reading": 1100,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.57
+    "treasury_10y_yield_pct": 4.71
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -15,7 +15,7 @@
     "last_edition_date": "2026-01"
   },
   "score": 0,
-  "status": "ELEVATED",
+  "status": "STABLE",
   "history": [
     {
       "date": "2026-06-03",
@@ -771,80 +771,159 @@
         "net_read": "The AI data-center capex / compute-demand / AI-financing thesis is facing increasing scrutiny. While hyperscalers continue to raise 2026 capex guidance, the bond market is signaling higher financing costs, and Oracle's credit downgrade due to AI spending highlights financial pressures. Additionally, a price war among AI labs and significant model efficiency gains suggest that future compute demand may be met with less raw infrastructure, potentially tempering long-term capex growth. However, strong investor interest persists, as evidenced by the high valuation and IPO plans of Chinese AI startup Moonshot."
       },
       "prosecution": "Minor index drawdowns are normal volatility, not a crash. Headline unemployment is flat at 4.2%, directly contradicting a key catalyst. Known lockup expirations are priced in; the Fed remains neutral. Nothing confirms an imminent crash.\n\nWeakens: Flat headline unemployment. Strengthens: Rising white-collar unemployment."
+    },
+    {
+      "date": "2026-07-27",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "STABLE",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1051,
+        "capex_2027_prev_reading": 1100,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.71
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -2.6,
+      "health_score": 9,
+      "unemployment": 4.2,
+      "white_collar_rate": 2.8,
+      "core_cpi_yoy_pct": 2.81,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "OpenAI Boosts AI Infrastructure Spending Target to $750 Billion, Unveils $20 Billion Data Center Project",
+            "date": "2026-07-22",
+            "sources": [
+              "Quartz (reporting on The Wall Street Journal)"
+            ],
+            "summary": "OpenAI has increased its projected spending on computing infrastructure to approximately $750 billion through 2030, up from $600 billion earlier this year. The company also announced a $20 billion investment to begin construction on 'Project Camellia,' a new data center in Effingham County, Georgia.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Nvidia Reportedly Negotiating $250 Billion Financing Backstop for OpenAI Data Center, Plus $350 Billion in Chip Purchases",
+            "date": "2026-07-27",
+            "sources": [
+              "The Jerusalem Post (reporting on The Wall Street Journal)"
+            ],
+            "summary": "Nvidia is reportedly in discussions to provide a financial guarantee of approximately $250 billion for OpenAI's data center lease and debt financing. Separately, Nvidia is also negotiating to finance up to $350 billion in chip purchases for a massive $500 billion data center project, aiming to support OpenAI's independent infrastructure development.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Alphabet Raises 2026 Capex Forecast to $195-$205 Billion Amid Surging AI and Cloud Demand",
+            "date": "2026-07-23",
+            "sources": [
+              "TechEchelon",
+              "AI Business Review"
+            ],
+            "summary": "Alphabet has increased its capital expenditure forecast for 2026 to a range of $195 billion to $205 billion, up from a previous estimate of $180 billion to $190 billion. This significant increase is driven by strong growth in Google Cloud and accelerating investments in AI infrastructure, with demand continuing to outpace current investment.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Amazon and Microsoft Project $400 Billion Combined AI Infrastructure Spending in 2026",
+            "date": "2026-07-27",
+            "sources": [
+              "Startup Fortune",
+              "The Motley Fool"
+            ],
+            "summary": "Amazon and Microsoft are collectively projected to spend approximately $400 billion on AI infrastructure in 2026, representing a 77% increase from the previous year. This massive investment highlights the ongoing hyperscaler commitment to AI, though investor concerns about return on investment are noted.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "IDC Elevates 2026 AI Infrastructure Spending Forecast to $497 Billion, Projects $1 Trillion by 2029",
+            "date": "2026-07-22",
+            "sources": [
+              "Seeking Alpha (reporting on IDC)"
+            ],
+            "summary": "Research firm IDC has raised its full-year 2026 forecast for AI infrastructure spending to $497 billion, a nearly 56% year-over-year increase. IDC also projects the global AI infrastructure market to surpass $1 trillion in 2029, reaching $1.08 trillion, and climbing to $1.21 trillion in 2030, indicating a sustained multi-year capital commitment cycle.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "bullish"
+      },
+      "prosecution": "Minor drawdowns are normal volatility. Overall unemployment is low and flat at 4.2%, contradicting recession fears, while widely-known IPO lockups are priced in. Bullish news and pending catalysts offer no immediate support for a crash.\n\nWeakens: Bullish news sentiment. Strengthens: White-collar unemployment rise."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "Hyperscalers raise 2026 AI-related capex guidance to $725 billion.",
-        "date": "2026-07-13",
+        "headline": "OpenAI Boosts AI Infrastructure Spending Target to $750 Billion, Unveils $20 Billion Data Center Project",
+        "date": "2026-07-22",
         "sources": [
-          "AllMind AI News",
-          "Third Run Time",
-          "Los Angeles Times",
-          "Reuters",
-          "Resultsense"
+          "Quartz (reporting on The Wall Street Journal)"
         ],
-        "summary": "Major hyperscalers, including Meta, Alphabet, and Microsoft, have collectively increased their projected AI-related capital expenditure for 2026 to approximately $725 billion, up from previous estimates of around $670 billion. This signals continued aggressive investment in AI infrastructure to meet surging demand.",
+        "summary": "OpenAI has increased its projected spending on computing infrastructure to approximately $750 billion through 2030, up from $600 billion earlier this year. The company also announced a $20 billion investment to begin construction on 'Project Camellia,' a new data center in Effingham County, Georgia.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "S&P Global Ratings downgrades Oracle's credit rating to BBB- due to massive AI infrastructure spending.",
-        "date": "2026-07-09",
+        "headline": "Nvidia Reportedly Negotiating $250 Billion Financing Backstop for OpenAI Data Center, Plus $350 Billion in Chip Purchases",
+        "date": "2026-07-27",
         "sources": [
-          "PPC Land",
-          "Los Angeles Times"
+          "The Jerusalem Post (reporting on The Wall Street Journal)"
         ],
-        "summary": "S&P Global Ratings lowered Oracle's long-term issuer credit rating to BBB- from BBB, placing it one notch above speculative grade. The decision is directly attributed to the substantial capital expenditure required for its AI infrastructure buildout, with Oracle's fiscal 2027 capex guidance reaching $90-95 billion, significantly higher than previous forecasts.",
-        "direction": "bearish",
+        "summary": "Nvidia is reportedly in discussions to provide a financial guarantee of approximately $250 billion for OpenAI's data center lease and debt financing. Separately, Nvidia is also negotiating to finance up to $350 billion in chip purchases for a massive $500 billion data center project, aiming to support OpenAI's independent infrastructure development.",
+        "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Major AI labs initiate price war and achieve significant model efficiency gains, reducing inference costs.",
-        "date": "2026-07-14",
+        "headline": "Alphabet Raises 2026 Capex Forecast to $195-$205 Billion Amid Surging AI and Cloud Demand",
+        "date": "2026-07-23",
         "sources": [
-          "KERSAI",
-          "Skycrumbs Blog",
-          "AI News Today",
-          "Philstar.com"
+          "TechEchelon",
+          "AI Business Review"
         ],
-        "summary": "SpaceXAI (Grok 4.5), OpenAI (GPT-5.6 Luna), and Meta (Muse Spark 1.1) launched new models with significantly reduced inference costs, triggering a price war. Concurrently, research indicates that improved reasoning and self-correction in models can lead to smaller, more efficient AI systems, suggesting that raw model size and compute budgets may no longer be the sole drivers of AI advancement.",
-        "direction": "bearish",
+        "summary": "Alphabet has increased its capital expenditure forecast for 2026 to a range of $195 billion to $205 billion, up from a previous estimate of $180 billion to $190 billion. This significant increase is driven by strong growth in Google Cloud and accelerating investments in AI infrastructure, with demand continuing to outpace current investment.",
+        "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Bond market indicates rising cost of financing for AI infrastructure, with widening spreads for hyperscaler debt.",
-        "date": "2026-07-13",
+        "headline": "Amazon and Microsoft Project $400 Billion Combined AI Infrastructure Spending in 2026",
+        "date": "2026-07-27",
         "sources": [
-          "Seeking Alpha",
-          "Reuters",
-          "Resultsense"
+          "Startup Fortune",
+          "The Motley Fool"
         ],
-        "summary": "The bond market is showing signs of increased financing costs for the AI boom, with the G-spread on hyperscaler bonds widening to approximately 148 basis points. This suggests that the large volume of debt required for AI infrastructure is becoming more expensive to absorb, reflecting concerns among credit investors about leverage and the monetization timeline of these massive investments.",
-        "direction": "bearish",
+        "summary": "Amazon and Microsoft are collectively projected to spend approximately $400 billion on AI infrastructure in 2026, representing a 77% increase from the previous year. This massive investment highlights the ongoing hyperscaler commitment to AI, though investor concerns about return on investment are noted.",
+        "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Chinese AI startup Moonshot prepares for Hong Kong IPO with a reported valuation exceeding $30 billion.",
-        "date": "2026-07-20",
+        "headline": "IDC Elevates 2026 AI Infrastructure Spending Forecast to $497 Billion, Projects $1 Trillion by 2029",
+        "date": "2026-07-22",
         "sources": [
-          "Bloomberg",
-          "Taipei Times",
-          "Philstar.com"
+          "Seeking Alpha (reporting on IDC)"
         ],
-        "summary": "Chinese AI startup Moonshot, known for its Kimi K3 model, is reportedly preparing for a Hong Kong IPO within the next six months, with its current funding round valuing the company at over $30 billion. This development highlights continued strong investor interest and high valuations in the AI sector, particularly for companies demonstrating competitive model performance.",
+        "summary": "Research firm IDC has raised its full-year 2026 forecast for AI infrastructure spending to $497 billion, a nearly 56% year-over-year increase. IDC also projects the global AI infrastructure market to surpass $1 trillion in 2029, reaching $1.08 trillion, and climbing to $1.21 trillion in 2030, indicating a sustained multi-year capital commitment cycle.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       }
     ],
-    "net_read": "The AI data-center capex / compute-demand / AI-financing thesis is facing increasing scrutiny. While hyperscalers continue to raise 2026 capex guidance, the bond market is signaling higher financing costs, and Oracle's credit downgrade due to AI spending highlights financial pressures. Additionally, a price war among AI labs and significant model efficiency gains suggest that future compute demand may be met with less raw infrastructure, potentially tempering long-term capex growth. However, strong investor interest persists, as evidenced by the high valuation and IPO plans of Chinese AI startup Moonshot."
+    "net_read": "bullish"
   },
   "catalysts": {
     "c1": {
@@ -854,7 +933,7 @@
       "first_window": "2026-09",
       "full_expiry": "2026-12",
       "insider_selling": true,
-      "evidence": "SpaceX completed its IPO on June 12, 2026. An employee and early investor lockup period is scheduled to end on the second trading day after the company's first quarterly earnings report, which is expected in early August 2026. A price-contingent lockup for another tranche of shares requires the stock to trade above $175.50."
+      "evidence": "SpaceX completed its IPO and was listed on the Nasdaq on June 12, 2026, under the ticker symbol SPCX. The offering was the largest in history, raising approximately $85.7 billion. A staggered lock-up schedule for insider shares is set to begin on August 6, 2026, which could release a significant number of shares into the market. There has been reported insider selling in the 24 months leading up to the IPO."
     },
     "c2": {
       "net_months": 0,
@@ -864,17 +943,17 @@
       "last_decision": "hold",
       "cpi_regime": "neutral",
       "cpi_yoy": 2.81,
-      "evidence": "The most recent FOMC decision was on June 17, 2026, when the committee decided to hold the federal funds rate in the 3.5% to 3.75% range. The S&P 500 declined 0.7% during the month of June, which does not constitute a 5%+ pullback. The 10-year Treasury yield was around 4.44% at the end of June 2026. There were no signs of unusual market stress around the meeting."
+      "evidence": "The most recent FOMC decision was on June 17, 2026, where the committee decided to hold the federal funds rate at a target range of 3.50% to 3.75%. In the period around the June meeting, the S&P 500 did not experience a pullback of 5% or more; it fell 0.7% in June. The 10-year Treasury yield ended June at 4.44%. While credit spreads widened modestly in June, they remained historically tight, and there were no widespread signs of acute credit stress at that time."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic announced on June 1, 2026, that it had confidentially submitted a draft S-1 registration statement. An IPO could take place as early as October 2026. OpenAI announced on June 8, 2026, that it had also confidentially submitted a draft S-1. Reporting in late June suggested OpenAI may wait until 2027 to go public."
+      "evidence": "Anthropic confidentially filed a draft S-1 with the SEC on June 1, 2026, with a potential IPO targeted for the fall of 2026. OpenAI also confidentially filed for an IPO on June 8, 2026, with a possible listing in late 2026 or early 2027. Neither company has completed its IPO as of the current date."
     },
     "c4": {
       "status": "confirmed",
       "stretch_warnings": 0,
-      "evidence": "Searches for the most recent earnings cycle for major SaaS companies including Salesforce, Workday, ServiceNow, HubSpot, and Adobe did not reveal any instances of guidance cuts or disappointments specifically attributed to AI disruption or substitution. The search results focused on how these companies are incorporating AI into their product offerings.",
+      "evidence": "In the most recent earnings cycle, major SaaS companies have generally not cut or disappointed on guidance due to AI disruption. In fact, many have cited AI as a significant driver of growth. ServiceNow reported strong Q2 2026 results on July 22, 2026, beating expectations and raising its full-year subscription revenue guidance, with its AI business surpassing $1 billion in annual contract value. Adobe also raised its full-year guidance after its Q2 2026 earnings in June, citing strong AI-driven demand. Salesforce's Q1 2027 earnings in May 2026 beat estimates, and the company raised its fiscal year guidance. Workday's Q1 2027 earnings in May 2026 also surpassed expectations, and the company reiterated its full-year subscription revenue guidance. HubSpot is scheduled to report its Q2 2026 earnings on August 5, 2026.",
       "confirmed_date": "2026-06"
     },
     "c5": {
@@ -918,12 +997,12 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -2.0,
-    "nasdaq_pct": -5.81,
-    "date": "2026-07-17"
+    "sp500_pct": -2.6,
+    "nasdaq_pct": -7.82,
+    "date": "2026-07-24"
   },
   "health": {
-    "score": 8,
+    "score": 9,
     "label": "stable"
   },
   "inflation": {
@@ -950,6 +1029,6 @@
   },
   "trap_last_run": {
     "events": [],
-    "evidence": "A search for new mega-cap secondary share offerings, large new equity raises, or unusually large insider/founder selling since 2026-07-13 did not yield any specific events."
+    "evidence": "A search for new mega-cap secondary share offerings, large new equity raises, or unusually large insider/founder selling between July 20, 2026, and July 27, 2026, did not yield any specific events. While there was a record amount of insider selling in the first half of 2026, no new significant offerings or sales from Magnificent Seven or hyperscaler companies were reported in the specified timeframe."
   }
 }
