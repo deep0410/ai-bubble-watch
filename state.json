@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-08-03",
+  "last_run": "2026-08-10",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1100,
-    "capex_2027_prev_reading": 1051,
+    "capex_2027_guidance_usd_bn": 1128.5,
+    "capex_2027_prev_reading": 1100,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.68
+    "treasury_10y_yield_pct": 4.69
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -15,7 +15,7 @@
     "last_edition_date": "2026-01"
   },
   "score": 0,
-  "status": "STABLE",
+  "status": "ELEVATED",
   "history": [
     {
       "date": "2026-06-03",
@@ -954,75 +954,185 @@
         "net_read": "The overall sentiment for the AI data-center capex / compute-demand / AI-financing thesis is strongly bullish. This is driven by significant upward revisions in hyperscaler capital expenditure guidance for 2026, with collective spending now projected to exceed $700 billion, largely allocated to AI infrastructure. Forecasts for AI server shipments and data center switch markets have also been upgraded, reflecting robust demand. The semiconductor industry is experiencing a massive surge in revenue driven by AI, although supply chain bottlenecks in key components like HBM are expected to persist. Furthermore, financing activity for AI and AI infrastructure startups remains strong, with billions raised in recent funding rounds. Nvidia's demand outlook is particularly robust, supported by continued hyperscaler spending and high revenue growth expectations."
       },
       "prosecution": "Numeric score is 0/5. Minor drawdowns are noise; headline unemployment is flat. Bullish AI capex and financing contradict a bubble burst, confirming nothing imminent.\n\nWeakens: Strongly bullish AI capex and financing news. Strengthens: White-collar unemployment rising (+0.4% YoY)."
+    },
+    {
+      "date": "2026-08-10",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1128.5,
+        "capex_2027_prev_reading": 1100,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.69
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": 0.0,
+      "health_score": 9,
+      "unemployment": 4.1,
+      "white_collar_rate": 2.9,
+      "core_cpi_yoy_pct": 2.81,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "AI debt frenzy faces 'indigestion' as Wall Street re-evaluates the surge in bond issuance by tech giants",
+            "date": "2026-08-07",
+            "sources": [
+              "Moomoo (citing Bloomberg, Morgan Stanley, Goldman Sachs)",
+              "JPMorgan",
+              "LSEG data",
+              "Goldman Sachs"
+            ],
+            "summary": "The AI financing boom continues with significant debt issuance by tech giants for data center projects, including a reported $15 billion for Anthropic's Texas data center backed by Google and $5.4 billion for QTS/Blackstone linked to Microsoft. JPMorgan raised its forecast for technology, media, and telecommunications debt issuance in 2026 to $540 billion from $450 billion. However, signs of 'market indigestion' are emerging, with bond prices falling in the secondary market and credit default swap premiums soaring. Wall Street banks are adjusting issuance strategies, and Big Tech firms are signaling a pause on further sales this year, raising concerns about a snowballing debt burden and the unclear timeline for monetizing AI investments.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Nvidia's stock saw its biggest weekly surge in more than a year after shattering earnings expectations",
+            "date": "2026-08-07",
+            "sources": [
+              "FactSet",
+              "Morning Brew",
+              "Startup Pakistan Recorder",
+              "Seeking Alpha"
+            ],
+            "summary": "Nvidia significantly surpassed Wall Street's expectations in its quarterly earnings report, reporting sales of $22.1 billion (265% higher year-over-year) and net income of $12.3 billion (769% higher year-over-year). Adjusted earnings per share of $5.16 also beat estimates. The company's stock surged over 16% to a record high of $785.38, adding $277 billion to its market capitalization. Strong AI chip demand was cited as a key driver, and Nvidia provided robust Q1 2027 revenue guidance of $43 billion, exceeding analyst estimates.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Intel raises $15B in common stock offering, citing 'unprecedented investment in AI compute'",
+            "date": "2026-08-10",
+            "sources": [
+              "AI Weekly",
+              "Nikkei",
+              "Investing.com (citing JPMorgan Chase, Goldman Sachs, Morgan Stanley, Citigroup)"
+            ],
+            "summary": "Intel announced a $15 billion underwritten public common stock offering, with an option for underwriters to purchase an additional $2.25 billion. The company stated the proceeds are for general corporate purposes, including capital expenditures to support growth opportunities driven by 'unprecedented investment in AI compute.' This equity raise, which will dilute existing shares, signals management's confidence in sustained AI compute demand and urgency to expand manufacturing capabilities. Intel also increased its 2026 capital-expenditure outlook to $20 billion from $18 billion. The stock fell 5% on the news due to dilution concerns.",
+            "direction": "neutral",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AI Data-Center Capex on track to hit 3% of US GDP by 2027, raising monetization concerns",
+            "date": "2026-08-09",
+            "sources": [
+              "Apollo Global Management (Torsten Slok)",
+              "Wall Street Journal",
+              "Synergy Research Group",
+              "Goldman Sachs",
+              "Jefferies (Brent Thill)",
+              "SLC Management (Dec Mullarkey)"
+            ],
+            "summary": "Apollo Global Management's chief economist, Torsten Slok, projects that data center construction will reach 3% of US GDP by 2027, a significant increase from 1.4% in 2025, noting the buildout is proceeding at nearly twice the pace of the housing boom. Hyperscalers like Alphabet, Microsoft, Meta, and Amazon are collectively tracking toward $725 billion in capex for 2026, with some having raised their guidance further. Goldman Sachs estimates a 24-fold increase in worldwide monthly token usage by 2030. However, concerns are growing about whether the monetization of AI investments will keep pace with this massive capital expenditure, with some analysts warning of potential overcapacity and a 'capital-intensive incinerator' scenario if revenue growth does not match spending.",
+            "direction": "neutral",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Wall Street banks hesitant to hold AI debt, shifting to offload commitments for major data center projects",
+            "date": "2026-08-05",
+            "sources": [
+              "Cryptopolitan (citing Morgan Stanley, Google, Broadcom, Apollo, Blackstone)",
+              "Moomoo (citing Bloomberg, Morgan Stanley, Goldman Sachs)",
+              "JPMorgan"
+            ],
+            "summary": "Financial institutions, including Morgan Stanley, are increasingly hesitant to hold large AI-related debt liabilities on their balance sheets. Lenders for the $15 billion Google-backed Anthropic data center project in Texas reportedly intend to offload their debt commitments by selling bonds. This trend reflects a broader shift in how Wall Street is financing AI infrastructure, moving towards selling debt through bond markets to recycle capital and limit exposure to a single high-risk sector. This also aligns with a broader shift in AI lab funding from traditional venture investment to project finance, exemplified by the Bitdeer/Volta colocation contract backed by JPMorgan.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "The AI data-center capex and compute-demand thesis remains robust, evidenced by Nvidia's strong earnings and continued hyperscaler investment. However, the AI-financing thesis is showing signs of stress, with Wall Street experiencing 'indigestion' from a surge in AI-related debt issuance and banks actively seeking to offload debt commitments for major data center projects. Concerns are mounting regarding the sustainability of current financing structures and the long-term monetization of massive AI investments, leading to a cautiously bearish sentiment in the financial markets despite strong underlying demand."
+      },
+      "prosecution": "S&P is flat; Nasdaq's minor dip is noise. Unemployment is flat, directly contradicting a key catalyst. The Fed is on hold, and known IPO lockups aren't active. Robust AI demand persists despite financing concerns; nothing confirms a crash is approaching.\nWeakens: Flat unemployment. Strengthens: AI financing stress."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "Hyperscalers Raise 2026 AI Infrastructure Capex Guidance to Over $700 Billion",
-        "date": "2026-08-02",
+        "headline": "AI debt frenzy faces 'indigestion' as Wall Street re-evaluates the surge in bond issuance by tech giants",
+        "date": "2026-08-07",
         "sources": [
-          "MLQ News",
-          "TrendForce",
-          "Bitcoin News"
+          "Moomoo (citing Bloomberg, Morgan Stanley, Goldman Sachs)",
+          "JPMorgan",
+          "LSEG data",
+          "Goldman Sachs"
         ],
-        "summary": "Major hyperscale cloud providers, including Amazon, Alphabet, Meta, and Microsoft, have collectively raised their capital expenditure guidance for 2026 to a range of $720 billion to $745 billion, with a significant portion earmarked for AI infrastructure. This represents a substantial increase from earlier forecasts and underscores the accelerating investment in AI data centers and compute capacity. Amazon's plan is approximately $220 billion, Alphabet's $195-$205 billion, Meta's $130-$145 billion, and Microsoft's approximately $175 billion. TrendForce further indicates that the combined 2026 CapEx of the nine largest CSPs will exceed US$886.7 billion, with North American hyperscalers accounting for nearly 90%, leading to an upward revision of AI server shipment forecasts. Morgan Stanley CEO Ted Pick noted 2026 data center capex is tracking closer to $850 billion, a significant jump from previous forecasts.",
+        "summary": "The AI financing boom continues with significant debt issuance by tech giants for data center projects, including a reported $15 billion for Anthropic's Texas data center backed by Google and $5.4 billion for QTS/Blackstone linked to Microsoft. JPMorgan raised its forecast for technology, media, and telecommunications debt issuance in 2026 to $540 billion from $450 billion. However, signs of 'market indigestion' are emerging, with bond prices falling in the secondary market and credit default swap premiums soaring. Wall Street banks are adjusting issuance strategies, and Big Tech firms are signaling a pause on further sales this year, raising concerns about a snowballing debt burden and the unclear timeline for monetizing AI investments.",
+        "direction": "bearish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "Nvidia's stock saw its biggest weekly surge in more than a year after shattering earnings expectations",
+        "date": "2026-08-07",
+        "sources": [
+          "FactSet",
+          "Morning Brew",
+          "Startup Pakistan Recorder",
+          "Seeking Alpha"
+        ],
+        "summary": "Nvidia significantly surpassed Wall Street's expectations in its quarterly earnings report, reporting sales of $22.1 billion (265% higher year-over-year) and net income of $12.3 billion (769% higher year-over-year). Adjusted earnings per share of $5.16 also beat estimates. The company's stock surged over 16% to a record high of $785.38, adding $277 billion to its market capitalization. Strong AI chip demand was cited as a key driver, and Nvidia provided robust Q1 2027 revenue guidance of $43 billion, exceeding analyst estimates.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "AI Server Shipments and Data Center Switch Market Forecasts Upgraded on Surging AI Infrastructure Demand",
-        "date": "2026-08-03",
+        "headline": "Intel raises $15B in common stock offering, citing 'unprecedented investment in AI compute'",
+        "date": "2026-08-10",
         "sources": [
-          "TrendForce",
-          "Dell'Oro Group"
+          "AI Weekly",
+          "Nikkei",
+          "Investing.com (citing JPMorgan Chase, Goldman Sachs, Morgan Stanley, Citigroup)"
         ],
-        "summary": "TrendForce has revised its 2026 AI server shipment forecast upward to nearly 31% year-over-year, driven by a projected 90% year-over-year surge in capital expenditures from the world's largest cloud service providers for AI infrastructure. Concurrently, Dell'Oro Group forecasts cumulative spending on data center switches for AI back-end networks to approach $1 trillion over the next five years (2026-2030), having substantially raised their revenue and port-shipment forecasts due to stronger demand and higher infrastructure costs, anticipating continued supply constraints.",
-        "direction": "bullish",
+        "summary": "Intel announced a $15 billion underwritten public common stock offering, with an option for underwriters to purchase an additional $2.25 billion. The company stated the proceeds are for general corporate purposes, including capital expenditures to support growth opportunities driven by 'unprecedented investment in AI compute.' This equity raise, which will dilute existing shares, signals management's confidence in sustained AI compute demand and urgency to expand manufacturing capabilities. Intel also increased its 2026 capital-expenditure outlook to $20 billion from $18 billion. The stock fell 5% on the news due to dilution concerns.",
+        "direction": "neutral",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Semiconductor Revenue Forecast Surges Due to Unprecedented AI Demand, Cautions on Persistent Supply Constraints",
-        "date": "2026-07-30",
+        "headline": "AI Data-Center Capex on track to hit 3% of US GDP by 2027, raising monetization concerns",
+        "date": "2026-08-09",
         "sources": [
-          "Informa"
+          "Apollo Global Management (Torsten Slok)",
+          "Wall Street Journal",
+          "Synergy Research Group",
+          "Goldman Sachs",
+          "Jefferies (Brent Thill)",
+          "SLC Management (Dec Mullarkey)"
         ],
-        "summary": "Omdia has significantly raised its 2026 semiconductor revenue forecast to a 94.1% year-over-year increase, primarily driven by exceptional growth in DRAM and NAND as AI demand continues to outpace global supply. The firm expects memory ICs to account for over 50% of total semiconductor revenue in 2026. However, bottlenecks in high bandwidth memory (HBM), advanced packaging, and node capacity are anticipated to persist until at least 2027, indicating ongoing supply challenges despite surging demand.",
-        "direction": "bullish",
-        "severity": "medium",
-        "unconfirmed": true
-      },
-      {
-        "headline": "AI and AI Infrastructure Startups Secure Billions in Latest Funding Rounds",
-        "date": "2026-08-02",
-        "sources": [
-          "Google Cloud",
-          "AI Funding Tracker",
-          "Crunchbase News"
-        ],
-        "summary": "The week ending August 2, 2026, saw significant financing activity in the AI sector, with 90 deals raising $36.1 billion, according to an AI Funding Tracker. Separately, five major funding rounds across AI, robotics, and advanced technology, including Atoms ($1.7 billion), Meshy ($400 million), and Etched ($300 million), collectively raised $2.88 billion in the week ending July 26, 2026. Additionally, AI-focused cybersecurity startups have raised $855 million across more than 150 seed-stage rounds so far in 2026, contributing to a broader $10.6 billion in cybersecurity financing in the first half of the year.",
-        "direction": "bullish",
+        "summary": "Apollo Global Management's chief economist, Torsten Slok, projects that data center construction will reach 3% of US GDP by 2027, a significant increase from 1.4% in 2025, noting the buildout is proceeding at nearly twice the pace of the housing boom. Hyperscalers like Alphabet, Microsoft, Meta, and Amazon are collectively tracking toward $725 billion in capex for 2026, with some having raised their guidance further. Goldman Sachs estimates a 24-fold increase in worldwide monthly token usage by 2030. However, concerns are growing about whether the monetization of AI investments will keep pace with this massive capital expenditure, with some analysts warning of potential overcapacity and a 'capital-intensive incinerator' scenario if revenue growth does not match spending.",
+        "direction": "neutral",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Nvidia's Demand Outlook Remains Robust, Supported by Hyperscaler Spending and High Revenue Growth Expectations",
-        "date": "2026-08-03",
+        "headline": "Wall Street banks hesitant to hold AI debt, shifting to offload commitments for major data center projects",
+        "date": "2026-08-05",
         "sources": [
-          "Seeking Alpha",
-          "PrimeXBT",
-          "Investing.com"
+          "Cryptopolitan (citing Morgan Stanley, Google, Broadcom, Apollo, Blackstone)",
+          "Moomoo (citing Bloomberg, Morgan Stanley, Goldman Sachs)",
+          "JPMorgan"
         ],
-        "summary": "Nvidia continues to be viewed as a compelling investment due to accelerating demand for its AI chips, reinforced by robust capital expenditure signals from major hyperscalers and manufacturing partners like TSMC and Alphabet. Analysts anticipate 96% revenue growth for Nvidia's second fiscal quarter (ending July) and suggest that a third-quarter guidance closer to 90% could further boost shares, as hyperscalers consistently raise their 2026 spending outlooks and hint at even higher spending in 2027. The long-term structural thesis for Nvidia remains intact, with projections for a $3-4 trillion annual AI infrastructure buildout by 2030.",
-        "direction": "bullish",
+        "summary": "Financial institutions, including Morgan Stanley, are increasingly hesitant to hold large AI-related debt liabilities on their balance sheets. Lenders for the $15 billion Google-backed Anthropic data center project in Texas reportedly intend to offload their debt commitments by selling bonds. This trend reflects a broader shift in how Wall Street is financing AI infrastructure, moving towards selling debt through bond markets to recycle capital and limit exposure to a single high-risk sector. This also aligns with a broader shift in AI lab funding from traditional venture investment to project finance, exemplified by the Bitdeer/Volta colocation contract backed by JPMorgan.",
+        "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
       }
     ],
-    "net_read": "The overall sentiment for the AI data-center capex / compute-demand / AI-financing thesis is strongly bullish. This is driven by significant upward revisions in hyperscaler capital expenditure guidance for 2026, with collective spending now projected to exceed $700 billion, largely allocated to AI infrastructure. Forecasts for AI server shipments and data center switch markets have also been upgraded, reflecting robust demand. The semiconductor industry is experiencing a massive surge in revenue driven by AI, although supply chain bottlenecks in key components like HBM are expected to persist. Furthermore, financing activity for AI and AI infrastructure startups remains strong, with billions raised in recent funding rounds. Nvidia's demand outlook is particularly robust, supported by continued hyperscaler spending and high revenue growth expectations."
+    "net_read": "The AI data-center capex and compute-demand thesis remains robust, evidenced by Nvidia's strong earnings and continued hyperscaler investment. However, the AI-financing thesis is showing signs of stress, with Wall Street experiencing 'indigestion' from a surge in AI-related debt issuance and banks actively seeking to offload debt commitments for major data center projects. Concerns are mounting regarding the sustainability of current financing structures and the long-term monetization of massive AI investments, leading to a cautiously bearish sentiment in the financial markets despite strong underlying demand."
   },
   "catalysts": {
     "c1": {
@@ -1031,8 +1141,8 @@
       "listing_date": "2026-06",
       "first_window": "2026-09",
       "full_expiry": "2026-12",
-      "insider_selling": true,
-      "evidence": "SpaceX priced its initial public offering at $135 per share and the stock began trading on the Nasdaq on June 12, 2026, under the ticker symbol SPCX. The first lock-up period is scheduled to expire on August 6, 2026, which will release a significant number of shares for trading. There are reports of insider selling pressure ahead of the lock-up expiry."
+      "insider_selling": false,
+      "evidence": "SpaceX completed its IPO on June 12, 2026, listing on the Nasdaq under the ticker SPCX. (TradingKey, 2026-08-10; Investing.com, 2026-08-04). Reports ahead of the IPO stated that CEO Elon Musk would not be selling any personal shares. (TradingKey, 2026-08-10). No meaningful insider selling has been reported since the listing."
     },
     "c2": {
       "net_months": 0,
@@ -1042,27 +1152,27 @@
       "last_decision": "hold",
       "cpi_regime": "neutral",
       "cpi_yoy": 2.81,
-      "evidence": "The most recent FOMC decision was on July 29, 2026, where the committee decided to hold interest rates steady. There was no indication of visible market stress around this meeting, with no reports of a 5%+ S&P pullback, significant yield spikes, or credit stress in the search results."
+      "evidence": "The Federal Open Market Committee (FOMC) held interest rates steady at its meeting on July 29, 2026. (Kiplinger, 2026-07-29). There were no reports of a 5%+ S&P 500 pullback around the meeting. While the 10-year Treasury yield rose in July, it was not described as a spike indicative of market stress. (dshort - Advisor Perspectives, 2026-07-31; Franklin Templeton, 2026-08-06)."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic confidentially filed a draft S-1 with the SEC on June 1, 2026, and is reportedly targeting an IPO as early as October 2026. OpenAI also confidentially filed for an IPO on June 8, 2026, but its timing is less certain, with some reports suggesting a potential delay to 2027."
+      "evidence": "Anthropic confidentially submitted a draft S-1 registration with the SEC on June 1, 2026, and is reportedly targeting an IPO in October 2026. (Luminix AI, 2026-07-03; BitMEX, 2026-06-16). OpenAI announced on June 8, 2026, that it had also confidentially filed for an IPO, with a potential listing in late 2026 or early 2027. (ThinkMarkets, 2026-06-11; SmartAsset, 2026-06-26)."
     },
     "c4": {
       "status": "confirmed",
       "stretch_warnings": 0,
-      "evidence": "In the most recent earnings cycle, major SaaS companies like ServiceNow and Adobe raised their guidance, attributing the positive outlook to strong AI-driven demand. Workday also raised its guidance in its latest reported quarter. No evidence was found of major SaaS companies cutting or disappointing on guidance due to AI disruption or substitution.",
+      "evidence": "In the most recent earnings cycle, there was no widespread trend of major SaaS companies cutting guidance due to AI disruption. While HubSpot lowered its full-year revenue guidance because of slower-than-expected adoption of its AI products (StockStory, 2026-08-06), other major SaaS companies like ServiceNow and Adobe raised their full-year guidance, citing strong demand and monetization of their AI offerings. (ServiceNow, 2026-07-22; Adobe, 2026-06-11).",
       "confirmed_date": "2026-06"
     },
     "c5": {
       "status": "flat",
-      "rate": 4.2,
-      "trend": "3mo avg 4.27 vs prior 4.33",
-      "white_collar_rate": 2.8,
-      "white_collar_yoy_delta": 0.4,
-      "mechanism_firing": true,
-      "evidence": "UNRATE 4.2% (2026-06-01); 3mo avg 4.27 vs prior 4.33; flat | white-collar 2.8% (+0.4 YoY) AI-MECHANISM FIRING (white-collar leading headline)"
+      "rate": 4.1,
+      "trend": "3mo avg 4.2 vs prior 4.33",
+      "white_collar_rate": 2.9,
+      "white_collar_yoy_delta": 0.1,
+      "mechanism_firing": false,
+      "evidence": "UNRATE 4.1% (2026-07-01); 3mo avg 4.2 vs prior 4.33; flat | white-collar 2.9% (+0.1 YoY)"
     }
   },
   "falsification": {
@@ -1096,9 +1206,9 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -1.58,
-    "nasdaq_pct": -6.35,
-    "date": "2026-07-31"
+    "sp500_pct": 0.0,
+    "nasdaq_pct": -1.49,
+    "date": "2026-08-07"
   },
   "health": {
     "score": 9,
@@ -1111,30 +1221,23 @@
     "evidence": "Core CPI 2.81% YoY (2026-06-01); regime: neutral"
   },
   "unemployment": {
-    "rate": 4.2,
-    "data_date": "2026-06-01",
-    "trend": "3mo avg 4.27 vs prior 4.33",
+    "rate": 4.1,
+    "data_date": "2026-07-01",
+    "trend": "3mo avg 4.2 vs prior 4.33",
     "uptrend_confirmed": false,
-    "white_collar_rate": 2.8,
-    "white_collar_yoy_delta": 0.4,
-    "white_collar_rising": true,
-    "mechanism_firing": true,
-    "evidence": "UNRATE 4.2% (2026-06-01); 3mo avg 4.27 vs prior 4.33; flat | white-collar 2.8% (+0.4 YoY) AI-MECHANISM FIRING (white-collar leading headline)"
+    "white_collar_rate": 2.9,
+    "white_collar_yoy_delta": 0.1,
+    "white_collar_rising": false,
+    "mechanism_firing": false,
+    "evidence": "UNRATE 4.1% (2026-07-01); 3mo avg 4.2 vs prior 4.33; flat | white-collar 2.9% (+0.1 YoY)"
   },
   "cape": {
-    "value": 41.29,
+    "value": 42.4,
     "data_date": "2026-08",
-    "source": "GuruFocus"
+    "source": "Global Markets Investor Substack, 2026-08-10"
   },
   "trap_last_run": {
-    "events": [
-      {
-        "company": "Alphabet (Google)",
-        "type": "Equity Offering",
-        "size": "$90 billion",
-        "date": "2026-06-04"
-      }
-    ],
-    "evidence": "Alphabet (Google) completed a record-breaking $90 billion equity offering, which closed on June 4, 2026, to fund AI infrastructure. There have been reports of insider selling at several mega-cap companies, including Meta, Amazon, and Tesla, since July 27, 2026, but none were described as unusually large in the search results."
+    "events": [],
+    "evidence": "A search of financial news for the period since 2026-08-03 did not identify any new secondary share offerings, large equity raises, or unusually large insider selling events from Magnificent 7 or other hyperscaler companies."
   }
 }
