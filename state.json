@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-08-10",
+  "last_run": "2026-08-17",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1128.5,
-    "capex_2027_prev_reading": 1100,
+    "capex_2027_guidance_usd_bn": 1004.5,
+    "capex_2027_prev_reading": 1128.5,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 92,
     "roi_no_return_pct": 56,
-    "treasury_10y_yield_pct": 4.69
+    "treasury_10y_yield_pct": 4.63
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
@@ -1056,83 +1056,193 @@
         "net_read": "The AI data-center capex and compute-demand thesis remains robust, evidenced by Nvidia's strong earnings and continued hyperscaler investment. However, the AI-financing thesis is showing signs of stress, with Wall Street experiencing 'indigestion' from a surge in AI-related debt issuance and banks actively seeking to offload debt commitments for major data center projects. Concerns are mounting regarding the sustainability of current financing structures and the long-term monetization of massive AI investments, leading to a cautiously bearish sentiment in the financial markets despite strong underlying demand."
       },
       "prosecution": "S&P is flat; Nasdaq's minor dip is noise. Unemployment is flat, directly contradicting a key catalyst. The Fed is on hold, and known IPO lockups aren't active. Robust AI demand persists despite financing concerns; nothing confirms a crash is approaching.\nWeakens: Flat unemployment. Strengthens: AI financing stress."
+    },
+    {
+      "date": "2026-08-17",
+      "score": 0,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 1004.5,
+        "capex_2027_prev_reading": 1128.5,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 92,
+        "roi_no_return_pct": 56,
+        "treasury_10y_yield_pct": 4.63
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -0.17,
+      "health_score": 9,
+      "unemployment": 4.1,
+      "white_collar_rate": 2.9,
+      "core_cpi_yoy_pct": 2.79,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "Hyperscalers Continue to Raise AI Capex Guidance, Demand Outstrips Supply",
+            "date": "2026-08-12",
+            "sources": [
+              "Reuters",
+              "Bloomberg",
+              "CNBC",
+              "Wall Street Journal",
+              "Financial Times",
+              "J.P. Morgan",
+              "Goldman Sachs",
+              "UBS"
+            ],
+            "summary": "Major hyperscale technology companies, including Microsoft, Amazon, Alphabet, and Meta, have signaled rising confidence in the multi-year AI growth cycle, with collective 2026 capex guidance reaching US$730-760 billion and projections to exceed US$1 trillion by 2028. Despite record capital outlays, demand for AI computing capacity continues to outstrip available supply, indicating the AI investment cycle remains in its early stages.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Nvidia Partners with Wall Street Giants to Mobilize Over $500 Billion for AI Infrastructure Financing",
+            "date": "2026-08-10",
+            "sources": [
+              "NVIDIA IR",
+              "Financial Times",
+              "Forbes",
+              "Briefs Finance"
+            ],
+            "summary": "Nvidia announced strategic partnerships with leading financial institutions including Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to establish independent compute financing platforms. This initiative aims to mobilize over $500 billion of third-party capital to fund the buildout of AI infrastructure, addressing the surging demand for AI compute.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Rising Cost of AI Infrastructure Debt Signals Lender Fatigue and Higher Borrowing Costs",
+            "date": "2026-08-17",
+            "sources": [
+              "Wall Street Journal",
+              "MarketScale",
+              "Morgan Stanley"
+            ],
+            "summary": "Meta Platforms' recent $12.5 billion bond offering for its El Paso data center was priced at higher yields compared to a similar deal last year, indicating increased borrowing costs for AI infrastructure. This trend reflects growing lender fatigue among debt investors and a widening of credit spreads for hyperscale issuers, suggesting a more expensive financing environment for AI data center projects.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Community Opposition Leads to Increased Scrutiny and Delays for US Data Center Projects",
+            "date": "2026-08-10",
+            "sources": [
+              "Reuters",
+              "JPMorgan",
+              "Morgan Stanley",
+              "Bank of America",
+              "Arizona Daily Star"
+            ],
+            "summary": "Wall Street banks are scrutinizing US data center financing more carefully due to increasing community opposition, which has led to project delays and cancellations. Lenders are concerned about the time and resources wasted on projects that may not proceed, incorporating community sentiment into credit risk assessments. Amazon, Microsoft, and Google have reportedly abandoned multibillion-dollar data centers due to local opposition.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AI Startup Thinking Machines Lab's Valuation Reverts After Failed $50-60 Billion Funding Round",
+            "date": "2026-08-16",
+            "sources": [
+              "The Information",
+              "Bloomberg",
+              "CNBC",
+              "TechCrunch"
+            ],
+            "summary": "Thinking Machines Lab, an AI startup founded by former OpenAI researchers, saw its valuation revert to its July 2025 seed round level of $12 billion after a proposed $50-60 billion follow-on funding round collapsed in January 2026. Investors reportedly balked at underwriting such a significant markup without a more substantial product record, indicating a potential cooling or more realistic valuation environment for some AI labs.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "The overall market sentiment for the AI data-center capex / compute-demand / AI-financing thesis is bullish on continued demand and investment, with massive capital deployment ongoing. However, increasing scrutiny on financing costs and growing execution risks from community opposition are emerging as significant headwinds."
+      },
+      "prosecution": "The 0/5 score confirms no crash signals. S&P/Nasdaq drawdowns are mere noise. Unemployment is flat and low, directly contradicting a core catalyst. IPO lockups are widely known and priced in. Nothing in this run confirms the crash is approaching; market sentiment remains bullish.\n\nWeakens: Flat, low unemployment. Strengthens: Emerging execution risks."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "AI debt frenzy faces 'indigestion' as Wall Street re-evaluates the surge in bond issuance by tech giants",
-        "date": "2026-08-07",
+        "headline": "Hyperscalers Continue to Raise AI Capex Guidance, Demand Outstrips Supply",
+        "date": "2026-08-12",
         "sources": [
-          "Moomoo (citing Bloomberg, Morgan Stanley, Goldman Sachs)",
-          "JPMorgan",
-          "LSEG data",
-          "Goldman Sachs"
+          "Reuters",
+          "Bloomberg",
+          "CNBC",
+          "Wall Street Journal",
+          "Financial Times",
+          "J.P. Morgan",
+          "Goldman Sachs",
+          "UBS"
         ],
-        "summary": "The AI financing boom continues with significant debt issuance by tech giants for data center projects, including a reported $15 billion for Anthropic's Texas data center backed by Google and $5.4 billion for QTS/Blackstone linked to Microsoft. JPMorgan raised its forecast for technology, media, and telecommunications debt issuance in 2026 to $540 billion from $450 billion. However, signs of 'market indigestion' are emerging, with bond prices falling in the secondary market and credit default swap premiums soaring. Wall Street banks are adjusting issuance strategies, and Big Tech firms are signaling a pause on further sales this year, raising concerns about a snowballing debt burden and the unclear timeline for monetizing AI investments.",
-        "direction": "bearish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "Nvidia's stock saw its biggest weekly surge in more than a year after shattering earnings expectations",
-        "date": "2026-08-07",
-        "sources": [
-          "FactSet",
-          "Morning Brew",
-          "Startup Pakistan Recorder",
-          "Seeking Alpha"
-        ],
-        "summary": "Nvidia significantly surpassed Wall Street's expectations in its quarterly earnings report, reporting sales of $22.1 billion (265% higher year-over-year) and net income of $12.3 billion (769% higher year-over-year). Adjusted earnings per share of $5.16 also beat estimates. The company's stock surged over 16% to a record high of $785.38, adding $277 billion to its market capitalization. Strong AI chip demand was cited as a key driver, and Nvidia provided robust Q1 2027 revenue guidance of $43 billion, exceeding analyst estimates.",
+        "summary": "Major hyperscale technology companies, including Microsoft, Amazon, Alphabet, and Meta, have signaled rising confidence in the multi-year AI growth cycle, with collective 2026 capex guidance reaching US$730-760 billion and projections to exceed US$1 trillion by 2028. Despite record capital outlays, demand for AI computing capacity continues to outstrip available supply, indicating the AI investment cycle remains in its early stages.",
         "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Intel raises $15B in common stock offering, citing 'unprecedented investment in AI compute'",
+        "headline": "Nvidia Partners with Wall Street Giants to Mobilize Over $500 Billion for AI Infrastructure Financing",
         "date": "2026-08-10",
         "sources": [
-          "AI Weekly",
-          "Nikkei",
-          "Investing.com (citing JPMorgan Chase, Goldman Sachs, Morgan Stanley, Citigroup)"
+          "NVIDIA IR",
+          "Financial Times",
+          "Forbes",
+          "Briefs Finance"
         ],
-        "summary": "Intel announced a $15 billion underwritten public common stock offering, with an option for underwriters to purchase an additional $2.25 billion. The company stated the proceeds are for general corporate purposes, including capital expenditures to support growth opportunities driven by 'unprecedented investment in AI compute.' This equity raise, which will dilute existing shares, signals management's confidence in sustained AI compute demand and urgency to expand manufacturing capabilities. Intel also increased its 2026 capital-expenditure outlook to $20 billion from $18 billion. The stock fell 5% on the news due to dilution concerns.",
-        "direction": "neutral",
+        "summary": "Nvidia announced strategic partnerships with leading financial institutions including Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to establish independent compute financing platforms. This initiative aims to mobilize over $500 billion of third-party capital to fund the buildout of AI infrastructure, addressing the surging demand for AI compute.",
+        "direction": "bullish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "AI Data-Center Capex on track to hit 3% of US GDP by 2027, raising monetization concerns",
-        "date": "2026-08-09",
+        "headline": "Rising Cost of AI Infrastructure Debt Signals Lender Fatigue and Higher Borrowing Costs",
+        "date": "2026-08-17",
         "sources": [
-          "Apollo Global Management (Torsten Slok)",
           "Wall Street Journal",
-          "Synergy Research Group",
-          "Goldman Sachs",
-          "Jefferies (Brent Thill)",
-          "SLC Management (Dec Mullarkey)"
+          "MarketScale",
+          "Morgan Stanley"
         ],
-        "summary": "Apollo Global Management's chief economist, Torsten Slok, projects that data center construction will reach 3% of US GDP by 2027, a significant increase from 1.4% in 2025, noting the buildout is proceeding at nearly twice the pace of the housing boom. Hyperscalers like Alphabet, Microsoft, Meta, and Amazon are collectively tracking toward $725 billion in capex for 2026, with some having raised their guidance further. Goldman Sachs estimates a 24-fold increase in worldwide monthly token usage by 2030. However, concerns are growing about whether the monetization of AI investments will keep pace with this massive capital expenditure, with some analysts warning of potential overcapacity and a 'capital-intensive incinerator' scenario if revenue growth does not match spending.",
-        "direction": "neutral",
+        "summary": "Meta Platforms' recent $12.5 billion bond offering for its El Paso data center was priced at higher yields compared to a similar deal last year, indicating increased borrowing costs for AI infrastructure. This trend reflects growing lender fatigue among debt investors and a widening of credit spreads for hyperscale issuers, suggesting a more expensive financing environment for AI data center projects.",
+        "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
       },
       {
-        "headline": "Wall Street banks hesitant to hold AI debt, shifting to offload commitments for major data center projects",
-        "date": "2026-08-05",
+        "headline": "Community Opposition Leads to Increased Scrutiny and Delays for US Data Center Projects",
+        "date": "2026-08-10",
         "sources": [
-          "Cryptopolitan (citing Morgan Stanley, Google, Broadcom, Apollo, Blackstone)",
-          "Moomoo (citing Bloomberg, Morgan Stanley, Goldman Sachs)",
-          "JPMorgan"
+          "Reuters",
+          "JPMorgan",
+          "Morgan Stanley",
+          "Bank of America",
+          "Arizona Daily Star"
         ],
-        "summary": "Financial institutions, including Morgan Stanley, are increasingly hesitant to hold large AI-related debt liabilities on their balance sheets. Lenders for the $15 billion Google-backed Anthropic data center project in Texas reportedly intend to offload their debt commitments by selling bonds. This trend reflects a broader shift in how Wall Street is financing AI infrastructure, moving towards selling debt through bond markets to recycle capital and limit exposure to a single high-risk sector. This also aligns with a broader shift in AI lab funding from traditional venture investment to project finance, exemplified by the Bitdeer/Volta colocation contract backed by JPMorgan.",
+        "summary": "Wall Street banks are scrutinizing US data center financing more carefully due to increasing community opposition, which has led to project delays and cancellations. Lenders are concerned about the time and resources wasted on projects that may not proceed, incorporating community sentiment into credit risk assessments. Amazon, Microsoft, and Google have reportedly abandoned multibillion-dollar data centers due to local opposition.",
+        "direction": "bearish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "AI Startup Thinking Machines Lab's Valuation Reverts After Failed $50-60 Billion Funding Round",
+        "date": "2026-08-16",
+        "sources": [
+          "The Information",
+          "Bloomberg",
+          "CNBC",
+          "TechCrunch"
+        ],
+        "summary": "Thinking Machines Lab, an AI startup founded by former OpenAI researchers, saw its valuation revert to its July 2025 seed round level of $12 billion after a proposed $50-60 billion follow-on funding round collapsed in January 2026. Investors reportedly balked at underwriting such a significant markup without a more substantial product record, indicating a potential cooling or more realistic valuation environment for some AI labs.",
         "direction": "bearish",
         "severity": "high",
         "unconfirmed": false
       }
     ],
-    "net_read": "The AI data-center capex and compute-demand thesis remains robust, evidenced by Nvidia's strong earnings and continued hyperscaler investment. However, the AI-financing thesis is showing signs of stress, with Wall Street experiencing 'indigestion' from a surge in AI-related debt issuance and banks actively seeking to offload debt commitments for major data center projects. Concerns are mounting regarding the sustainability of current financing structures and the long-term monetization of massive AI investments, leading to a cautiously bearish sentiment in the financial markets despite strong underlying demand."
+    "net_read": "The overall market sentiment for the AI data-center capex / compute-demand / AI-financing thesis is bullish on continued demand and investment, with massive capital deployment ongoing. However, increasing scrutiny on financing costs and growing execution risks from community opposition are emerging as significant headwinds."
   },
   "catalysts": {
     "c1": {
@@ -1141,8 +1251,8 @@
       "listing_date": "2026-06",
       "first_window": "2026-09",
       "full_expiry": "2026-12",
-      "insider_selling": false,
-      "evidence": "SpaceX completed its IPO on June 12, 2026, listing on the Nasdaq under the ticker SPCX. (TradingKey, 2026-08-10; Investing.com, 2026-08-04). Reports ahead of the IPO stated that CEO Elon Musk would not be selling any personal shares. (TradingKey, 2026-08-10). No meaningful insider selling has been reported since the listing."
+      "insider_selling": true,
+      "evidence": "SpaceX went public on June 12, 2026. The lock-up period for insiders and early investors is 180 days, with a 366-day lockup for Elon Musk and other insiders. The first lockup period expired in August 2026, and while there was concern about potential selling pressure, it has not resulted in massive selling yet."
     },
     "c2": {
       "net_months": 0,
@@ -1151,18 +1261,18 @@
       "last_counted_date": "2026-07-29",
       "last_decision": "hold",
       "cpi_regime": "neutral",
-      "cpi_yoy": 2.81,
-      "evidence": "The Federal Open Market Committee (FOMC) held interest rates steady at its meeting on July 29, 2026. (Kiplinger, 2026-07-29). There were no reports of a 5%+ S&P 500 pullback around the meeting. While the 10-year Treasury yield rose in July, it was not described as a spike indicative of market stress. (dshort - Advisor Perspectives, 2026-07-31; Franklin Templeton, 2026-08-06)."
+      "cpi_yoy": 2.79,
+      "evidence": "The most recent FOMC decision was on July 29, 2026, when the committee voted to maintain the target range for the federal funds rate at 3.50% to 3.75%. The S&P 500 declined approximately 0.28% in July 2026, not indicating a pullback of 5% or more. However, the 10-year Treasury yield was elevated, rising to 4.70% on August 17, 2026, and was above 4.6% in late July. There were also signs of credit stress, with the US Private Credit Default Rate remaining at a record high in July 2026."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic confidentially submitted a draft S-1 registration with the SEC on June 1, 2026, and is reportedly targeting an IPO in October 2026. (Luminix AI, 2026-07-03; BitMEX, 2026-06-16). OpenAI announced on June 8, 2026, that it had also confidentially filed for an IPO, with a potential listing in late 2026 or early 2027. (ThinkMarkets, 2026-06-11; SmartAsset, 2026-06-26)."
+      "evidence": "Anthropic confidentially submitted a draft S-1 registration statement for a proposed IPO on June 1, 2026. A public listing is expected as early as October 2026. OpenAI also confidentially filed for an IPO on June 8, 2026. However, reports in late June and August 2026 suggest that OpenAI is now considering waiting until 2027 to go public."
     },
     "c4": {
       "status": "confirmed",
       "stretch_warnings": 0,
-      "evidence": "In the most recent earnings cycle, there was no widespread trend of major SaaS companies cutting guidance due to AI disruption. While HubSpot lowered its full-year revenue guidance because of slower-than-expected adoption of its AI products (StockStory, 2026-08-06), other major SaaS companies like ServiceNow and Adobe raised their full-year guidance, citing strong demand and monetization of their AI offerings. (ServiceNow, 2026-07-22; Adobe, 2026-06-11).",
+      "evidence": "In the most recent earnings cycle, major SaaS companies did not cut or disappoint on guidance in ways attributed to AI disruption. In fact, several raised their outlooks, citing strong AI-driven demand. ServiceNow raised its full-year subscription revenue guidance after its AI business crossed $1 billion in annual contract value. Adobe raised its full-year revenue and EPS targets, citing strong AI-driven demand. Workday also increased its fiscal 2026 subscription revenue guidance, noting momentum in its AI-enabled platform. While HubSpot projected a deceleration in growth, this was attributed to a strategic shift in its own AI pricing and sales cycles, not external AI substitution. Salesforce, in its most recent report in May 2026, raised the midpoint of its full-year revenue guidance.",
       "confirmed_date": "2026-06"
     },
     "c5": {
@@ -1206,19 +1316,19 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": 0.0,
-    "nasdaq_pct": -1.49,
-    "date": "2026-08-07"
+    "sp500_pct": -0.17,
+    "nasdaq_pct": -1.35,
+    "date": "2026-08-14"
   },
   "health": {
     "score": 9,
     "label": "stable"
   },
   "inflation": {
-    "core_cpi_yoy_pct": 2.81,
-    "data_date": "2026-06-01",
+    "core_cpi_yoy_pct": 2.79,
+    "data_date": "2026-07-01",
     "regime": "neutral",
-    "evidence": "Core CPI 2.81% YoY (2026-06-01); regime: neutral"
+    "evidence": "Core CPI 2.79% YoY (2026-07-01); regime: neutral"
   },
   "unemployment": {
     "rate": 4.1,
@@ -1232,12 +1342,12 @@
     "evidence": "UNRATE 4.1% (2026-07-01); 3mo avg 4.2 vs prior 4.33; flat | white-collar 2.9% (+0.1 YoY)"
   },
   "cape": {
-    "value": 42.4,
-    "data_date": "2026-08",
-    "source": "Global Markets Investor Substack, 2026-08-10"
+    "value": 42.56,
+    "data_date": "2026-08-14",
+    "source": "multpl.com"
   },
   "trap_last_run": {
     "events": [],
-    "evidence": "A search of financial news for the period since 2026-08-03 did not identify any new secondary share offerings, large equity raises, or unusually large insider selling events from Magnificent 7 or other hyperscaler companies."
+    "evidence": "A search for new mega-cap secondary share offerings, large new equity raises, or unusually large insider/founder selling since August 10, 2026, did not yield any such events for the Magnificent Seven or other hyperscalers. A secondary offering for First Advantage (a non-mega-cap) was announced on August 11, 2026. There is reporting on increased capital expenditures by hyperscalers for AI infrastructure, but this is being financed through debt and cash flow, not large new equity raises."
   }
 }
