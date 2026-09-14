@@ -1,21 +1,21 @@
 {
-  "last_run": "2026-09-07",
+  "last_run": "2026-09-14",
   "indicators": {
-    "capex_2027_guidance_usd_bn": 1124.1,
-    "capex_2027_prev_reading": 1190.5,
+    "capex_2027_guidance_usd_bn": 972.5,
+    "capex_2027_prev_reading": 1124.1,
     "capacity_language": "supply-constrained",
     "nvidia_next_q_guidance_raised": true,
     "nvidia_dc_yoy_growth_pct": 117,
     "roi_no_return_pct": 46,
-    "treasury_10y_yield_pct": 4.77
+    "treasury_10y_yield_pct": 4.95
   },
   "roi_survey": {
     "name": "PwC Global CEO Survey",
     "metric": "% of CEOs reporting no value / 'nothing' from AI investment",
     "last_edition_date": "2026-08"
   },
-  "score": 0,
-  "status": "WATCH",
+  "score": 1,
+  "status": "ELEVATED",
   "history": [
     {
       "date": "2026-06-03",
@@ -1386,70 +1386,171 @@
         "net_read": "The overall sentiment is bullish, driven by massive long-term capex projections, strong earnings from key AI infrastructure players like Nvidia, and new financing initiatives. However, emerging concerns regarding the sustainability of AI infrastructure debt and competitive shifts introduce a degree of caution."
       },
       "prosecution": "Drawdowns are negligible noise. Flat unemployment, with falling white-collar rates, directly contradicts a core catalyst. IPO lockup selling is underway, a known event, yet markets remain resilient. Nothing confirms an approaching crash.\n\nWeakens: Flat unemployment contradicts a core catalyst. Strengthens: AI disruption catalyst confirmed."
+    },
+    {
+      "date": "2026-09-14",
+      "score": 1,
+      "numeric_status": "STABLE",
+      "status": "ELEVATED",
+      "indicators": {
+        "capex_2027_guidance_usd_bn": 972.5,
+        "capex_2027_prev_reading": 1124.1,
+        "capacity_language": "supply-constrained",
+        "nvidia_next_q_guidance_raised": true,
+        "nvidia_dc_yoy_growth_pct": 117,
+        "roi_no_return_pct": 46,
+        "treasury_10y_yield_pct": 4.95
+      },
+      "crash_band": {
+        "start": "2027-01",
+        "end": "2027-08",
+        "net_slip_months": 0
+      },
+      "sp500_drawdown_pct": -1.82,
+      "health_score": 8,
+      "unemployment": 4.1,
+      "white_collar_rate": 2.9,
+      "core_cpi_yoy_pct": 2.76,
+      "falsification_status": "PENDING",
+      "news": {
+        "items": [
+          {
+            "headline": "Goldman Sachs Reports Widening AI Datacenter Debt Spreads Amid Market Strain",
+            "date": "2026-09-14",
+            "sources": [
+              "Goldman Sachs",
+              "The Economic Times"
+            ],
+            "summary": "Goldman Sachs' high-yield AI datacenter basket is now trading at a spread of 353 basis points, wider than in June 2022. Broader AI-related bond issuance expected across 2025 and 2026 carries an option-adjusted spread of 381 basis points, indicating market expectations for tighter conditions and higher borrowing costs for companies issuing this debt. Goldman estimates approximately $500 billion in AI-related debt will be issued in 2026.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AI Infrastructure Struggling to Keep Pace with Surging Demand Despite High Hyperscaler Capex",
+            "date": "2026-09-14",
+            "sources": [
+              "Goldman Sachs",
+              "The Economic Times"
+            ],
+            "summary": "The global artificial intelligence sector is struggling to build infrastructure fast enough to meet rising demand. Goldman Sachs projects global hyperscaler capital expenditure to exceed $760 billion in 2026. Grid operators are facing multi-year backlogs for electrical distribution equipment and significant interconnection delays, leading to the emergence of fully islanded data centers as an alternative solution.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "UN Warns AI Datacentres Pose Growing Threat to Global Electricity Systems",
+            "date": "2026-09-08",
+            "sources": [
+              "UN News",
+              "International Energy Agency (IEA)"
+            ],
+            "summary": "The UN's economic commission for Europe (UNECE) has warned that the growth of AI data centers is outpacing the expansion of electricity infrastructure, raising concerns about the future reliability and resilience of energy systems worldwide. Data center electricity consumption is projected to nearly double by 2030, from 485 Terawatt-hours (TWh) in 2025 to 950 TWh, equivalent to three percent of global demand.",
+            "direction": "bearish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "Nvidia Agrees to Acquire Hugging Face for Nearly $13 Billion",
+            "date": "2026-09-07",
+            "sources": [
+              "The Information",
+              "AlleyWatch"
+            ],
+            "summary": "Nvidia confirmed on September 3, 2026, its agreement to acquire Hugging Face, a widely used open-source AI developer platform, in a deal valued at approximately $12.93 billion. This marks Nvidia's largest acquisition on record and is seen as a strategic move to extend its reach from chips into developer tools and open-source infrastructure.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          },
+          {
+            "headline": "AI Startups Secure Billions in New Funding Rounds, Signaling Robust Investor Appetite",
+            "date": "2026-09-07",
+            "sources": [
+              "The Information",
+              "AlleyWatch",
+              "Yutori",
+              "Techcrunch",
+              "Bloomberg"
+            ],
+            "summary": "The week saw significant financing activity for AI startups. Crusoe, an AI infrastructure company, closed over $3 billion in financing at a $30 billion valuation. AI coding startup Cognition raised $2 billion. Mistral AI secured a EUR 3 billion Series D round, marking Europe's largest tech funding round of the year. Positron AI, focused on AI inference hardware, raised $875 million, and Harvey, an AI legal assistant, completed a $550 million Series F at a $15.5 billion valuation. Tripo AI also raised approximately $446 million for generative 3D models.",
+            "direction": "bullish",
+            "severity": "high",
+            "unconfirmed": false
+          }
+        ],
+        "net_read": "The AI data-center capex / compute-demand / AI-financing thesis shows a mixed but predominantly bullish picture this week. While significant capital continues to flow into AI startups and infrastructure, with major funding rounds and strategic acquisitions, there are increasing concerns about the sustainability and practical execution of this growth. Widening debt spreads for AI datacenters and warnings from the UN about electricity grid strain highlight growing bottlenecks and rising costs. Goldman Sachs also points to AI infrastructure struggling to keep pace with demand, despite massive hyperscaler capex commitments. The overall sentiment suggests strong demand and investment, but with increasing awareness of infrastructure limitations and financial pressures."
+      },
+      "prosecution": "Current minor drawdowns are noise, not a crash. Unemployment is flat/improving, directly contradicting a key catalyst. The Fed remains neutral. AI news shows strong demand and investment. Nothing confirms an imminent crash approaching the 2027 band.\n\nWeakens: Flat/improving unemployment. Strengthens: SaaS earnings cracks."
     }
   ],
   "numeric_status": "STABLE",
   "news_last_run": {
     "items": [
       {
-        "headline": "PwC Projects $31.6 Trillion Global AI Data Center Capex by 2050, Driven by Recurring Chip Upgrades",
-        "date": "2026-09-02",
+        "headline": "Goldman Sachs Reports Widening AI Datacenter Debt Spreads Amid Market Strain",
+        "date": "2026-09-14",
         "sources": [
-          "PwC",
-          "TheEnergyMag"
+          "Goldman Sachs",
+          "The Economic Times"
         ],
-        "summary": "PwC's Global Data Centre Outlook forecasts global spending on data centers and computing equipment to reach $31.6 trillion through 2050, with annual capital expenditure rising from $800 billion in 2026 to $1.8 trillion in 2050. The report emphasizes that recurring chip upgrades, rather than initial construction, will drive the majority of long-term capital investment, and power availability will be the decisive factor for investment location.",
-        "direction": "bullish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "Nvidia Reports Record Q2 Fiscal 2027 Earnings, Data Center Revenue Surges, and Announces $500 Billion AI Infrastructure Financing Platforms",
-        "date": "2026-09-03",
-        "sources": [
-          "Barchart.com",
-          "Ctech"
-        ],
-        "summary": "Nvidia reported record Q2 fiscal 2027 revenue of $96.2 billion, a 106% year-over-year increase, with data center revenue reaching $89 billion, up 117% year-over-year. The company also provided strong guidance for Q3 revenue of $108 billion. Furthermore, Nvidia announced memoranda of understanding with six major financial institutions to establish independent financing platforms aimed at raising over $500 billion from third parties to build AI infrastructure.",
-        "direction": "bullish",
-        "severity": "high",
-        "unconfirmed": false
-      },
-      {
-        "headline": "S&P Global Ratings Issues Systemic Credit Warning on Hyperscaler AI Infrastructure Debt, Citing Lack of ROI and Circular Financing",
-        "date": "2026-09-04",
-        "sources": [
-          "S&P Global Ratings (as reported by Futu News)"
-        ],
-        "summary": "S&P Global Ratings issued a systemic credit warning to hyperscale cloud service providers, projecting their total capital expenditure to exceed $7 trillion by 2030. The agency highlighted concerns over the lack of quantified return on investment for AI projects and increasingly complex circular financing structures. The report specifically noted Amazon's risk of losing its AA rating and Oracle's potential downgrade to junk status.",
+        "summary": "Goldman Sachs' high-yield AI datacenter basket is now trading at a spread of 353 basis points, wider than in June 2022. Broader AI-related bond issuance expected across 2025 and 2026 carries an option-adjusted spread of 381 basis points, indicating market expectations for tighter conditions and higher borrowing costs for companies issuing this debt. Goldman estimates approximately $500 billion in AI-related debt will be issued in 2026.",
         "direction": "bearish",
-        "severity": "medium",
-        "unconfirmed": true
+        "severity": "high",
+        "unconfirmed": false
       },
       {
-        "headline": "Nvidia Targets Server CPU Market with New Vera Chip, Projecting $20 Billion Revenue in 2026",
-        "date": "2026-09-04",
+        "headline": "AI Infrastructure Struggling to Keep Pace with Surging Demand Despite High Hyperscaler Capex",
+        "date": "2026-09-14",
         "sources": [
-          "The Motley Fool"
+          "Goldman Sachs",
+          "The Economic Times"
         ],
-        "summary": "Nvidia announced its next-generation Vera server CPU is expected to gain significant traction, with projected revenue of $20 billion in 2026 and a forecast to more than double in fiscal 2028. This move positions Nvidia as a direct competitor to AMD and Intel in the server CPU market.",
-        "direction": "bullish",
-        "severity": "medium",
-        "unconfirmed": true
+        "summary": "The global artificial intelligence sector is struggling to build infrastructure fast enough to meet rising demand. Goldman Sachs projects global hyperscaler capital expenditure to exceed $760 billion in 2026. Grid operators are facing multi-year backlogs for electrical distribution equipment and significant interconnection delays, leading to the emergence of fully islanded data centers as an alternative solution.",
+        "direction": "bearish",
+        "severity": "high",
+        "unconfirmed": false
       },
       {
-        "headline": "OpenAI Commits $1 Billion to Expand Frontier AI Cybersecurity for Critical Infrastructure",
+        "headline": "UN Warns AI Datacentres Pose Growing Threat to Global Electricity Systems",
+        "date": "2026-09-08",
+        "sources": [
+          "UN News",
+          "International Energy Agency (IEA)"
+        ],
+        "summary": "The UN's economic commission for Europe (UNECE) has warned that the growth of AI data centers is outpacing the expansion of electricity infrastructure, raising concerns about the future reliability and resilience of energy systems worldwide. Data center electricity consumption is projected to nearly double by 2030, from 485 Terawatt-hours (TWh) in 2025 to 950 TWh, equivalent to three percent of global demand.",
+        "direction": "bearish",
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "Nvidia Agrees to Acquire Hugging Face for Nearly $13 Billion",
         "date": "2026-09-07",
         "sources": [
-          "Industrial Cyber"
+          "The Information",
+          "AlleyWatch"
         ],
-        "summary": "OpenAI is committing $1 billion to its 'Daybreak for Frontline Defenders' initiative. This program aims to expand subsidized access to frontier AI cyber capabilities, training, technical support, and partnerships for organizations protecting essential services in the U.S. and globally, including water, electricity, and banking systems.",
+        "summary": "Nvidia confirmed on September 3, 2026, its agreement to acquire Hugging Face, a widely used open-source AI developer platform, in a deal valued at approximately $12.93 billion. This marks Nvidia's largest acquisition on record and is seen as a strategic move to extend its reach from chips into developer tools and open-source infrastructure.",
         "direction": "bullish",
-        "severity": "medium",
-        "unconfirmed": true
+        "severity": "high",
+        "unconfirmed": false
+      },
+      {
+        "headline": "AI Startups Secure Billions in New Funding Rounds, Signaling Robust Investor Appetite",
+        "date": "2026-09-07",
+        "sources": [
+          "The Information",
+          "AlleyWatch",
+          "Yutori",
+          "Techcrunch",
+          "Bloomberg"
+        ],
+        "summary": "The week saw significant financing activity for AI startups. Crusoe, an AI infrastructure company, closed over $3 billion in financing at a $30 billion valuation. AI coding startup Cognition raised $2 billion. Mistral AI secured a EUR 3 billion Series D round, marking Europe's largest tech funding round of the year. Positron AI, focused on AI inference hardware, raised $875 million, and Harvey, an AI legal assistant, completed a $550 million Series F at a $15.5 billion valuation. Tripo AI also raised approximately $446 million for generative 3D models.",
+        "direction": "bullish",
+        "severity": "high",
+        "unconfirmed": false
       }
     ],
-    "net_read": "The overall sentiment is bullish, driven by massive long-term capex projections, strong earnings from key AI infrastructure players like Nvidia, and new financing initiatives. However, emerging concerns regarding the sustainability of AI infrastructure debt and competitive shifts introduce a degree of caution."
+    "net_read": "The AI data-center capex / compute-demand / AI-financing thesis shows a mixed but predominantly bullish picture this week. While significant capital continues to flow into AI startups and infrastructure, with major funding rounds and strategic acquisitions, there are increasing concerns about the sustainability and practical execution of this growth. Widening debt spreads for AI datacenters and warnings from the UN about electricity grid strain highlight growing bottlenecks and rising costs. Goldman Sachs also points to AI infrastructure struggling to keep pace with demand, despite massive hyperscaler capex commitments. The overall sentiment suggests strong demand and investment, but with increasing awareness of infrastructure limitations and financial pressures."
   },
   "catalysts": {
     "c1": {
@@ -1459,7 +1560,7 @@
       "first_window": "2026-09",
       "full_expiry": "2026-12",
       "insider_selling": true,
-      "evidence": "SpaceX completed its IPO on June 12, 2026, listing on the Nasdaq under the ticker SPCX. (Various sources including SmartAsset, 2026-08-26; Capital.com, 2026-07-09). A staggered lockup release for insiders is in place, with Elon Musk's shares subject to a 366-day lockup. (MLQ.ai, 2026-08-20). Many insiders were first able to sell shares in August 2026. (Associated Press, 2026-08-06)."
+      "evidence": "SpaceX completed its IPO on June 12, 2026, and trades on the Nasdaq under the ticker SPCX. The offering closed on June 15, 2026. One report mentioned that SpaceX's IPO lockup is being released in stages through 2026 and that there were initial concerns about a large number of shares being sold by insiders, but strong demand for the stock absorbed the selling pressure. Another report from September 13, 2026, noted that by the end of October, more than 1 billion shares are expected to become available from pre-IPO investors, with another 1.3 billion shares potentially available after the Q3 earnings report in November."
     },
     "c2": {
       "net_months": 0,
@@ -1468,18 +1569,18 @@
       "last_counted_date": "2026-07-29",
       "last_decision": "hold",
       "cpi_regime": "neutral",
-      "cpi_yoy": 2.79,
-      "evidence": "The most recent FOMC meeting was on July 28-29, 2026, at which the committee decided to maintain the target range for the federal funds rate. (Federal Reserve, 2026-07-29). The S&P 500 was relatively flat around the meeting dates and gained approximately 2.5% to 2.7% in August 2026. (Associated Press, 2026-07-28; BBAE Pro, 2026-09-01; Nasdaq, 2026-09-01). There were no reports of significant yield spikes or credit stress in the period following the meeting."
+      "cpi_yoy": 2.76,
+      "evidence": "The most recent FOMC decision was on July 29, 2026, when the committee decided to hold the federal funds rate steady at a target range of 3.50% to 3.75%. The minutes from the July meeting, released on August 19, 2026, noted that over the intermeeting period, equities were 'somewhat lower' and nominal Treasury yields rose. There was no indication of a 5%+ S&P 500 pullback or significant, acute credit stress immediately following the July decision. However, a report from Fitch Ratings on September 14, 2026, indicated that the U.S. Private Credit Default Rate for the trailing 12 months ending in August 2026 rose to a record high of 6.3%. A September 3, 2026 survey of private credit executives showed a shift in concern towards geopolitical risk and rising corporate defaults."
     },
     "c3": {
       "slip_months": 0,
       "status": "pending",
-      "evidence": "Anthropic confidentially filed for an IPO on June 1, 2026, with an expected listing in October 2026. (Forge Global, 2026-09-03; BNC, 2026-09-06). OpenAI confidentially filed for an IPO on June 8, 2026, with a potential listing in late 2026 or more likely in 2027. (Forge Global, 2026-09-01; IG UK, 2026-07-23)."
+      "evidence": "Anthropic confidentially submitted a draft S-1 registration statement to the SEC on June 1, 2026. As of September 14, 2026, reports indicate that Anthropic is still on track for an IPO in 2026, potentially in October, and has chosen Nasdaq as its listing venue. OpenAI CEO Sam Altman stated in interviews published around September 12-14, 2026, that the company will not go public in 2026 due to concerns about AI safety, and an IPO is postponed until at least 2027. While an earlier report mentioned OpenAI had confidentially filed for an IPO on June 8, 2026, the more recent statements from the CEO indicate a delay."
     },
     "c4": {
       "status": "confirmed",
       "stretch_warnings": 0,
-      "evidence": "In its Q2 2026 earnings report on August 5, 2026, HubSpot beat earnings expectations but cut its full-year revenue guidance. The company attributed this to 'deliberate choices to accelerate our AI transformation' including changes to its pricing and sales model, as well as a more budget-sensitive demand environment. (HubSpot, 2026-08-05; Seeking Alpha, 2026-08-05). Other major SaaS companies like Salesforce and ServiceNow raised their guidance, citing strong AI-related demand. (Constellation Research, 2026-08-26; 24/7 Wall St., 2026-07-22).",
+      "evidence": "In the most recent earnings cycle, major SaaS companies like Salesforce, Workday, and ServiceNow reported strong results and, in some cases, raised their guidance, citing AI as a significant growth driver. HubSpot beat earnings estimates but offered weaker-than-expected guidance, which was attributed to macroeconomic factors like budget sensitivity and longer sales cycles, not AI disruption. Adobe raised its full-year revenue and non-GAAP EPS targets, but a deeper analysis shows its organic Annualized Recurring Revenue (ARR) guidance was effectively lowered to fund a strategic shift toward freemium models in response to the AI landscape, rather than a direct cut due to AI substitution. There is no evidence of multiple major SaaS companies cutting guidance specifically due to AI disruption or substitution.",
       "confirmed_date": "2026-09"
     },
     "c5": {
@@ -1523,19 +1624,19 @@
     "conformance": "in the SELL-peak year itself - too early to score; the test is what happens from here into next year"
   },
   "drawdowns": {
-    "sp500_pct": -1.03,
-    "nasdaq_pct": -2.17,
-    "date": "2026-09-04"
+    "sp500_pct": -1.82,
+    "nasdaq_pct": -2.81,
+    "date": "2026-09-11"
   },
   "health": {
-    "score": 10,
+    "score": 8,
     "label": "stable"
   },
   "inflation": {
-    "core_cpi_yoy_pct": 2.79,
-    "data_date": "2026-07-01",
+    "core_cpi_yoy_pct": 2.76,
+    "data_date": "2026-08-01",
     "regime": "neutral",
-    "evidence": "Core CPI 2.79% YoY (2026-07-01); regime: neutral"
+    "evidence": "Core CPI 2.76% YoY (2026-08-01); regime: neutral"
   },
   "unemployment": {
     "rate": 4.1,
@@ -1549,12 +1650,12 @@
     "evidence": "UNRATE 4.1% (2026-08-01); 3mo avg 4.13 vs prior 4.3; flat | white-collar 2.9% (-0.1 YoY)"
   },
   "cape": {
-    "value": 41.04,
+    "value": 40.58,
     "data_date": "2026-09",
-    "source": "GuruFocus"
+    "source": "YCharts"
   },
   "trap_last_run": {
     "events": [],
-    "evidence": "A search for new mega-cap (Magnificent 7 / hyperscaler) secondary share offerings, large new equity raises, or unusually large insider/founder selling since 2026-08-31 did not yield any significant events fitting the description of 'smart money selling equity to the public at peak prices'."
+    "evidence": "Searches for new mega-cap (Magnificent 7 / hyperscaler) secondary share offerings, large new equity raises, or unusually large insider/founder selling since September 7, 2026, did not yield any such events. While there was some insider selling reported at companies like CrowdStrike, Datadog, and Meta, the amounts were not indicative of 'unusually large' sales by founders or key insiders of the Magnificent Seven. Other reported secondary offerings and insider sales were for companies outside of the mega-cap tech space."
   }
 }
